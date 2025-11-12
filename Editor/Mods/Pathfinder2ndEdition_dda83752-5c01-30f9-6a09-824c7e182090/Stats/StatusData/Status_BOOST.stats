@@ -109,6 +109,18 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="6fba086b-94f3-4206-bf00-b1c6b9efac5e" />
+        <field name="Name" type="NameTableFieldDefinition" value="ADVANTAGE_DISABLER" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4da7fac3g30f6ga983gd9d2g1a2bfcb229cd" version="1" />
+        <field name="StackId" type="StringTableFieldDefinition" value="ADVANTAGE_DISABLER" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="Advantage(AttackRoll);Advantage(AllSavingThrows);Advantage(AllAbilities);Advantage(AllSkills);Advantage(DeathSavingThrow);Advantage(Concentration);Disadvantage(AttackRoll);Disadvantage(AllSavingThrows);Disadvantage(AllAbilities);Disadvantage(AllSkills);Disadvantage(DeathSavingThrow);Disadvantage(Concentration);" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="IgnoreResting" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="5df296f9-ce4d-43be-944c-cc3a90ec6f02" />
         <field name="Name" type="NameTableFieldDefinition" value="FEINT_ONCE" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hb03d411bge1f5gdd4bgd87agefe396dd2e21" version="1" />
@@ -1125,31 +1137,6 @@
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h6eccb42cg2012g20bagd6ddg3bb951741cc7" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hd4c1fb41g436dg99a9g362fg65633ceef9f7" version="1" />
         <field name="Icon" type="StringTableFieldDefinition" value="Status_Flanked" />
-        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;IgnoreResting;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="62282408-a5c8-4616-b934-6b2af0dcedd4" />
-        <field name="Name" type="NameTableFieldDefinition" value="Flanked_2" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd19956ebg0d42g68bag680cgb43e5100d3cf" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h90945407g2e5bgf500gae8fg6d7c821446a6" version="2" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Status_Flanked" />
-        <field name="StackId" type="StringTableFieldDefinition" value="New_Flanked" />
-        <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
-        <field name="AuraRadius" type="IntegerTableFieldDefinition" value="3" />
-        <field name="AuraStatuses" type="StringTableFieldDefinition" value="IF(Enemy()):ApplyStatus(RemoveDisadvantage)" />
-        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnCombatEnded" enumeration_type_name="StatusEvent" version="1" />
-        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;IgnoreResting;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
-      </fields>
-    </stat_object>
-    <stat_object is_substat="false">
-      <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="36f7f728-6275-4174-9173-1086bbe0c9aa" />
-        <field name="Name" type="NameTableFieldDefinition" value="RemoveDisadvantage" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h814ef028gccbfg24fegc7b6g299ea8a99d04" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h22d8b94dgf1acg4112g34fcg1966f2cab172" version="1" />
-        <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
         <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;IgnoreResting;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
       </fields>
     </stat_object>
@@ -3770,7 +3757,7 @@
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="0" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
         <field name="AuraRadius" type="IntegerTableFieldDefinition" value="4" />
-        <field name="AuraStatuses" type="StringTableFieldDefinition" value="Target:IF(Character() and Ally() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BLESS,100,-1)" />
+        <field name="AuraStatuses" type="StringTableFieldDefinition" value="Target:IF(Character() and MentalSpell() and Ally() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BLESS,100,-1)" />
         <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(STAT_BON_1ATTACK);UnlockSpell(Shout_Bless_Sustain);" />
         <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1" />
@@ -3967,7 +3954,7 @@
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="0" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
         <field name="AuraRadius" type="IntegerTableFieldDefinition" value="4" />
-        <field name="AuraStatuses" type="StringTableFieldDefinition" value="Target:IF(Character() and not Enemy() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BENEDICTION,100,-1)" />
+        <field name="AuraStatuses" type="StringTableFieldDefinition" value="Target:IF(Character() and MentalSpell() and not Enemy() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BENEDICTION,100,-1)" />
         <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_Bless_Sustain);Tag(STAT_BON_1AC);" />
         <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1" />
@@ -4285,7 +4272,7 @@
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="0" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
         <field name="AuraRadius" type="IntegerTableFieldDefinition" value="3" />
-        <field name="AuraStatuses" type="StringTableFieldDefinition" value="TARGET:IF(Character() and Enemy() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BANE_TECHNICAL,100,-1)" />
+        <field name="AuraStatuses" type="StringTableFieldDefinition" value="TARGET:IF(Character() and MentalSpell() and Enemy() and not (Dead() or HasStatus('KNOCKED_OUT'))):ApplyStatus(BANE_TECHNICAL,100,-1)" />
         <field name="TickType" type="EnumerationTableFieldDefinition" value="StartTurn" enumeration_type_name="TickType" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_Bane_Sustain);" />
         <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1" />

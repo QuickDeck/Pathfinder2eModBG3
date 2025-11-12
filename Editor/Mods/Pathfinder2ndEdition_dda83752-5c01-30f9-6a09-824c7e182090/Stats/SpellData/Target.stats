@@ -517,7 +517,7 @@
         <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Persuasion,WillDC());" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(IsCriticalSkill()):ApplyStatus(BON_MOT_3,100,10);IF(not IsCriticalSkill()):ApplyStatus(BON_MOT_2,100,10);RemoveStatus(SELF,BON_MOT_2);RemoveStatus(SELF,BON_MOT_2_SELF);RemoveStatus(SELF,BON_MOT_3);" />
         <field name="SpellFail" type="StringTableFieldDefinition" value="IF(IsCriticalMissSkill()):ApplyStatus(SELF,BON_MOT_2_SELF,100,10);" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Ally() and IsIntelligent(context.Target) and not Tagged('MINDLESS');" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Ally() and LinguisticSpell() and EmotionSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Action_Bard_CuttingWords" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2819e4e2gc567g041ag4e66g35849a6ffa96" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h96a7b7begd857g4d94g9ec2g71e6ad957395" version="1" />
@@ -5441,7 +5441,7 @@
         <field name="TargetRadius" type="StringTableFieldDefinition" value="4.5" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Wisdom, SourceSpellDC());" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="ApplyStatus(BANE, 100, 10);" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Dead() and not Ally() and Character()" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Dead() and not Ally() and Character() and MentalSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_Bane" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha42c1d87gdad5g317cg83f9g23978168741e" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he2f645c4g539dgcc62g58e2g13f8c393a654" version="2" />
@@ -5479,7 +5479,7 @@
         <field name="AmountOfTargets" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="MaximumTargets" type="IntegerTableFieldDefinition" value="3" />
         <field name="CombatAIOverrideSpell" type="StatReferenceTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Dead() and not Ally() and not Item()" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Dead() and not Ally() and not Item() and MentalSpell();" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -8116,7 +8116,7 @@
         <field name="Level" type="IntegerTableFieldDefinition" value="3" />
         <field name="TargetRadius" type="StringTableFieldDefinition" value="18" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Wisdom, SourceSpellDC());" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Self()" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Self() and MentalSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Necromancy_BestowCurse_DebuffAbility" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0b7eb5a5gb991g45d2g265bgaf39de40be7a" version="2" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he9a79eebg7835g8e8egb7bfgae73e7959dbb" version="2" />
@@ -13150,7 +13150,7 @@
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(DISARMED, 100, 1)" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_CommandDrop" />
         <field name="ContainerSpells" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Tagged('UNDEAD') and not Ally() and not HasPassive('ImmuneToDisarm')" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and LinguisticSpell() and MentalSpell() and not Ally() and not HasPassive('ImmuneToDisarm');" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
       </fields>
     </stat_object>
@@ -13205,7 +13205,7 @@
         <field name="TargetRadius" type="StringTableFieldDefinition" value="18" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Wisdom, SourceSpellDC());" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="ApplyStatus(COMMAND_HALT, 100, 1)" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Tagged('UNDEAD') and not Ally()" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and LinguisticSpell() and MentalSpell() and not Ally();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_CommandHalt" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha141dff6g4093g6951gaf87g7d8c26a17601" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h2ed6e2dega667ga170g6635g37c6b6139d50" version="1" />
@@ -14141,7 +14141,7 @@
         <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Wisdom, SourceSpellDC());" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SaveCrit()):ApplyStatus(BlisteringInvectiveBurning_Rank2,100,-1);IF(not SaveCrit()):ApplyStatus(FRIGHTENED,100,1);IF(SaveCrit()):ApplyStatus(BlisteringInvectiveBurning_Rank2_Double,100,-1);IF(SaveCrit()):ApplyStatus(FRIGHTENED,100,2);IF(SaveCrit()):ApplyStatus(CriticalFailureDisplay,100,0);" />
         <field name="SpellFail" type="StringTableFieldDefinition" value="IF(not SaveCritMiss('Fear')):ApplyStatus(BlisteringInvectiveBurning_Rank2_Half,100,-1);" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Tagged('CONSTRUCT');" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and MentalSpell();" />
         <field name="AmountOfTargets" type="StringTableFieldDefinition" value="1" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_CrownOfMadness" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h62e84ed2g3e30gef01gef81g6f66323c7198" version="1" />
@@ -15064,7 +15064,7 @@
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h392d94bdg38e5gea96gacf3g7e1dcd555232" version="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Enchantment" enumeration_type_name="SpellSchool" version="1" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Wisdom, SourceSpellDC());" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Self()" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Self() and MentalSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Illusion_Fear" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(4d6,Psychic);" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom" />
@@ -24763,7 +24763,7 @@
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Enchantment" enumeration_type_name="SpellSchool" version="1" />
         <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_Stop" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Tagged('CONSTRUCT');" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and MentalSpell();" />
         <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="2fa6b127-6f8a-4150-8be6-6f62b7a85911" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom" />

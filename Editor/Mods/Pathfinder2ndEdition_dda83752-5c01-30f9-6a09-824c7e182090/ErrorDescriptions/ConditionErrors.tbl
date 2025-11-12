@@ -142,6 +142,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="57366df4-f4af-4467-bedb-b2451349583a" />
         <field name="Identifier" type="FixedStringTableFieldDefinition" value="NotInTradition" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h043c26b0gf3a0g4c19g0c93g41e25de3c79e" version="1" />
+        <field name="ErrorDescriptionType" type="EnumerationTableFieldDefinition" value="ErrorName" enumeration_type_name="ErrorDescriptionType" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -150,6 +151,24 @@
         <field name="UUID" type="IdTableFieldDefinition" value="678e5f0a-3557-46ff-a81a-005443f5a7ba" />
         <field name="Identifier" type="FixedStringTableFieldDefinition" value="LanguageBarrier" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfbbeac77ga1a6ge64fg445cg5ab65380ce00" version="1" />
+        <field name="ErrorDescriptionType" type="EnumerationTableFieldDefinition" value="ErrorName" enumeration_type_name="ErrorDescriptionType" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_15" />
+        <field name="UUID" type="IdTableFieldDefinition" value="b8115e95-9daa-40b1-937f-2b013c942012" />
+        <field name="Identifier" type="FixedStringTableFieldDefinition" value="Emotionless" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0237b08ag1f77g532ag5a7egd6bd2859735d" version="1" />
+        <field name="ErrorDescriptionType" type="EnumerationTableFieldDefinition" value="ErrorName" enumeration_type_name="ErrorDescriptionType" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_16" />
+        <field name="UUID" type="IdTableFieldDefinition" value="4edfbacb-4139-4eeb-a93a-9c4a22fba827" />
+        <field name="Identifier" type="FixedStringTableFieldDefinition" value="Mindless" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1352bc76g7495g4f18gbf76gf6f657cdcf13" version="1" />
         <field name="ErrorDescriptionType" type="EnumerationTableFieldDefinition" value="ErrorName" enumeration_type_name="ErrorDescriptionType" version="1" />
       </fields>
     </stat_object>
