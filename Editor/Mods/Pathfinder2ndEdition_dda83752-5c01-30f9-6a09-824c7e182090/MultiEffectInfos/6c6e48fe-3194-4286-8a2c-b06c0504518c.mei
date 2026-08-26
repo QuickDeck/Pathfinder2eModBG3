@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="6c6e48fe-3194-4286-8a2c-b06c0504518c" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2e_Grease_StatusEffect">
+  <EffectInfo UUID="bfdbb156-df0f-4a0e-aa0b-9cbdf58d779a" EffectResourceGuid="0febe2dc-2084-e87b-cb0a-63d5518ca55d" DetachSource="false" DetachTarget="false" KeepRotation="false" UseOrientDirection="false" UseDistance="false" UseScaleOverride="false" KeepScale="true" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Target" Enabled="true" DamageType="None" VerbalIntent="None" TargetBone="Dummy_BodyFX" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

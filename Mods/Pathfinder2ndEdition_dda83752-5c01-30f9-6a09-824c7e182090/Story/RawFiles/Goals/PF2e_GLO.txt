@@ -91,6 +91,7 @@ DB_ClearStatusOnShortRest("ResistEnergyStatus_Thunder_Rank4");
 DB_ClearStatusOnShortRest("DAZZLED_APPLY");
 DB_ClearStatusOnShortRest("SLEEP");
 DB_ClearStatusOnShortRest("HEALER_HEALED_SHORT");
+DB_ClearStatusOnShortRest("GREASE_COATED");
 //Focus spell disguises
 DB_ClearStatusOnShortRest("DISGUISE_SELF_HUMAN_FEMALE");
 DB_ClearStatusOnShortRest("DISGUISE_SELF_HUMAN_MALE");

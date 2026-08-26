@@ -8353,7 +8353,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="f9b4a801-9ebd-457b-8c02-737901eacfb5" />
         <field name="ContainerSpells" type="StringTableFieldDefinition" value="Shout_ImpalingSpikeEscape_Athletics;Shout_ImpalingSpikeEscape_Acrobatics;" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Athletics,GetDCStatusDuration('IMPALING_SPIKE_DC'));" />
-        <field name="SpellSuccess" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" clear_inherited_value="true" value="AI_IGNORE:RemoveStatus(SELF,IMPALING_SPIKE);AI_IGNORE:RemoveStatus(SELF,IMPALING_SPIKE_CRIT);AI_IGNORE:RemoveStatus(SELF,IMPALING_SPIKE_DC);AI_ONLY:GainTemporaryHitPoints(SELF,40);" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_TransmutationStone" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h69c0c519g8604g24c7g6e0cgb60e0745bb97" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h75ade30egd9a5g131dg7f2eg5b62994f02e0" version="2" />

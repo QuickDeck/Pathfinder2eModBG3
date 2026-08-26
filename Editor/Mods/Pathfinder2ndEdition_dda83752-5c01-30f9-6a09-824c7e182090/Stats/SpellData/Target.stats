@@ -152,7 +152,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="d193419f-3602-4b8f-8c45-26023de77750" />
         <field name="Name" type="NameTableFieldDefinition" value="Grapple" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="2b4dcefd-3a65-4a59-9e21-0f89a57f117d" />
-        <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Athletics,FortitudeDC());" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Athletics,GrappleDC());" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="AI_IGNORE:IF(not SkillCrit()):ApplyStatus(GRABBED,100,2);AI_IGNORE:IF(SkillCrit()):ApplyStatus(RESTRAINED_2E,100,2);AI_IGNORE:ApplyStatus(SELF,GRAPPLE_SOURCE,100,2);AI_IGNORE:SetStatusDuration(SELF,GRAPPLE_SOURCE,2,ForceSet);AI_IGNORE:IF(HasPassive('CrushingGrab',context.Source)):DealDamage(StrengthModifier,Bludgeoning,Magical);AI_ONLY:IF(HasStatus('FLANKED',context.Source) and not HasStatus('MAP_PENALTY_3RD', context.Source) and not HasStatus('MAP_PENALTY_2ND', context.Source) and not HasStatus('OFF_BALANCED',context.Target) and HasHPPercentageMoreThan(50,context.Target) and HasAllyWithinRange('SG_Incapacitated',12) and HasPassive('WyllAIFix',context.Source)):DealDamage((LevelMapValue(CharacterLevel))*2, MainMeleeWeaponDamageType);AI_ONLY:IF(HasStatus('FLANKED',context.Source) and not HasStatus('MAP_PENALTY_3RD', context.Source) and not HasStatus('MAP_PENALTY_2ND', context.Source) and not HasStatus('OFF_BALANCED',context.Target) and HasHPPercentageMoreThan(50,context.Target) and HasAllyWithinRange('SG_Incapacitated',9) and HasPassive('WyllAIFix',context.Source)):DealDamage((LevelMapValue(CharacterLevel))*2, Bludgeoning);AI_IGNORE:IF(not Player(context.Source)):ApplyStatus(SELF,GRAPPLE_SOURCE_NPC,100,-1);" />
         <field name="Icon" type="StringTableFieldDefinition" value="Action_Monster_NetherTentacle_Grapple" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h46153393gb209gc5d5g5385g952cecf1aceb" version="1" />
@@ -13983,8 +13983,8 @@
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="c76d5e53-0c60-49fd-9664-0ff3bf21e76b" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="ba496ed9-5d72-4243-8918-18cb3b2703ee" />
-        <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="38480f98-ea71-41e5-9427-a4aa3bf20fd4" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="f2962afa-61fa-4510-a78e-ad7aae405e44" />
+        <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="dc2f6749-36a4-40c9-81f9-231cdfa23d9d" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
         <field name="TargetConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
         <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
@@ -14989,19 +14989,17 @@
         <field name="UUID" type="IdTableFieldDefinition" value="54ad03cd-561c-4a54-917f-d5293a5d63d9" />
         <field name="Name" type="NameTableFieldDefinition" value="Grease" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:CreateSurface(6,10,Grease)" />
         <field name="TargetRadius" type="StringTableFieldDefinition" value="12" />
-        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="6" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_Grease" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hac67cdecgc4bfg727egd24dg91d25fb0a1ab" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hcf39b1dcg613agad2dgc0c9g626d7b0366ae" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hcf39b1dcg613agad2dgc0c9g626d7b0366ae" version="2" />
         <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
         <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Control_Grease_L1to3" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;22dfbbf4-f417-4c84-b39e-2039315961e6,,;,,;5bfbe9f9-4fc3-4f26-b112-43d404db6a89,,;,,;,," />
         <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Control" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasSomaticComponent;HasVerbalComponent;IsSpell;HasHighGroundRangeExtension;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful;IsLinkedSpellContainer" enumeration_type_name="SpellFlagList" version="1" />
         <field name="RechargeValues" type="StringTableFieldDefinition" value="6" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Conjuration" enumeration_type_name="SpellSchool" version="1" />
@@ -15018,6 +15016,264 @@
         <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="HitAnimationType" version="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
         <field name="TargetConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
+        <field name="ContainerSpells" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1;Target_Item_Grease_Rank1;Target_Creature_Grease_Rank1;" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank1" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:CreateSurface(6,10,Grease);" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="12" />
+        <field name="AreaRadius" type="IntegerTableFieldDefinition" value="6" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Conjuration_Grease" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0f93f337gf7e7gb073ga5faga46550d2986f" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0c1109a4gbd39g8d81g6676g3d66e6228a58" version="1" />
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Control_Grease_L1to3" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;22dfbbf4-f417-4c84-b39e-2039315961e6,,;,,;5bfbe9f9-4fc3-4f26-b112-43d404db6a89,,;,,;,," />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Control" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="RechargeValues" type="StringTableFieldDefinition" value="6" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Conjuration" enumeration_type_name="SpellSchool" version="1" />
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Control_Grease_L1to3" />
+        <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_SurfaceCreationGrease" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Enemy() and not Dead()" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="2fa6b127-6f8a-4150-8be6-6f62b7a85911" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="ba496ed9-5d72-4243-8918-18cb3b2703ee" />
+        <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="38480f98-ea71-41e5-9427-a4aa3bf20fd4" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Dexterity" />
+        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01" />
+        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01_Loop" />
+        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="HitAnimationType" version="1" />
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_Grease" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank1" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Conjuration" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="IF(Item()):ApplyStatus(GREASE_COATED,100,10);IF(Character()):ApplyStatus(GREASE_WEAPON_PROC,100,0);" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="12" />
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="ConcentrateSpell() and (Item() or not Unarmed()) and not Dead();" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_ElementalWeapon_Acid" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4d4ef6c3gc5aage8d3gea51g3d01c958dbd2" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hb7309f29g3fcbg5798g0995gbe36372c423b" version="2" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Dexterity" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
+        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01" />
+        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01_Loop" />
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Control_Grease_L1to3" />
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Control_Grease_L1to3" />
+        <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_SurfaceCreationGrease" />
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Enemy() and not Dead()" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;22dfbbf4-f417-4c84-b39e-2039315961e6,,;,,;5bfbe9f9-4fc3-4f26-b112-43d404db6a89,,;,,;,," />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Control" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasSomaticComponent;HasVerbalComponent;IsSpell;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="PhysicalDamage" enumeration_type_name="HitAnimationType" version="1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="2fa6b127-6f8a-4150-8be6-6f62b7a85911" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="ba496ed9-5d72-4243-8918-18cb3b2703ee" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_Grease" />
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="4428509a-efba-47b3-9a2e-f718be631118" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank1" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Conjuration" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(GREASE_COATED,100,10);" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="12" />
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="ConcentrateSpell() and Character() and not Dead();" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_GaseousForm" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1daa6c44g06cfg5d96g5b7aga2eebcc69a05" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h3d92f2f0g9654gbbbfg000aga0254b98d396" version="2" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
+        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01" />
+        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Control_Gen_L1to3_01_Loop" />
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Control_Grease_L1to3" />
+        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Control_Grease_L1to3" />
+        <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_SurfaceCreationGrease" />
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Ally() and not Dead()" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="554a18f7-952e-494a-b301-7702a85d4bc9,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;22dfbbf4-f417-4c84-b39e-2039315961e6,,;,,;5bfbe9f9-4fc3-4f26-b112-43d404db6a89,,;,,;,," />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasSomaticComponent;HasVerbalComponent;IsSpell" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="HitAnimationType" version="1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="2fa6b127-6f8a-4150-8be6-6f62b7a85911" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="ba496ed9-5d72-4243-8918-18cb3b2703ee" />
+        <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_Grease" />
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="4428509a-efba-47b3-9a2e-f718be631118" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="34c48181-1c64-4283-9561-ee53d1740e1b" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:2" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bf8333a3-de2c-4c31-9af2-2d813ede3ef7" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:2" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Item_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="7a6cfe40-d41a-4b35-8fe6-6e1a6c836a3a" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:2" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Creature_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="b25e19f5-e0a3-4ddd-baca-216287477853" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f792f234-2653-43ec-8927-e6aaefe557d4" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Item_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="aa7caf61-7c79-4243-8aba-006b12d196ae" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Creature_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="86936a5d-9ad4-41fc-8f82-dfff02d18391" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5eea4cc1-4e18-4b3f-926b-bd309f3e0e55" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Item_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3409fa9e-2a5b-42b8-aada-48d8d4b5e2dc" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Creature_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a6b3a978-8ca6-4b4a-965c-a8ced76203f9" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d3cb9275-a0d4-487d-9581-4234081abbbd" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Item_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5fc5862e-5d60-47b8-9b81-c70a81471bb2" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Creature_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1c9a495f-d7a0-4677-8ce6-14f0a8cfed58" />
+        <field name="Name" type="NameTableFieldDefinition" value="Surface_Grease_Rank6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="37f20d56-300a-4ab3-8d25-e69bc4d64e9b" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Surface_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="832bef53-e3c0-444b-b832-aced73786164" />
+        <field name="Name" type="NameTableFieldDefinition" value="Item_Grease_Rank6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="23a48911-5c5c-4169-897d-639d66552753" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Item_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f8ba6a00-8d86-46c7-a5ca-cb18a2129caa" />
+        <field name="Name" type="NameTableFieldDefinition" value="Creature_Grease_Rank6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="f56ed518-3610-4bcd-8e3e-07be3233c66f" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Creature_Grease_Rank1" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

@@ -4465,7 +4465,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="h9f22e15dg32abg0267g857eg01cb0978f3d0" version="1">Jumping</content>
   <content contentuid="h1705e77dgcbc1gef78g9400g926b177e25c1" version="1">Your legs surge with strength, ready to leap high and far. You jump 30 feet in any direction without touching the ground. You must land on a space of solid ground within 30 feet of you, or else you fall after using your next action.</content>
   <content contentuid="hac67cdecgc4bfg727egd24dg91d25fb0a1ab" version="1">Grease</content>
-  <content contentuid="hcf39b1dcg613agad2dgc0c9g626d7b0366ae" version="1">Cover the ground in grease, slowing creatures within and possibly making them fall &lt;LSTag Type="Status" Tooltip="PRONE"&gt;Prone&lt;/LSTag&gt;.</content>
+  <content contentuid="hcf39b1dcg613agad2dgc0c9g626d7b0366ae" version="2">You conjure grease, choosing an &lt;LSTag Type="Spell" Tooltip="Target_Surface_Grease_Rank1"&gt;area&lt;/LSTag&gt;, and &lt;LSTag Type="Spell" Tooltip="Target_Item_Grease_Rank1"&gt;item&lt;/LSTag&gt;, or a &lt;LSTag Type="Spell" Tooltip="Target_Creature_Grease_Rank1"&gt;creature&lt;/LSTag&gt;. </content>
   <content contentuid="h371b4887gc4cagccdcg3f88g7dc79a424217" version="1">Dizzying Colors</content>
   <content contentuid="h377a60e4g358egc593gda9eg4d7d40eee780" version="1">Shocking Grasp</content>
   <content contentuid="h0d4a678dgd2a1ge2c7g663fg32fc51c33cae" version="1">Deals lightning damage as a melee spell attack.</content>
@@ -31060,8 +31060,8 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h98aeacdcg9cd8g7295ga2d3gf69ed6c7b3e3" version="1">Teleport [1] in a random direction.</content>
   <content contentuid="h36113a82g97dagf170gbf0agb7248a0f8933" version="1">Critical Specialization: Polearm</content>
   <content contentuid="h7256a4c2g64ecge9deg96e8gfe989236e13c" version="1">Move the target anywhere within [1].</content>
-  <content contentuid="ha3d883a2gef2dg4f35gad4cg5b57f75a23d3" version="5">Difficult terrain - &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is halved and creatures may fall Prone. Flammable.</content>
-  <content contentuid="h595d945bgc56fg4dccg8bfbg555b0454efc3" version="2">Grease</content>
+  <content contentuid="ha3d883a2gef2dg4f35gad4cg5b57f75a23d3" version="7">Difficult terrain - &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is halved and creatures may fall Prone. Flammable.</content>
+  <content contentuid="h595d945bgc56fg4dccg8bfbg555b0454efc3" version="4">Grease</content>
   <content contentuid="h52f66133g3934ga8ebg58b4g20acc9e5d4c6" version="1">Reload</content>
   <content contentuid="hcda9a859g8ec7g221eg7e39gd559884c9e4c" version="1">Must reload before firing.</content>
   <content contentuid="h1afae65cgc1aeg8e52g6dd2gd5894dcf5dd8" version="1">Reload</content>
@@ -31581,8 +31581,8 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h2ce2c6bcg819cg0874gace7g63d079cb3109" version="1">You have temporary hit points.</content>
   <content contentuid="h0c3eaf7age0dcg5272g0f07g316fd3383c24" version="1">Cast Into Time</content>
   <content contentuid="hdca729a7g41ebg4fd9g8570g1160422c3ccc" version="1">Falling through time until the end of your turn. Can't interact or be interacted with. Will take [1] and [2] at the end of your turn.</content>
-  <content contentuid="h26d7f157ge313g4aa4g9b3eg9f543626d280" version="4">Difficult terrain - &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is halved and creatures may fall Prone.</content>
-  <content contentuid="haf0c6ea5gbdbbg4b31g81f5gd7a42302faa6" version="2">Ice</content>
+  <content contentuid="h26d7f157ge313g4aa4g9b3eg9f543626d280" version="5">Difficult terrain - &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is halved and creatures may fall Prone.</content>
+  <content contentuid="haf0c6ea5gbdbbg4b31g81f5gd7a42302faa6" version="3">Ice</content>
   <content contentuid="h74e6646fgad57ga1c5gf7ecg11710d80de36" version="1">Dying (Wounded 1)</content>
   <content contentuid="h00da9d7ag0a48g0000gaeceg49b71ff5157f" version="1">If you reach 0 hit points, you fall Unconscious and must make Death Saving Throws. On 2 successes, you stop bleeding out and become Stable. On 2 failures, you die. If you regain any hit points, the condition is removed.</content>
   <content contentuid="h97271882gd85bgf77cg13d2ge6e23ef29ca1" version="1">Dying (Wounded 2)</content>
@@ -32655,4 +32655,18 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="hda76352ag8377gc18cgfae6g81377a5597e0" version="1">Deal [1], and causes &lt;LSTag Type="Status" Tooltip="BLEEDING_4"&gt;persistent bleeding&lt;/LSTag&gt; on a critical failure.</content>
   <content contentuid="h0e374e89g070dg9ba8g00abg6ac666b05001" version="1">Deal [1], and causes &lt;LSTag Type="Status" Tooltip="BLEEDING_5"&gt;persistent bleeding&lt;/LSTag&gt; on a critical failure.</content>
   <content contentuid="hbf907616g4da6g3db9gfcfeg2d0e2966ab4b" version="1">Deal [1], and causes &lt;LSTag Type="Status" Tooltip="BLEEDING_6"&gt;persistent bleeding&lt;/LSTag&gt; on a critical failure.</content>
+  <content contentuid="hc1019fd2g25c8g0c0bgb4c0g9b2563e2e63b" version="1">Grease</content>
+  <content contentuid="h653b4682gdb93g48cfga71egcfb2134d4ecd" version="2">Sewage</content>
+  <content contentuid="hdf3bd37bgbe49g4728ga759gfb940dd3916a" version="4">Difficult terrain - &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is halved and creatures may fall Prone.</content>
+  <content contentuid="h04274f13g77b6g4998g8f6bg30a4c236293a" version="2">Frozen Grease</content>
+  <content contentuid="h8fd8f156g4822g00f2gbd4ag61144dada1fa" version="1">Greasy</content>
+  <content contentuid="h376db1c8gac55gc764g7226g776d9ff76712" version="1">Grease</content>
+  <content contentuid="h0f93f337gf7e7gb073ga5faga46550d2986f" version="1">Grease (Terrain)</content>
+  <content contentuid="h0c1109a4gbd39g8d81g6676g3d66e6228a58" version="1">You cover the ground in grease. Each creature standing on the greasy surface must succeed at a Reflex save or an Acrobatics check against your spell DC or fall &lt;LSTag Type="Status" Tooltip="PRONE_PF2"&gt;prone&lt;/LSTag&gt;. Creatures that move onto the greasy surface during the spell's duration must attempt either a Reflex save or an Acrobatics check, falling prone on a failure. A creature that Steps doesn't have to attempt a check or save.</content>
+  <content contentuid="h4d4ef6c3gc5aage8d3gea51g3d01c958dbd2" version="1">Grease (Item)</content>
+  <content contentuid="hb7309f29g3fcbg5798g0995gbe36372c423b" version="2">You cover an object in grease. Anyone trying to pick up the object must succeed at an Acrobatics check or Reflex save against your spell DC to do so. If you target a creature's weapon, the creature that holds it must attempt an Acrobatics check or Reflex save. On a failure, the holder takes a –2 circumstance penalty to attack rolls using the weapon. On a critical failure, the holder drops the weapon.</content>
+  <content contentuid="h1daa6c44g06cfg5d96g5b7aga2eebcc69a05" version="1">Grease (Creature)</content>
+  <content contentuid="h3d92f2f0g9654gbbbfg000aga0254b98d396" version="2">You cover a creature in grease. The target gains a +2 circumstance bonus to Fortitude saves against attempts to grapple them and can squeeze through tight spaces.</content>
+  <content contentuid="hfc210c38gb111g1009g1a06g1d9f55081137" version="1">Greasy creatures have a +2 circumstance bonus to fortitude saves against grappling, and greasy items require a creature succeed an acrobatics check or reflex save before picking them up.</content>
+  <content contentuid="he18ddd44g9baeg3b69gb678g41f7e19b4c8f" version="1">Grease</content>
 </contentList>

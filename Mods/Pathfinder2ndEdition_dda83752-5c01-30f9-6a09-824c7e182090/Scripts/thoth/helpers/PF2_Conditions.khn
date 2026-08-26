@@ -771,6 +771,21 @@ function ShoveCheck()
 	return result
 end
 
+function GrappleDC()
+	BaseDC = FortitudeDC()
+
+	if HasStatus('GREASE_COATED', context.Target).Result then
+		if HasStatus('CircumstanceBonus2FortSaves', context.Target).Result then
+			return BaseDC
+		elseif HasStatus('CircumstanceBonus1FortSaves', context.Target).Result then
+			return BaseDC - 1
+		else
+			return BaseDC - 2
+		end
+	end
+end
+
+
 function GetBestSkillCheck(dc)
 	local source = context.Source
 	
