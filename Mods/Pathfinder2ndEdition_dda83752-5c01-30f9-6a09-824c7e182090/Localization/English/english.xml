@@ -4400,7 +4400,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hb8ac40afg4c35g00acg7c87g20b1f6d7d689" version="1">Point Blank Stance</content>
   <content contentuid="h5ccf99ddg3fabg2c73g3d77g66ff11234c02" version="1">1 Action &lt;br&gt; While in this stance and using a ranged weapon that doesn’t have the volley trait, you gain a +2 circumstance bonus to damage rolls on attacks against targets within the weapon’s first range increment.</content>
   <content contentuid="h8eb438fag8cdcga7a6g2addgc2acc3932137" version="1">Acidic Burst</content>
-  <content contentuid="h56b54b51g76f0g2956g27e2g758dd1b8553b" version="1">2 Actions&lt;br&gt;Area 5-foot Emanation&lt;br&gt;Saving throw basic Reflex&lt;br&gt;You create a shell of acid around yourself that immediately bursts outward, dealing 2d6 acid damage to each creature in the area.</content>
+  <content contentuid="h56b54b51g76f0g2956g27e2g758dd1b8553b" version="2">You create a shell of acid around yourself that immediately bursts outward, dealing [1] to each creature in the area.</content>
   <content contentuid="hdcf6846dg37adg6667g1f46g308b287716d0" version="1">Flourishing Flora</content>
   <content contentuid="h8b51676dg6228g0946g1899g1b74af95762e" version="3">Plants rapidly grow up from the ground. All creatures in the target area take [1]. The type of damage depends on the type of plant you choose to grow. On a critical failure, targets experience additional effects, also depending on what you choose to grow.</content>
   <content contentuid="he949d341g8082g5e36g6ad4g87f85164b63d" version="1">Chilling Spray</content>
