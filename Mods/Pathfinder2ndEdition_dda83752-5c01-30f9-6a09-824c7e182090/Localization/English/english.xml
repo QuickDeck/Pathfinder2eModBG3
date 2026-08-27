@@ -4404,7 +4404,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hdcf6846dg37adg6667g1f46g308b287716d0" version="1">Flourishing Flora</content>
   <content contentuid="h8b51676dg6228g0946g1899g1b74af95762e" version="3">Plants rapidly grow up from the ground. All creatures in the target area take [1]. The type of damage depends on the type of plant you choose to grow. On a critical failure, targets experience additional effects, also depending on what you choose to grow.</content>
   <content contentuid="he949d341g8082g5e36g6ad4g87f85164b63d" version="1">Chilling Spray</content>
-  <content contentuid="h9756b5d4ga0e7g5591g5e49ge671e36b9025" version="1">2 Actions&lt;br&gt;Area 15-foot cone&lt;br&gt;Defense Reflex&lt;br&gt;A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. You deal 2d4 cold damage to creatures in the area; they must each attempt a Reflex save.&lt;br&gt;Heightened (+1) The damage increases by 2d4.</content>
+  <content contentuid="h9756b5d4ga0e7g5591g5e49ge671e36b9025" version="2">A cone of icy shards bursts from your spread hands and coats the targets in a layer of frost. You deal [1] to creatures in the area with a basic reflex save. Additionally, creatures that fail their save suffer a -[2] penalty to their speed for 2 rounds (-[3] on a critical failure).</content>
   <content contentuid="h4ad463cdg1db9gf0e2gfc5eg57d1a95454fe" version="1">Endure</content>
   <content contentuid="h1a9ce150g4d79g0ddag9b6dga8033a173000" version="2">You have tempoary hit points for 1 minute.</content>
   <content contentuid="h4d2b16e1g5643gc970g2555gbbaf43b83bc8" version="3">Deal [1], and causes &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;persistent bleeding&lt;/LSTag&gt; on a critical failure.</content>
@@ -4454,7 +4454,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hb8cb4994g2e7fg192cg0840g7e640c42e53f" version="1">Concordant Choir (3 Actions)</content>
   <content contentuid="h58118d31g5cc2g8664ge381gfba5fc543d84" version="1">The spell deals 2d4 sonic damage to all creatures in a 30-foot emanation, with a basic Fortitude save&lt;br&gt;Heightened (+1) The damage increases by 1d4 for the 1-action version, or 2d4 for the other versions.</content>
   <content contentuid="h0b610cc5g984agae9bgbbf1g993b38b8d17b" version="1">Breathe Fire</content>
-  <content contentuid="hd5a32b51g5775ge986g4268ga7e6036787b1" version="2">A gout of flame sprays from your mouth. You deal 2d6 fire damage to creatures in the area with a basic Reflex save.&lt;br&gt;Heightened (+1) The damage increases by 2d6.</content>
+  <content contentuid="hd5a32b51g5775ge986g4268ga7e6036787b1" version="3">A gout of flame sprays from your mouth. You deal [1] to creatures in the area with a basic Reflex save.</content>
   <content contentuid="h8bd7f93bg7bc8g2e8dg62a9g8861d8e6e445" version="1">Dehydrated</content>
   <content contentuid="h7588d3f8g1cb6g0972g34f4gc0447f249d43" version="1">Taking 1d6 persistent fire damage and has to save versus Enfeebled.</content>
   <content contentuid="hcd9eb6efgd333g058dga845g48ba61bb77fd" version="1">Taking 4d6 persistent fire damage and has to save versus Enfeebled.</content>
