@@ -49,5 +49,13 @@
         <field name="Text" type="TranslatedStringTableFieldDefinition" handle="h2aa45d2cgc24eg9b69g51a0gc83c664c7bba" version="1" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_6" />
+        <field name="UUID" type="IdTableFieldDefinition" value="9c052f5f-c976-48e7-8d6f-55e0da75ac40" />
+        <field name="NameFS" type="FixedStringTableFieldDefinition" value="FearUpcast" />
+        <field name="Text" type="TranslatedStringTableFieldDefinition" handle="h704271d8g0dc5gb149ge25cgef1db489216e" version="1" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>

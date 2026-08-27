@@ -34,6 +34,11 @@
                     <attribute id="Text" type="TranslatedString" handle="h2aa45d2cgc24eg9b69g51a0gc83c664c7bba" version="1"/>
                     <attribute id="UUID" type="guid" value="f2e89acd-ecac-48a4-9d4b-bd2eaf1a6184"/>
                 </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="FearUpcast"/>
+                    <attribute id="Text" type="TranslatedString" handle="h704271d8g0dc5gb149ge25cgef1db489216e" version="1"/>
+                    <attribute id="UUID" type="guid" value="9c052f5f-c976-48e7-8d6f-55e0da75ac40"/>
+                </node>
             </children>
         </node>
     </region>

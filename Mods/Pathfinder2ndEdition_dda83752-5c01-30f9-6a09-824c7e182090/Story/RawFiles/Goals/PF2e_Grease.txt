@@ -2,9 +2,9 @@ Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
 DB_GreaseSurfaceDefaults("SurfaceGrease", 90.0);
-DB_GreaseSurfaceDefaults("SurfaceGreaseFrozen", 120.0);
+DB_GreaseSurfaceDefaults("SurfaceGreaseFrozen", 108.0);
 DB_GreaseSurfaceDefaults("SurfaceSewer", 90.0);
-DB_GreaseSurfaceDefaults("SurfaceWaterFrozen", 150.0);
+DB_GreaseSurfaceDefaults("SurfaceWaterFrozen", 120.0);
 
 DB_GreaseAcrobaticsStatuses("CircumstanceBonus1Acrobatics", 1.0);
 DB_GreaseAcrobaticsStatuses("CircumstanceBonus2Acrobatics", 2.0);

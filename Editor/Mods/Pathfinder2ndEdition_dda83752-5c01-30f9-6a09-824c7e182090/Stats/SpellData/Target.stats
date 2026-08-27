@@ -12980,11 +12980,10 @@
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Self() and FearSpell() and EmotionSpell() and MentalSpell() and ConcentrateSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Illusion_Fear" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hca8e9f42g51e5g1311ge43ag5d4189bae778" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hab657c50g850fgefb9g79bcg193f146ffffe" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hab657c50g850fgefb9g79bcg193f146ffffe" version="2" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom" />
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(FRIGHTENED,100,2)" />
-        <field name="TooltipOnSave" type="StringTableFieldDefinition" value="961753f4-c345-4bc4-b408-1d5b87a5ab0c" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="04cc3403-f67a-4747-b49e-a1802cc7a6ad" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="9c052f5f-c976-48e7-8d6f-55e0da75ac40" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Control_Fear_L4to5" />
         <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Control_Fear_L4to5" />
         <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_Scare" />
@@ -12998,8 +12997,8 @@
         <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalDamage_Psychic" enumeration_type_name="HitAnimationType" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="23e86239-d81d-4bad-b618-8d12a2a9258a" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="bd2fc245-5645-452f-a2cd-d158b751bbe4" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="a0aee53a-d702-4901-9bb3-7cf08e214346" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="21c81027-2fc8-418e-b0bd-ed92e009dee5" />
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="3d86ded0-a33f-4a63-8959-0dcd941e3f42" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
       </fields>
@@ -13023,6 +13022,7 @@
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasVerbalComponent;IsSpell;IsHarmful;HasSomaticComponent;IgnorePreviouslyPickedEntities" enumeration_type_name="SpellFlagList" version="1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="4fe0d043-2711-4692-a5e6-697aa6fcc658" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf68c92a7gf4bbga569gf24bgc294ff32e179" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13654,9 +13654,11 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4152f8e7g2f9egcab1gb674gf07f46208124" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h384797a3gd09bg906bg4e6dga3996b0c6c21" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h384797a3gd09bg906bg4e6dga3996b0c6c21" version="3" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Enemy() and ConcentrateSpell();" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(5)" />
+        <field name="TooltipUpcastDescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(5)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13669,6 +13671,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:2" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Endure_Rank1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(10)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13681,6 +13684,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:3" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Endure_Rank1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(15)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13693,6 +13697,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:4" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Endure_Rank1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(20)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13705,6 +13710,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:5" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Endure_Rank1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(25)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13717,6 +13723,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:6" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Endure_Rank1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="GainTemporaryHitPoints(30)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
