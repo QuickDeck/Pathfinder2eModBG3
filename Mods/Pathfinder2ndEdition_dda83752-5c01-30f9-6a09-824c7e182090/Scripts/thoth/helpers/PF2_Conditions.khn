@@ -1514,7 +1514,7 @@ function SaveCritMiss(save_type)
 		local target = context.Target
 		if save_type == 'Fort' and (HasPassive('CritConvert_Juggernaut',target) | HasPassive('PathToPerfectionFort',target)).Result then
 				return ConditionResult(true)
-			elseif save_type == 'Reflex' and (HasPassive('CritConvert_Evasion',target) | HasPassive('PathToPerfectionFort',target) | HasPassive('PathToPerfectionWill',target)).Result then
+			elseif save_type == 'Reflex' and (HasPassive('CritConvert_Evasion',target) | HasPassive('PathToPerfectionRef',target)).Result then
 				return ConditionResult(true)
 			elseif save_type == 'Fear' and (HasPassive('CritConvert_Bravery',target) | HasPassive('Halfling_Brave',target) | HasPassive('CritConvert_Resolve',target) | HasPassive('PathToPerfectionWill',target)).Result then
 				return ConditionResult(true)

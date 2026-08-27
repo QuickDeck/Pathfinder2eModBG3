@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="20db9636-38a9-4c03-a632-045cb161719b" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2e_GravitationalPull_BeamEffect">
+  <EffectInfo UUID="71882d65-e97e-4729-bcf3-201869b0a0d2" EffectResourceGuid="06529ab5-303d-bbd1-3e0e-18ce3e75ed4e" DetachSource="true" DetachTarget="false" KeepRotation="false" UseOrientDirection="true" UseDistance="true" UseScaleOverride="false" KeepScale="true" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Source" Enabled="true" StartTextKey="Cast" DamageType="None" VerbalIntent="None" SourceBone="Dummy_BodyFX" TargetBone="Dummy_BodyFX" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>
