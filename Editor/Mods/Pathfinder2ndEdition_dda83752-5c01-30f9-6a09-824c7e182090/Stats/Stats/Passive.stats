@@ -4820,7 +4820,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="a517daa6-1e30-45d9-8606-dbb944375fde" />
         <field name="Name" type="NameTableFieldDefinition" value="GrandeurCause" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h97370584gaf5dg0fe8g6fc5gbc1b5f085bdf" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h26a96a36ga0bdgb68eg3c27gc97a48ab7188" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h26a96a36ga0bdgb68eg3c27gc97a48ab7188" version="3" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_DivineAllegiance" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockInterrupt(FlashOfGrandeurInterrupt)" />
@@ -7347,7 +7347,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="bbf4d688-9663-4c4a-afde-6297c6f906ec" />
         <field name="Name" type="NameTableFieldDefinition" value="EnergyAblation" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hb09de544g1c00g6989g75f7gd1f29dc25d67" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h9d6743d7g3c5fg38c7gda2cg842e046866e4" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h9d6743d7g3c5fg38c7gda2cg842e046866e4" version="2" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="MetaMagic;ToggledDefaultAddToHotbar;IsToggled" enumeration_type_name="PassiveFlags" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpellVariant(HasUseCosts('ActionPoint') and IsSpell(),ModifyUseCosts(Add,ActionPoint,1,0),ModifyIconGlow(),ModifyTooltipDescription());" />
         <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnCast" enumeration_type_name="StatsFunctorContext" version="1" />
@@ -11138,8 +11138,8 @@
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0ea52175g5ba3g1213g7545g5df52c42ea67" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hcedd5751g08c9g7ce9ge9aegbb8858804b80" version="1" />
         <field name="StatsFunctorContext" type="EnumerationListTableFieldDefinition" value="OnAttack" enumeration_type_name="StatsFunctorContext" version="1" />
-        <field name="Conditions" type="StringTableFieldDefinition" value="AttackedWithPassiveSourceWeapon() and (IsCurrentTurnInCombat(context.Source) or not Combat()) and not ConditionResult(GetStatusDuration('FORCEFUL', GetAttackWeapon()) &gt; 1);" />
-        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(SELF,FORCEFUL_OWNER);IF(IsMainHandAttack()):ApplyEquipmentStatus(SELF,MainHand,FORCEFUL);IF(IsOffHandAttack()):ApplyEquipmentStatus(SELF,OffHand,FORCEFUL)" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="AttackedWithPassiveSourceWeapon() and (IsCurrentTurnInCombat(context.Source) or not Combat());" />
+        <field name="StatsFunctors" type="FunctorsTableFieldDefinition" value="IF(HasStatus('FORCEFUL', GetAttackWeapon())):ApplyStatus(SELF,FORCEFUL_EXTRA);ApplyStatus(SELF,FORCEFUL_OWNER);IF(IsMainHandAttack() and not HasStatus('FORCEFUL', GetAttackWeapon())):ApplyEquipmentStatus(SELF,MainHand,FORCEFUL);IF(IsOffHandAttack() and not HasStatus('FORCEFUL', GetAttackWeapon())):ApplyEquipmentStatus(SELF,OffHand,FORCEFUL)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
