@@ -5853,14 +5853,14 @@
         <field name="Name" type="NameTableFieldDefinition" value="Bane" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Enchantment" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(BANE_AURA,100,10);ApplyStatus(BANE_SUSTAIN_BLOCKED,100,1);" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(BANE_AURA,100,-1);ApplyStatus(BANE_SUSTAIN_BLOCKED,100,1);" />
         <field name="AreaRadius" type="IntegerTableFieldDefinition" value="4" />
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and ConcentrateSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_Bane" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h05bda940gebafg190fg2340ga789ce6b0b89" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h919f1f20gccf2gc9f9gf2cdg86c6a2bd53f2" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h919f1f20gccf2gc9f9gf2cdg86c6a2bd53f2" version="3" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(BANE, 100, 10)" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(BANE, 100, -1)" />
         <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Debuff_Gen_L1to3_01" />
         <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Debuff_Gen_L1to3_01_Loop" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Debuff_Bane_L1to3" />
@@ -5876,6 +5876,8 @@
         <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="c6846cf3-6ea3-4551-b867-3554eaa6aeae" />
         <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="863456af-4e7d-4251-bf86-935e18c4b444" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(4)" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -5947,7 +5949,7 @@
         <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(BANE_AURA_2,100,BANE_AURA.Duration);ApplyStatus(BANE_SUSTAIN_BLOCKED,100,1);" />
         <field name="AreaRadius" type="IntegerTableFieldDefinition" value="8" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf8879bcbgb975ge05ag6164g26330228cb22" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h5487b0b0g5043g9bf2g9118gf058cdb79442" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h5487b0b0g5043g9bf2g9118gf058cdb79442" version="2" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="Temporary" enumeration_type_name="SpellFlagList" version="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="not HasStatus('BANE_SUSTAIN_BLOCKED', context.Source) and ConcentrateSpell();" />
@@ -5955,6 +5957,7 @@
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="0" />
         <field name="Cooldown" type="EnumerationTableFieldDefinition" value="OncePerTurn" enumeration_type_name="CooldownType" version="1" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="9313094a-bae2-454f-9701-f920d0e8e98d,,;,,;9d86c202-31a5-4ba3-ae60-ec4fbb425665,,;a4112e22-e36f-44ff-828f-81252360da53,,;808fdfab-2e6c-472e-b3c4-19ce4a719d9d,,;,,;ea745d30-eb87-447f-b190-c81298e27d9c,,;,,;,," />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -6040,7 +6043,7 @@
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and ConcentrateSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_Bless" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4931b8e0g1df4g1268ga5beg4d8dc607a47c" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h26059949gf2b3gaa44g74f9g4cb9e1f3c032" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h26059949gf2b3gaa44g74f9g4cb9e1f3c032" version="3" />
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(BLESS_AURA,100,10);" />
         <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3_01" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_Bless_L1to3" />
@@ -6057,6 +6060,7 @@
         <field name="PositionEffect" type="GuidObjectTableFieldDefinition" value="2832c7dd-14bd-4c51-9d2a-599c2c19005f" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
         <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Buff_Gen_L1to3_01_Loop" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(4)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -6122,7 +6126,7 @@
         <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(BLESS_AURA_2,100,BLESS_AURA.Duration);ApplyStatus(BLESS_SUSTAIN_BLOCKED,100,1);" />
         <field name="AreaRadius" type="IntegerTableFieldDefinition" value="10" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hacbb10c1g6ceeg2f94g1aedgf3487565730a" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h90e21753g24d7g8232g204eg0f78871a80d0" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h90e21753g24d7g8232g204eg0f78871a80d0" version="2" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="Temporary" enumeration_type_name="SpellFlagList" version="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="not HasStatus('BLESS_SUSTAIN_BLOCKED', context.Source) and ConcentrateSpell();" />

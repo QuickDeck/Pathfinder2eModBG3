@@ -39,6 +39,11 @@
                     <attribute id="Text" type="TranslatedString" handle="h704271d8g0dc5gb149ge25cgef1db489216e" version="1"/>
                     <attribute id="UUID" type="guid" value="9c052f5f-c976-48e7-8d6f-55e0da75ac40"/>
                 </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="ForceBarrage"/>
+                    <attribute id="Text" type="TranslatedString" handle="h75f7a03bgac5cgbe70g1f9cg8d7b06d06b3d" version="2"/>
+                    <attribute id="UUID" type="guid" value="5b0b668e-17e1-44e2-873b-976597d0424d"/>
+                </node>
             </children>
         </node>
     </region>

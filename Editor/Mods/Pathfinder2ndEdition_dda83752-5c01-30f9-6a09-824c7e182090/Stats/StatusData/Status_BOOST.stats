@@ -7536,7 +7536,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="ffcef28f-c270-4e59-9f7f-b39e0fcad34d" />
         <field name="Name" type="NameTableFieldDefinition" value="BANE" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h12858ac3g428eg0e54g979bg56ba061511ba" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h51a00d7fgc7b5g3294geac6g6f0c4589b944" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h51a00d7fgc7b5g3294geac6g6f0c4589b944" version="3" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_Bane" />
         <field name="StackId" type="StringTableFieldDefinition" value="BANE" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(STAT_PEN_1ATTACK);" />
@@ -7599,6 +7599,8 @@
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_Bane_Sustain);" />
         <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_RemoveOnRespec" enumeration_type_name="StatusGroupFlags" version="1" />
         <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="df991d17-e0f8-4f40-833f-8f6b79487be5" />
+        <field name="AuraFlags" type="EnumerationListTableFieldDefinition" value="IgnoreItems;ShouldCheckLOS" enumeration_type_name="AuraFlags" version="1" />
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnCombatEnded" enumeration_type_name="StatusEvent" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

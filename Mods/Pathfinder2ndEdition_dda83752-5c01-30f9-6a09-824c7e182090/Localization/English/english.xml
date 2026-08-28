@@ -333,7 +333,7 @@
   <content contentuid="h37e8cc06g59e6g1de6g8a99gd1885bf22ee1" version="1">Multiattack (Ranged)</content>
   <content contentuid="h9ab814b3g94fega8b7gbd6egd6009bc09921" version="1">Aim two attacks at a target.</content>
   <content contentuid="h29f2d6f4g570fgec69gb231g8af5fbbdbaee" version="2">Force Barrage</content>
-  <content contentuid="h843a28aag5976gf915g13e5gdab2d79b4b19" version="1">Shoot [2] magical darts, each dealing [1]. They always hit their target.</content>
+  <content contentuid="h843a28aag5976gf915g13e5gdab2d79b4b19" version="2">You fire a shard of solidified magic toward a creature that you can see. It automatically hits and deals [1]. For each additional action you use when Casting the Spell, increase the number of shards you shoot by one, to a maximum of three shards for 3 actions. You choose the target for each shard individually.</content>
   <content contentuid="h24c9a75dg48ceg8d6eg7807gbe9cf3779442" version="1">Shoot [2] magical darts, each dealing [1]. They always hit their target.</content>
   <content contentuid="hc8c7b5d2gf358g8fb1g7da4gd9f8644b1e61" version="1">Magic Missile</content>
   <content contentuid="h6f496a09g0437g4275g823fga87680847457" version="1">Shoot [2] magical darts, each dealing [1]. They always hit their target.</content>
@@ -1809,7 +1809,7 @@
   <content contentuid="h3cda5fecg2b2fg7f58g52dcgeef0c0ba177a" version="1">You can also use this attack if you have an ally within [1] of the target and you don't have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;.</content>
   <content contentuid="h73e5ab49gc5d2gc1c6g9dd0g756c3d506f96" version="1">Strengthened Force Tunnel</content>
   <content contentuid="h12858ac3g428eg0e54g979bg56ba061511ba" version="1">Bane</content>
-  <content contentuid="h51a00d7fgc7b5g3294geac6g6f0c4589b944" version="2">Has a -1 status penalty to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;.</content>
+  <content contentuid="h51a00d7fgc7b5g3294geac6g6f0c4589b944" version="3">Has a -1 status penalty to &lt;LSTag Tooltip="AttackRoll"&gt;attack rolls&lt;/LSTag&gt; until the end of combat.</content>
   <content contentuid="h9698d635g18bdg3317gafb2g9b6103e75a44" version="1">Magic Weapon</content>
   <content contentuid="h96c495d9g0e3bgaf9eg5d87g0f9622dbfe86" version="1">Weapon has become magical, receiving a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt; and deals an extra die of damage.</content>
   <content contentuid="h7930a48cgdb05g4b07g4de4ga612f30f3dcf" version="1">Guidance</content>
@@ -6142,15 +6142,15 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hac4bcc21g54dcg70d7gdfb3gde2be9278c10" version="1">If the creature is only wearing metal armour, it always receives Disadvantage.&lt;br&gt;&lt;br&gt;If the creature is still touching the metal, you can use a bonus action on subsequent turns to deal another [1] and force the creature to let go or receive Disadvantage.</content>
   <content contentuid="h98fe1e2dg87a8gccfcg4378gb1b41d0d757c" version="1">On a successful save, the target still takes half damage.</content>
   <content contentuid="h05bda940gebafg190fg2340ga789ce6b0b89" version="1">Bane</content>
-  <content contentuid="h919f1f20gccf2gc9f9gf2cdg86c6a2bd53f2" version="1">2 Actions&lt;br&gt;Area 10-foot emanation&lt;br&gt;You fill the minds of your enemies with doubt. Enemies in the area must succeed at a Will save or take a –1 status penalty to attack rolls as long as they are in the area. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by 10 feet and force enemies in the area that weren't yet affected to attempt another saving throw. Bane can counteract bless.</content>
+  <content contentuid="h919f1f20gccf2gc9f9gf2cdg86c6a2bd53f2" version="3">You fill the minds of your enemies with doubt. Enemies in the area must succeed at a Will save or take a –1 status penalty to &lt;LSTag Tooltip="AttackRoll"&gt;attack rolls&lt;/LSTag&gt; as long as they are in the area. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by [1] and force enemies in the area that weren't yet affected to attempt another saving throw.</content>
   <content contentuid="hf8879bcbgb975ge05ag6164g26330228cb22" version="2">Bane (Sustain)</content>
-  <content contentuid="h5487b0b0g5043g9bf2g9118gf058cdb79442" version="1">Increases the emanation's radius by 10 feet and force enemies in the area that weren't yet affected to attempt another saving throw.</content>
+  <content contentuid="h5487b0b0g5043g9bf2g9118gf058cdb79442" version="2">Increases bane's radius by [1] and force enemies in the area that weren't yet affected to attempt another saving throw.</content>
   <content contentuid="hc5eb9fa2g9764ge347g24a3gc55c7f9aef42" version="1">Bane Aura</content>
   <content contentuid="h7476e372g753eg6404g9529g9661c8e7c199" version="1">Enemies in the area must succeed at a Will save or take a –1 status penalty to attack rolls as long as they are in the area.</content>
   <content contentuid="h4931b8e0g1df4g1268ga5beg4d8dc607a47c" version="1">Bless</content>
-  <content contentuid="h26059949gf2b3gaa44g74f9g4cb9e1f3c032" version="1">2 Actions&lt;br&gt;Area 15-foot emanation&lt;br&gt;Duration 1 minute&lt;br&gt;Bless allies within 15 feet. They gain a +1 status bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by 10 feet.</content>
+  <content contentuid="h26059949gf2b3gaa44g74f9g4cb9e1f3c032" version="3">Blessings from beyond help your companions strike true. You and your allies gain a +1 status bonus to attack rolls while within the emanation. Once per round on subsequent turns, you can Sustain the spell to increase the emanation's radius by [1].</content>
   <content contentuid="hacbb10c1g6ceeg2f94g1aedgf3487565730a" version="2">Bless (Sustain)</content>
-  <content contentuid="h90e21753g24d7g8232g204eg0f78871a80d0" version="1">Increases the emanation's radius by 10 feet.</content>
+  <content contentuid="h90e21753g24d7g8232g204eg0f78871a80d0" version="2">Increases bless's radius by [1].</content>
   <content contentuid="h7f4ef5d9g760bgef8cga617g78741649b1f8" version="1">Bless Aura</content>
   <content contentuid="h62c47855gae05gd66dg7936g0a9492643ca6" version="1">Has a +1 status bonus to attack rolls as long as they are in the area.</content>
   <content contentuid="h002d0189g05d0gbd47g8086ga66695a5c216" version="1">Counterspell</content>
@@ -32675,4 +32675,9 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h704271d8g0dc5gb149ge25cgef1db489216e" version="1">Targets up to 5 creatures at 3rd rank.</content>
   <content contentuid="h2e59d9e3g708agaf32gcef9ga884beb4a326" version="1">You plant fear in up to 5 targets; each must attempt a Will save. On a failed save, the target is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;frightened 2&lt;/LSTag&gt;. On a critical failure, the target is frightened 3 and &lt;LSTag Type="Status" Tooltip="COMMAND_FLEE"&gt;fleeing&lt;/LSTag&gt; for 1 round. On a success, the target is frightened 1.</content>
   <content contentuid="hf68c92a7gf4bbga569gf24bgc294ff32e179" version="1">You plant fear in up to 5 targets; each must attempt a Will save. On a failed save, the target is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;frightened 2&lt;/LSTag&gt;. On a critical failure, the target is frightened 3 and &lt;LSTag Type="Status" Tooltip="COMMAND_FLEE"&gt;fleeing&lt;/LSTag&gt; for 1 round. On a success, the target is frightened 1.</content>
+  <content contentuid="hf8faa089g20b0ge4f7g9bd7g902fc96fe35e" version="1">You fire a shard of solidified magic toward a creature that you can see. It automatically hits and deals [1].</content>
+  <content contentuid="hb4fa5d8egb82cg1946g5931g5aba92a6925f" version="1">You fire a shard of solidified magic toward [2] creatures that you can see. They automatically hit and deal [1]. You can target the same creature multiple times.</content>
+  <content contentuid="hb0cf8f66gff65g3bb5g980aga6b1dec4c560" version="1">You fire a shard of solidified magic toward [2] creatures that you can see. They automatically hit and deal [1]. You can target the same creature multiple times.</content>
+  <content contentuid="h8d5b569cg39edg384bg47d1gccd94de22195" version="1">You fire a shard of solidified magic toward [2] creatures that you can see. They automatically hit and deal [1]. You can target the same creature multiple times.</content>
+  <content contentuid="h75f7a03bgac5cgbe70g1f9cg8d7b06d06b3d" version="2">Every second rank, the number of shards produced per action spent increases by 1.</content>
 </contentList>
