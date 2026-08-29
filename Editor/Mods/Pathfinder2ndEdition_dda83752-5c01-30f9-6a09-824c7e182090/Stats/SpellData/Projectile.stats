@@ -1734,13 +1734,25 @@
         <field name="AddRangeFromAbility" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_LongJump" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hbb139911g6f41gd9f1gda71g9c4bbdfbfb0b" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf99f8fffgcd61gbb0cg8d17g17557fdf8416" version="3" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf99f8fffgcd61gbb0cg8d17g17557fdf8416" version="4" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsJump;AddFallDamageOnLand;HasHighGroundRangeExtension;IgnoreVisionBlock;Stealth;Invisible;CannotTargetCharacter;CannotTargetItems;HasSomaticComponent;HasVerbalComponent;IsSpell" enumeration_type_name="SpellFlagList" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(12)" />
         <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="8e78022b-584e-4c18-a819-17a7a0b8f266" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d68f3df3-15ad-498a-9c2a-811486520da0" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="2560eda0-a8a7-42b4-a572-7095465ffeca" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="5aff6bb1-cbb7-40eb-bd7b-8297bb52f98d" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8a492a42-efc0-4924-b3d9-cf85945fe88c" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:2;" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Projectile_Jump_PF2" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -1749,7 +1761,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank3Unlock" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="8a492a42-efc0-4924-b3d9-cf85945fe88c" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsJump;AddFallDamageOnLand;HasHighGroundRangeExtension;IgnoreVisionBlock;Stealth;Invisible;CannotTargetCharacter;CannotTargetItems;HasSomaticComponent;HasVerbalComponent" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsJump;AddFallDamageOnLand;HasHighGroundRangeExtension;IgnoreVisionBlock;Stealth;Invisible;CannotTargetCharacter;CannotTargetItems;HasSomaticComponent;HasVerbalComponent;Temporary" enumeration_type_name="SpellFlagList" version="1" />
         <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" clear_inherited_value="true" value="" />
       </fields>
     </stat_object>

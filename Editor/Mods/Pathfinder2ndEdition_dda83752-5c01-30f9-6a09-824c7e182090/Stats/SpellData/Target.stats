@@ -15054,14 +15054,14 @@
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
-        <field name="Name" type="NameTableFieldDefinition" value="Jump_PF2_Rank3" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="3" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank3" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
         <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(Jump_Rank3Unlock_Status,100,10)" />
         <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_LongJump" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfaad0fceg62a9g1423gfbb7gb44fb3087e0c" version="3" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he36fea0bg28d9gcb54gdaa8g7f4ff558113f" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he36fea0bg28d9gcb54gdaa8g7f4ff558113f" version="3" />
         <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01" />
         <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01_Loop" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Utility_Jump_L1to3" />
@@ -15075,9 +15075,37 @@
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Projectile_Jump_PF2" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="33302a46-4a12-41dd-8845-6b7314d50022" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="bcd66fb0-b0bc-41d0-abba-ad443d63dd72" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="b87ac768-1e18-4220-974c-b86edd94553e" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="f2cf2f9e-5db5-4872-bb8e-8112b50bc7f9" />
         <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="32d71967-b080-4ac9-a1cf-c2829839bd90" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(12)" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="cea5f4b6-b327-47fb-8575-2f38eda68376" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:4" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="4d86d187-74ce-4acc-8843-074ff9afa7c6" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:5" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="121db8bb-e18f-4cf0-b7c2-3a9a4fe8bdfb" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_Rank6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:6" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -21103,94 +21131,28 @@
         <field name="Name" type="NameTableFieldDefinition" value="Jump" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:1" />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Utility_Jump_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Utility_Jump_L1to3" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,c8f325f3-9d7d-4387-af85-b3b4257e26cc,f4b7eabd-2875-46fa-bae3-9f4d0a51c955;8373f3da-2368-4a51-98b1-146ec3586660,12971987-e66c-45dd-9843-b4784c30d9a2,279cd9eb-1d9c-4e4c-a44e-e751ae0eae66;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;236087a5-5597-4ee7-ab06-75b01147f596,,;ee0b6a78-c6b6-4852-aecb-d7c474a37d68,," />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="33302a46-4a12-41dd-8845-6b7314d50022" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="bcd66fb0-b0bc-41d0-abba-ad443d63dd72" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="32d71967-b080-4ac9-a1cf-c2829839bd90" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellSoundMagnitude" type="EnumerationTableFieldDefinition" value="Big" enumeration_type_name="SpellSoundMagnitude" version="1" />
-        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01" />
-        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01_Loop" />
         <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(Jump_Rank3Unlock_Status,100,10)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_LongJump" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="haa051dbfgbc64g47c0g560fg4a934d8909a5" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h25063cf5ge696g1356gf389gf8aa08995a3a" version="1" />
-        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Ally() and not Dead()" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="adda75c1-f42e-4d4f-a503-dbbbb76e2a3b" />
         <field name="Name" type="NameTableFieldDefinition" value="Jump_2" />
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Jump" />
-        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Utility_Jump_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Utility_Jump_L1to3" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:2" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(Jump_Rank3Unlock_Status,100,10)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_LongJump" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfddcff36gbbbfg2f30g86c8gb594f080b1a6" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h4deca0b7g3723gfd89ga240gfea86d493679" version="1" />
-        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01" />
-        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01_Loop" />
-        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Ally() and not Dead()" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,c8f325f3-9d7d-4387-af85-b3b4257e26cc,f4b7eabd-2875-46fa-bae3-9f4d0a51c955;8373f3da-2368-4a51-98b1-146ec3586660,12971987-e66c-45dd-9843-b4784c30d9a2,279cd9eb-1d9c-4e4c-a44e-e751ae0eae66;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;236087a5-5597-4ee7-ab06-75b01147f596,,;ee0b6a78-c6b6-4852-aecb-d7c474a37d68,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="33302a46-4a12-41dd-8845-6b7314d50022" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="bcd66fb0-b0bc-41d0-abba-ad443d63dd72" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="32d71967-b080-4ac9-a1cf-c2829839bd90" />
-        <field name="SpellSoundMagnitude" type="EnumerationTableFieldDefinition" value="Big" enumeration_type_name="SpellSoundMagnitude" version="1" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="fbbef0b4-068e-4c64-a2b3-078696d69d41" />
         <field name="Name" type="NameTableFieldDefinition" value="Jump_3" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;SpellSlotsGroup:1:1:3" />
-        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Jump" />
-        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(Jump_Rank3Unlock_Status,100,10)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Transmutation_LongJump" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hec8de429g6a17g3c38gf837g55aa0b27d6da" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h4216c8c8g54dfgb53bgda6cg4e29e66bab80" version="1" />
-        <field name="PrepareSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01" />
-        <field name="PrepareLoopSound" type="StringTableFieldDefinition" value="Spell_Prepare_Utility_Gen_L1to3_01_Loop" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Utility_Jump_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Utility_Jump_L1to3" />
-        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Ally() and not Dead()" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;94ad1609-9862-499a-8337-5e6a7d9487f9,c8f325f3-9d7d-4387-af85-b3b4257e26cc,f4b7eabd-2875-46fa-bae3-9f4d0a51c955;8373f3da-2368-4a51-98b1-146ec3586660,12971987-e66c-45dd-9843-b4784c30d9a2,279cd9eb-1d9c-4e4c-a44e-e751ae0eae66;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;236087a5-5597-4ee7-ab06-75b01147f596,,;ee0b6a78-c6b6-4852-aecb-d7c474a37d68,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="33302a46-4a12-41dd-8845-6b7314d50022" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="bcd66fb0-b0bc-41d0-abba-ad443d63dd72" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="32d71967-b080-4ac9-a1cf-c2829839bd90" />
-        <field name="SpellSoundMagnitude" type="EnumerationTableFieldDefinition" value="Big" enumeration_type_name="SpellSoundMagnitude" version="1" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
