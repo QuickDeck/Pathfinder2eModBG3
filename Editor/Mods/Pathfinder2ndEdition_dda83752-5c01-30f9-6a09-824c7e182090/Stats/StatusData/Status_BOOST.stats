@@ -9935,25 +9935,45 @@
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="78a536d2-b8d8-4ffb-9ab8-33bac2c228b1" />
-        <field name="Name" type="NameTableFieldDefinition" value="MysticArmorStatus_Rank_1" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha2f14058g5c1bgde02gf84eg9c014aa42510" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0ad3d9e1g386fg4033ge587g47a9a1729c23" version="1" />
+        <field name="Name" type="NameTableFieldDefinition" value="MYSTIC_ARMOR_1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha2f14058g5c1bgde02gf84eg9c014aa42510" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h0ad3d9e1g386fg4033ge587g47a9a1729c23" version="2" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="StackId" type="StringTableFieldDefinition" value="MysticArmor" />
+        <field name="StackId" type="StringTableFieldDefinition" value="MYSTIC_ARMOR" />
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(ITEM_BON_1AC);" />
         <field name="RemoveConditions" type="RollConditionsTableFieldDefinition" value="WearingArmor()" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="1" />
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnEquip" enumeration_type_name="StatusEvent" version="1" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="b605de22-7474-4f7b-9eeb-287ef6a94dce" />
+        <field name="OnRemoveFunctors" type="FunctorsTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_CLEANUP,100,0)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="9856e0ab-82fa-4943-adf2-dccd974db019" />
-        <field name="Name" type="NameTableFieldDefinition" value="MysticArmorStatus_Rank_4" />
+        <field name="Name" type="NameTableFieldDefinition" value="MYSTIC_ARMOR_4" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="78a536d2-b8d8-4ffb-9ab8-33bac2c228b1" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd7dc9cd2gfa49g92cbg250bg486a37c5cbd8" version="1" />
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="2" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(ITEM_BON_1AC);Tag(ITEM_BON_1SAVES);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="43b2335a-2645-4482-afc6-23de26a92a2b" />
+        <field name="Name" type="NameTableFieldDefinition" value="MYSTIC_ARMOR_6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9856e0ab-82fa-4943-adf2-dccd974db019" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="2" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="3" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="Tag(ITEM_BON_2AC);Tag(ITEM_BON_1SAVES);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="53cb9b71-73b4-4116-b80f-ebed2312533d" />
+        <field name="Name" type="NameTableFieldDefinition" value="MYSTIC_ARMOR_CLEANUP" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11231,6 +11251,9 @@
         <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Projectile_Jump_Rank3Unlock)" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(12)" />
         <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="e14337a2-55b0-495a-8294-02f7de8d0209" />
+        <field name="StackId" type="StringTableFieldDefinition" value="JUMP_RANK_3" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -19274,6 +19297,18 @@
         <field name="UUID" type="IdTableFieldDefinition" value="6e290fe3-ec58-4d69-9840-9b52e56bc8ad" />
         <field name="Name" type="NameTableFieldDefinition" value="HYENA_DRAG_TARGET" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="70d88b29-fca1-4416-815b-6dd677a31360" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="43366c36-562b-40b8-bf6f-46b0adee0d04" />
+        <field name="Name" type="NameTableFieldDefinition" value="MYSTIC_ARMOR_VFX" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="9863d6f0-ba87-4f25-ab71-e77ecfb093e2" />
+        <field name="StackId" type="StringTableFieldDefinition" value="MYSTIC_ARMOR_VFX" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
+        <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1" />
+        <field name="RemoveConditions" type="RollConditionsTableFieldDefinition" value="HasStatus('MYSTIC_ARMOR_CLEANUP',context.Source)" />
+        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnSourceStatusApplied" enumeration_type_name="StatusEvent" version="1" />
       </fields>
     </stat_object>
   </stat_objects>

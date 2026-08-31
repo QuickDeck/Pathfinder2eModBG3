@@ -44,6 +44,11 @@
                     <attribute id="Text" type="TranslatedString" handle="h75f7a03bgac5cgbe70g1f9cg8d7b06d06b3d" version="2"/>
                     <attribute id="UUID" type="guid" value="5b0b668e-17e1-44e2-873b-976597d0424d"/>
                 </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="MysticArmor"/>
+                    <attribute id="Text" type="TranslatedString" handle="h110b4b24g2d4cg10a5gd267g14d0ad5a77e4" version="1"/>
+                    <attribute id="UUID" type="guid" value="ad439e06-7978-466a-8c22-93930d1ae046"/>
+                </node>
             </children>
         </node>
     </region>

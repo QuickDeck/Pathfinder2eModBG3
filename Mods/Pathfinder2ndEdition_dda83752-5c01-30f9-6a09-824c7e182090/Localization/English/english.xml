@@ -4142,8 +4142,8 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="h8d3637c8g1270gd6a8g067cg1db9ea4a8bf5" version="1">Blood Ward (Rank 5)</content>
   <content contentuid="he91cb64agecc5g0b8fg04bcg2033343f082b" version="1">Life Boost</content>
   <content contentuid="h3c30fe89gc93dg3602g3e79g29185d98448c" version="1">Life force from your patron floods into the target, ensuring they can continue doing your patron's will for just a little longer. The target gains fast healing 2.&lt;br&gt;Heightened (+1) The fast healing increases by 2.</content>
-  <content contentuid="ha2f14058g5c1bgde02gf84eg9c014aa42510" version="1">Mystic Armor (Rank 1)</content>
-  <content contentuid="h0ad3d9e1g386fg4033ge587g47a9a1729c23" version="1">You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC. &lt;br&gt;Heightened (4th) You gain a +1 item bonus to saving throws.</content>
+  <content contentuid="ha2f14058g5c1bgde02gf84eg9c014aa42510" version="2">Mystic Armor</content>
+  <content contentuid="h0ad3d9e1g386fg4033ge587g47a9a1729c23" version="2">You ward yourself with shimmering magical energy, gaining a +[1] item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC. At 4th rank and above, you also gain a +1 item bonus to saving throws.</content>
   <content contentuid="hd7dc9cd2gfa49g92cbg250bg486a37c5cbd8" version="1">Mystic Armor (Rank 4)</content>
   <content contentuid="h438e40f3ga25bg5340gd6f2gbc4a11eca278" version="3">Natural disasters and inclement weather hold more power than the mightiest creature. You gain the elemental betrayal hex. Your familiar learns breathe fire, gust of wind, hydraulic push, and pummeling rubble.</content>
   <content contentuid="h61cd8db2gdb11g6be1g407fgc54a8b2bb58d" version="1">Suffer not even the smallest slights. You gain the needle of vengeance hex, and your familiar learns phantom pain.</content>
@@ -5125,7 +5125,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hfaad0fceg62a9g1423gfbb7gb44fb3087e0c" version="3">Jump</content>
   <content contentuid="he36fea0bg28d9gcb54gdaa8g7f4ff558113f" version="3">The target's legs surge with strength, ready to leap high and far. For 1 minute, the target can jump [1] in any direction for 1 action.</content>
   <content contentuid="h11800737gcea1gd449g0318g8a96f0b91fe5" version="1">Mystic Armor</content>
-  <content contentuid="h85e64d7eg9c9fgf7dag6f69g89d9209e756a" version="1">You ward yourself with shimmering magical energy, gaining a +1 item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC. &lt;br&gt;Heightened (4th) You gain a +1 item bonus to saving throws.</content>
+  <content contentuid="h85e64d7eg9c9fgf7dag6f69g89d9209e756a" version="3">You ward yourself with shimmering magical energy, gaining a +[1] item bonus to AC. You must not be wearing armor to benefit from this spell.</content>
   <content contentuid="hb7809e71gaae3g051fg5d07g4c5bd023a46b" version="1">Fear (PF2)</content>
   <content contentuid="hb9be1a72gc242gc67cgc9a3g2eb10e34d996" version="1">2 Actions&lt;br&gt;Range 30 feet&lt;br&gt;Targets 1 creature&lt;br&gt;Defense Will&lt;br&gt;You plant fear in the target; it must attempt a Will save.&lt;br&gt;Critical Success The target is unaffected.&lt;br&gt;Success The target is frightened 1.&lt;br&gt;Failure The target is frightened 2.&lt;br&gt;Critical Failure The target is frightened 3&lt;br&gt;Heightened (3rd) You can target up to five creatures.</content>
   <content contentuid="hca8e9f42g51e5g1311ge43ag5d4189bae778" version="2">Fear</content>
@@ -32681,4 +32681,11 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h8d5b569cg39edg384bg47d1gccd94de22195" version="1">You fire a shard of solidified magic toward [2] creatures that you can see. They automatically hit and deal [1]. You can target the same creature multiple times.</content>
   <content contentuid="h75f7a03bgac5cgbe70g1f9cg8d7b06d06b3d" version="2">Every second rank, the number of shards produced per action spent increases by 1.</content>
   <content contentuid="h7ace7373g6a9ag9413g4fe6g58e340e51ac1" version="1">Already used Bless this turn.</content>
+  <content contentuid="h9eae6dc1gb454g0860g696dg87fe25d3c8e4" version="1">You ward yourself with shimmering magical energy, gaining a +[1] item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC. You gain a +1 item bonus to saving throws.</content>
+  <content contentuid="h110b4b24g2d4cg10a5gd267g14d0ad5a77e4" version="1">At fourth rank, you also gain a +1 item bonus to saving throws. At 6th rank, the item bonus to AC increases to +2.</content>
+  <content contentuid="hb8508a9dg19edg1c74g0fb7g621839b725a1" version="1">Mystic Armor</content>
+  <content contentuid="hc1c75446ga9d7gca1fgd2efg1a7c4bba02b6" version="1">You ward yourself with shimmering magical energy, gaining a +[1] item bonus to AC. You must not be wearing armor to benefit from this spell.</content>
+  <content contentuid="hf6ac0d10g873fgb11dg0f56g151a6a7bc400" version="1">You ward yourself with shimmering magical energy, gaining a +[1] item bonus to AC and a maximum Dexterity modifier of +5. While wearing mystic armor, you use your unarmored proficiency to calculate your AC. You gain a +1 item bonus to saving throws.</content>
+  <content contentuid="h8675900bgd492g8c40g7aedg0467b708bd2d" version="1">Rolan's Mage Armour</content>
+  <content contentuid="h93d5f3e3g702ege482gcc96gee8ac0a05994" version="1">Grant a creature a rudimentary defensive boost, increasing its &lt;LSTag Tooltip="ArmorClass"&gt;Armour Class&lt;/LSTag&gt; by [1].</content>
 </contentList>

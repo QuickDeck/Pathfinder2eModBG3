@@ -5740,102 +5740,25 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="b2e2410f-f3bf-4698-b6d5-2a47a23e2fbd" />
+        <field name="UUID" type="IdTableFieldDefinition" value="38eca6a4-e0ad-46d5-8979-3723c86f8993" />
         <field name="Name" type="NameTableFieldDefinition" value="MageArmor" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h9b80c96bgb343g3fdbg38efgf988292e6533" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he5c504c0gf5bdg43dcgef38g199fd6ea73d3" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="651b22a0-c018-4aca-a646-e3600f213945" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="8dc0a1bb-b530-4e8f-be0c-0432f922f367" />
+        <field name="UUID" type="IdTableFieldDefinition" value="8d4e7955-153b-4844-84f1-cae5e0ee5b62" />
         <field name="Name" type="NameTableFieldDefinition" value="MageArmor_2" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:2" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="aa4d2aa2-f0cd-435c-bc8b-85734e9d162c" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MageArmor" />
-        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha9f43a97gb95bg0335gcc8eg55f08e7a87b4" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h4997a7e6g713eg76baged80gaf563cb6d03b" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
-        <field name="UUID" type="IdTableFieldDefinition" value="160b4a99-7fdc-47f9-ba78-e6af36cf4984" />
+        <field name="UUID" type="IdTableFieldDefinition" value="80d77d13-6e63-47e8-8ce1-7a2a8c9bb5a6" />
         <field name="Name" type="NameTableFieldDefinition" value="MageArmor_3" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8a6c9c95-fe1b-4b4c-8630-19a4a9ba9853" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MageArmor" />
-        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4b3ddcd0g7c3eg236agbc1ag09deb6cb201e" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h923c5b5eg3505g0bcag2b77gd6bb8174d0b5" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -12308,99 +12231,84 @@
         <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Base" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
         <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_1,100,-1);ApplyEquipmentStatus(SELF,Breast,MYSTIC_ARMOR_VFX,100,5);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and ConcentrateSpell();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h11800737gcea1gd449g0318g8a96f0b91fe5" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h85e64d7eg9c9fgf7dag6f69g89d9209e756a" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h85e64d7eg9c9fgf7dag6f69g89d9209e756a" version="3" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_1,100,-1)" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="ad439e06-7978-466a-8c22-93930d1ae046" />
         <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
         <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
         <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor();" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:1" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;bcc3b0d9-f04f-4448-aab0-e0ad641167cc,,;bf924cc6-8b39-4c3b-b1c0-eda264cf6150,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;bcc3b0d9-f04f-4448-aab0-e0ad641167cc,,;,," />
         <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
         <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="1" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
         <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell() and not WearingArmor();" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="1" />
+        <field name="PreviewCursor" type="EnumerationTableFieldDefinition" value="Cast" enumeration_type_name="CursorMode" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="aa4d2aa2-f0cd-435c-bc8b-85734e9d162c" />
         <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Rank2" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h6d8d0305g31a0g50bfge37dgcb911b4dbbb3" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha59adfffg14a7g1c6dg3260g4c14386445c2" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_1,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:2" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MysticArmor_Base" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="651b22a0-c018-4aca-a646-e3600f213945" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="8a6c9c95-fe1b-4b4c-8630-19a4a9ba9853" />
+        <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Rank3" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="651b22a0-c018-4aca-a646-e3600f213945" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MysticArmor_Base" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="8244ca10-eeb1-4428-aa1f-39583cf5bb38" />
         <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Rank4" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Abjuration" enumeration_type_name="SpellSchool" version="1" />
-        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_4,100,-1)" />
-        <field name="TargetRadius" type="StringTableFieldDefinition" value="2" />
-        <field name="TargetConditions" type="StringTableFieldDefinition" value="Self() and not WearingArmor() and ConcentrateSpell();" />
-        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Abjuration_MageArmor" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h0ab58c64g8bd7ge2b9g1dc2g86dc4f1b8e3a" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7e4589bdgf58fg61cbg0262ge2bb17028971" version="1" />
-        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MysticArmorStatus_Rank_4,100,-1)" />
-        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="6ff1780a-855a-414c-a8bf-811251537206" />
-        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" value="23589df5-60a7-4429-962f-287e7e0e5ae0" />
-        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Buff_MageArmor_L1to3" />
-        <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Buff_MageArmor_L1to3" />
-        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="CycleConditions" type="StringTableFieldDefinition" value="Self() and not Dead() and not WearingArmor()" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_4,100,-1);ApplyEquipmentStatus(SELF,Breast,MYSTIC_ARMOR_VFX,100,-1);" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h9eae6dc1gb454g0860g696dg87fe25d3c8e4" version="1" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_4,100,-1)" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
-        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="03496c4a-49e0-4132-b585-3e5ecd1ad8e5,,;,,;5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184,5e7e63e1-0e69-46e7-ade7-fe3dadcc9184;e9ad50df-e7f1-43a0-b782-4c08f92b0f5a,,;a9682ef9-5d9e-4ac0-8144-2c7fe6eb868c,,;,,;32fb4d91-7fde-4b05-9144-ea87b9a4284a,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent;IsMelee" enumeration_type_name="SpellFlagList" version="1" />
-        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalNonDamage" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
         <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MysticArmor_Base" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="d39761b2-330d-455b-9225-b54dedc8c1c6" />
-        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0a0b5aa5-a6d0-464d-8fa1-20a1c48530f2" />
-        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="99ae486b-9055-4a75-b536-e57d62f15c0e" />
-        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="651b22a0-c018-4aca-a646-e3600f213945" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1aff9471-7fe4-4bb4-a539-b13f83539d86" />
+        <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Rank5" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8244ca10-eeb1-4428-aa1f-39583cf5bb38" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="96aeab14-7ab8-467e-bf74-33dc092a8887" />
+        <field name="Name" type="NameTableFieldDefinition" value="MysticArmor_Rank6" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8244ca10-eeb1-4428-aa1f-39583cf5bb38" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="2" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_6,100,-1)" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(MYSTIC_ARMOR_6,100,-1);ApplyEquipmentStatus(SELF,Breast,MYSTIC_ARMOR_VFX,100,-1);" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -21129,8 +21037,6 @@
       <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="99170283-5c5f-4544-8994-ab4563d865e6" />
         <field name="Name" type="NameTableFieldDefinition" value="Jump" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
         <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
@@ -21140,8 +21046,6 @@
         <field name="UUID" type="IdTableFieldDefinition" value="adda75c1-f42e-4d4f-a503-dbbbb76e2a3b" />
         <field name="Name" type="NameTableFieldDefinition" value="Jump_2" />
         <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
     </stat_object>
@@ -21150,8 +21054,6 @@
         <field name="UUID" type="IdTableFieldDefinition" value="fbbef0b4-068e-4c64-a2b3-078696d69d41" />
         <field name="Name" type="NameTableFieldDefinition" value="Jump_3" />
         <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Transmutation" enumeration_type_name="SpellSchool" version="1" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="52d4aa8a-7c4e-4832-b0e5-fe1d0b779ce3" />
       </fields>
     </stat_object>
@@ -30273,6 +30175,95 @@
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="c6318d1b-1355-4f49-8c9e-0db3d3ba4805" />
         <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="594a3a82-6e67-40aa-a156-e6909b839d76" />
         <field name="DamageType" type="EnumerationTableFieldDefinition" value="Bludgeoning" enumeration_type_name="Damage Type" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1f174b0f-f0ea-4f6b-81c0-a5fdc1581d1d" />
+        <field name="Name" type="NameTableFieldDefinition" value="MageArmor_4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="8244ca10-eeb1-4428-aa1f-39583cf5bb38" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MageArmor" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="d0b0dfbd-6897-4045-b0b4-5ee755a9d08d" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="1aff9471-7fe4-4bb4-a539-b13f83539d86" />
+        <field name="Name" type="NameTableFieldDefinition" value="MageArmor_5" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MageArmor" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="f5ea363d-a04a-4682-83d4-8bc7fab89e84" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="96aeab14-7ab8-467e-bf74-33dc092a8887" />
+        <field name="Name" type="NameTableFieldDefinition" value="MageArmor_6" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_MageArmor" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3eea47e7-4dcb-4910-a8c3-5f2c572efbc1" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_4" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fbbef0b4-068e-4c64-a2b3-078696d69d41" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:4" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Jump" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1a6651cd-17c3-49cb-8bcd-5ba96fd35429" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fbbef0b4-068e-4c64-a2b3-078696d69d41" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_5" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Jump" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="5" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:5" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="bd709882-0fdf-4878-b89e-8db105267a5e" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="fbbef0b4-068e-4c64-a2b3-078696d69d41" />
+        <field name="Name" type="NameTableFieldDefinition" value="Jump_6" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" value="Target_Jump" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="56543234-b8e9-45ba-a4b5-84c8322dc921" />
+        <field name="Name" type="NameTableFieldDefinition" value="LOW_Rolan_MageArmor_" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="b2e2410f-f3bf-4698-b6d5-2a47a23e2fbd" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="ApplyStatus(LOW_ROLAN_MAGE_ARMOR,100,-1)" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Enemy() and not HasStatus('LOW_ROLAN_MAGE_ARMOR')" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8675900bgd492g8c40g7aedg0467b708bd2d" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h93d5f3e3g702ege482gcc96gee8ac0a05994" version="1" />
+        <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" clear_inherited_value="true" />
+        <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(LOW_ROLAN_MAGE_ARMOR,100,-1)" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Ally() and not Dead()" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="8" />
+        <field name="TooltipPermanentWarnings" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasVerbalComponent;HasSomaticComponent" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="2" />
+        <field name="CombatAIOverrideSpell" type="StatReferenceTableFieldDefinition" clear_inherited_value="true" value="" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="dbcb294e-3756-4c25-a377-01d6a4067b13" />
+        <field name="Name" type="NameTableFieldDefinition" value="LOW_Rolan_MageArmor" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="96aeab14-7ab8-467e-bf74-33dc092a8887" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:3" />
+        <field name="RootSpellID" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="PowerLevel" type="IntegerTableFieldDefinition" value="3" />
       </fields>
     </stat_object>
   </stat_objects>

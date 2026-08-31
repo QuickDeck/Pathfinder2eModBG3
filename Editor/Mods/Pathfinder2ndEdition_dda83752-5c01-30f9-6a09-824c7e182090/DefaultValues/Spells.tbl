@@ -27,7 +27,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="4d02bfc1-75e6-42eb-acd9-126e65f43862" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="d18eda7e-4b7d-490d-9952-cd33a3c60479" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_ElectricArc;Target_IgnitionContainer;Target_TelekineticHand;Projectile_RayOfFrost;Shout_Shield_Cantrip;Target_MysticArmor_Base;Zone_BurningHands;Target_Grease;Target_Sleep;Projectile_MagicMissile" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_ElectricArc;Target_IgnitionContainer;Target_TelekineticHand;Projectile_RayOfFrost;Shout_Shield_Cantrip;Shout_MysticArmor_Rank1;Zone_BurningHands;Target_Grease;Target_Sleep;Projectile_MagicMissile" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Wizard" />
       </fields>
     </stat_object>
@@ -60,7 +60,7 @@
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="d18eda7e-4b7d-490d-9952-cd33a3c60479" />
         <field name="Origin" type="GuidTableFieldDefinition" value="35c3caad-5543-4593-be75-e7deba30f062" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Target_IgnitionContainer;Target_TelekineticHand;Projectile_RayOfFrost;Shout_Shield_Cantrip;Target_Thunderstrike_Rank1;Target_Longstrider;Target_Sleep;Zone_GustOfWind;Target_MysticArmor_Base" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Target_IgnitionContainer;Target_TelekineticHand;Projectile_RayOfFrost;Shout_Shield_Cantrip;Target_Thunderstrike_Rank1;Target_Longstrider;Target_Sleep;Zone_GustOfWind;Shout_MysticArmor_Rank1" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Gale" />
       </fields>
     </stat_object>
@@ -140,7 +140,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="dbf1a185-4021-4c99-b9a2-b429b2068db1" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="7e1e0190-bd32-4ca6-9623-8adebeba74d4" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_NeedleDarts;Projectile_ElectricArc;Projectile_ScatterScree;Target_GougingClaw;Projectile_PoisonSpray;Target_Guidance;Target_HealBase1;Target_SacredBeasts_Rank1;Target_MysticArmor_Base;Target_MagicWeapon;Target_Longstrider;Target_FlourishingFlora_Rank1" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_NeedleDarts;Projectile_ElectricArc;Projectile_ScatterScree;Target_GougingClaw;Projectile_PoisonSpray;Target_Guidance;Target_HealBase1;Target_SacredBeasts_Rank1;Shout_MysticArmor_Rank1;Target_MagicWeapon;Target_Longstrider;Target_FlourishingFlora_Rank1" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Witch: Wild" />
       </fields>
     </stat_object>
@@ -150,7 +150,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="997634ca-53da-4cda-8bd6-652969b21202" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="a5663842-6653-4cfd-abd8-dfbb0a2ca1b5" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Projectile_RayOfFrost;Target_Spout;Target_RousingSplash;Shout_GlassShield;Target_HealBase1;Zone_ChillingSpray_Rank1;Target_MysticArmor_Base;Target_MagicWeapon;Target_CreateDestroyWater" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Projectile_RayOfFrost;Target_Spout;Target_RousingSplash;Shout_GlassShield;Target_HealBase1;Zone_ChillingSpray_Rank1;Shout_MysticArmor_Rank1;Target_MagicWeapon;Target_CreateDestroyWater" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Witch: Winter" />
       </fields>
     </stat_object>
@@ -160,7 +160,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="358bcf18-9f9c-40c9-8d12-43cacebb7bd2" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="6bc59ea3-e028-4cbe-bf8c-c2af0ce9d074" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_ElectricArc;Throw_TelekineticProjectile;Target_Light;Shout_GlassShield;Target_MinorIllusion;Target_MysticArmor_Base;Projectile_MagicMissile;Target_Endure_Rank1;Zone_ColorSpray;Target_Command_Container;Target_Thunderstrike_Rank1" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_ElectricArc;Throw_TelekineticProjectile;Target_Light;Shout_GlassShield;Target_MinorIllusion;Shout_MysticArmor_Rank1;Projectile_MagicMissile;Target_Endure_Rank1;Zone_ColorSpray;Target_Command_Container;Target_Thunderstrike_Rank1" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Witch: Rune" />
       </fields>
     </stat_object>
@@ -170,7 +170,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="0ebc8d48-7441-4191-a037-88f3dd019833" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="85a7da24-525b-41bb-9b6a-9fe4d49bb4da" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Target_Guidance;Projectile_DivineLance;Projectile_NeedleDarts;Target_ChillTouch;Shout_Shield_Cantrip;Target_MagicWeapon;Target_SacredBeasts_Rank1;Target_MysticArmor_Base;Target_HelpfulSteps_Rank1;Target_HealBase1" />
+        <field name="Add" type="StringTableFieldDefinition" value="Target_Guidance;Projectile_DivineLance;Projectile_NeedleDarts;Target_ChillTouch;Shout_Shield_Cantrip;Target_MagicWeapon;Target_SacredBeasts_Rank1;Shout_MysticArmor_Rank1;Target_HelpfulSteps_Rank1;Target_HealBase1" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Witch: Fervor" />
       </fields>
     </stat_object>
