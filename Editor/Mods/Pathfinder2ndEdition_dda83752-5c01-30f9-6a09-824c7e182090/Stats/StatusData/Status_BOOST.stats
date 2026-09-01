@@ -10961,26 +10961,25 @@
         <field name="UUID" type="IdTableFieldDefinition" value="d9d2c648-0f5d-42f0-9c09-0abfae67746c" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank1" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8bd7f93bg7bc8g2e8dg62a9g8861d8e6e445" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7588d3f8g1cb6g0972g34f4gc0447f249d43" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7588d3f8g1cb6g0972g34f4gc0447f249d43" version="2" />
         <field name="Icon" type="StringTableFieldDefinition" value="Status_Burning" />
         <field name="FormatColor" type="EnumerationTableFieldDefinition" value="Fire" enumeration_type_name="FormatStringColor" version="1" />
         <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalDamage_External" enumeration_type_name="HitAnimationType" version="1" />
-        <field name="SoundLoop" type="StringTableFieldDefinition" value="Misc_Status_Burning_MO" />
-        <field name="SoundStop" type="StringTableFieldDefinition" value="Misc_Status_Burning_MO_Stop" />
         <field name="StackId" type="StringTableFieldDefinition" value="BURNING" />
-        <field name="StackPriority" type="IntegerTableFieldDefinition" value="0" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="4" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Overwrite" enumeration_type_name="StatusStackType" version="1" />
-        <field name="SurfaceChange" type="StringTableFieldDefinition" value="Ignite" />
         <field name="TickType" type="EnumerationTableFieldDefinition" value="EndTurn" enumeration_type_name="TickType" version="1" />
-        <field name="RemoveConditions" type="RollConditionsTableFieldDefinition" value="PersistentFireRemove(false)" />
+        <field name="RemoveConditions" type="RollConditionsTableFieldDefinition" value="PersistentFireRemove(false) or HasStatus('DRINK_WATER',context.Target)" />
         <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurn" enumeration_type_name="StatusEvent" version="1" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(1d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage(1d6,Fire,Magical)" />
-        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="InitiateCombat;Burning;DisableOverhead;IgnoreResting" enumeration_type_name="StatusPropertyFlags" version="1" />
-        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Light;SG_Helpable_Condition" enumeration_type_name="StatusGroupFlags" version="1" />
-        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="2156dd48-f83b-4060-9a4e-cab994da8857" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="InitiateCombat;DisableOverhead;IgnoreResting" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="StatusGroups" type="EnumerationListTableFieldDefinition" value="SG_Condition" enumeration_type_name="StatusGroupFlags" version="1" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="78a54491-3082-45bd-afea-66ad9129a2c2" />
         <field name="OnApplyConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
-        <field name="Boosts" type="StringTableFieldDefinition" value="StatusImmunity(WET);" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6,Fire)" />
+        <field name="OnTickRoll" type="RollConditionsTableFieldDefinition" value="PersistentFireRemove(false) or HasStatus('DRINK_WATER',context.Target)" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank1)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -10990,6 +10989,9 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="d9d2c648-0f5d-42f0-9c09-0abfae67746c" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage((1d6)*2,Fire,Magical)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="8" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank1_Double)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -10997,10 +10999,11 @@
         <field name="UUID" type="IdTableFieldDefinition" value="5f44c104-2132-4cf5-b8b0-08f5c9141eb4" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank3" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d9d2c648-0f5d-42f0-9c09-0abfae67746c" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hcd9eb6efgd333g058dga845g48ba61bb77fd" version="1" />
-        <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="14" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(4d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage(4d6,Fire,Magical)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(4d6,Fire)" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank3)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11010,6 +11013,9 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="5f44c104-2132-4cf5-b8b0-08f5c9141eb4" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(8d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage((4d6)*2,Fire,Magical)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(8d6,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="28" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank3_Double)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11017,10 +11023,11 @@
         <field name="UUID" type="IdTableFieldDefinition" value="b40cbd00-0613-42c0-b331-a3dc4a1c2f0c" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank5" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d9d2c648-0f5d-42f0-9c09-0abfae67746c" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h74856900g5d90g9a82gd58agdf506cbfde88" version="1" />
-        <field name="StackPriority" type="IntegerTableFieldDefinition" value="2" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="25" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(7d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage(7d6,Fire,Magical)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(7d6,Fire)" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank5)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11030,6 +11037,9 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="b40cbd00-0613-42c0-b331-a3dc4a1c2f0c" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage(14d6,Fire)" />
         <field name="TickFunctors" type="FunctorsTableFieldDefinition" value="IF(not Tagged('TORCH')):DealDamage((7d6)*2,Fire,Magical)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(14d6,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="49" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank5_Double)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11205,8 +11215,6 @@
         <field name="UUID" type="IdTableFieldDefinition" value="9475b44b-5d9f-4ef3-82c1-2c903c1fa1c3" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateEnfeebled" />
         <field name="TickType" type="EnumerationTableFieldDefinition" value="EndTurn" enumeration_type_name="TickType" version="1" />
-        <field name="RemoveConditions" type="RollConditionsTableFieldDefinition" value="SavingThrow(Ability.Constitution, SourceSpellDC())" />
-        <field name="RemoveEvents" type="EnumerationListTableFieldDefinition" value="OnTurn" enumeration_type_name="StatusEvent" version="1" />
         <field name="StackId" type="StringTableFieldDefinition" value="DEHYDRATE_ENFEEBLED" />
         <field name="StackPriority" type="IntegerTableFieldDefinition" value="1" />
         <field name="StackType" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="StatusStackType" version="1" />
@@ -11216,11 +11224,22 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="be1d4d6a-b774-4923-a453-236b4c0e3f8c" />
+        <field name="Name" type="NameTableFieldDefinition" value="DehydrateEnfeebledCrit" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="9475b44b-5d9f-4ef3-82c1-2c903c1fa1c3" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="2" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="Tag(ENFEEBLED_2);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="2c34fe5d-6e9f-446c-b91d-0534ea4ec1b5" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank1_Half" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="d9d2c648-0f5d-42f0-9c09-0abfae67746c" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf92706e4g2df0g939bg842cg48f4c4b05bcf" version="1" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage((1d6)/2,Fire)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(1d6/2,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="2" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank1_Half)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11228,8 +11247,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="c39c0054-8ba8-46b1-b4c6-f9250aa7086e" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank3_Half" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="5f44c104-2132-4cf5-b8b0-08f5c9141eb4" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="he5c1357fg3918g5ec1g61f0g6f8dae2dd717" version="1" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage((4d6)/2,Fire)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(4d6/2,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="7" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank3_Half)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -11237,8 +11258,10 @@
         <field name="UUID" type="IdTableFieldDefinition" value="df455380-1f35-4e8c-8528-6c51502f3372" />
         <field name="Name" type="NameTableFieldDefinition" value="DehydrateDamage_Rank5_Half" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="b40cbd00-0613-42c0-b331-a3dc4a1c2f0c" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7acd89edg6002ga217gb0bcgd92b40157e82" version="1" />
         <field name="TooltipDamage" type="StringTableFieldDefinition" value="DealDamage((7d6)/2,Fire)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(7d6/2,Fire)" />
+        <field name="StackPriority" type="IntegerTableFieldDefinition" value="12" />
+        <field name="OnTickSuccess" type="FunctorsTableFieldDefinition" value="RemoveStatus(DehydrateDamage_Rank5_Half)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

@@ -1528,6 +1528,19 @@ function SaveCritMiss(save_type)
 	return ConditionResult(false)
 end
 
+-- Dehydrate treats DC as 10 higher for water and plant creatures.
+function DehydrateDC(target,source)
+	target = target or context.Target
+	source = source or context.Source
+	dc = SourceSpellDC(10,source)
+	
+	if HasAnyTags({'CHASM_IMMUNE_SWIM','PLANT'},target) then
+		dc = dc + 10
+	end
+
+	return dc
+end
+
 function SkillCrit()
 	local total, difficulty = LastConditionRollValues(ConditionRollType.ConditionSkillCheck)
 	local thresholdtotal = total - 10

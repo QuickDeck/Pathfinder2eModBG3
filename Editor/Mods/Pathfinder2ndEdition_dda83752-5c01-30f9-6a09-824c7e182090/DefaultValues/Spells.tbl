@@ -150,7 +150,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="997634ca-53da-4cda-8bd6-652969b21202" />
         <field name="ProgressionUUID" type="GuidTableFieldDefinition" value="a5663842-6653-4cfd-abd8-dfbb0a2ca1b5" />
         <field name="Level" type="IntegerTableFieldDefinition" value="1" />
-        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Projectile_RayOfFrost;Target_Spout;Target_RousingSplash;Shout_GlassShield;Target_HealBase1;Zone_ChillingSpray_Rank1;Shout_MysticArmor_Rank1;Target_MagicWeapon;Target_CreateDestroyWater" />
+        <field name="Add" type="StringTableFieldDefinition" value="Projectile_EldritchBlast;Projectile_RayOfFrost;Target_Spout;Target_RousingSplash;Shout_GlassShield;Target_HealBase1;Zone_ChillingSpray_Rank1;Shout_MysticArmor_Rank1;Target_MagicWeapon" />
         <field name="Comment" type="CommentTableFieldDefinition" value="Witch: Winter" />
       </fields>
     </stat_object>
