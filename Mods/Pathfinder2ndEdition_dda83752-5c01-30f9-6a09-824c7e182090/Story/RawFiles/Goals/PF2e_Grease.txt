@@ -1,0 +1,421 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_GreaseSurfaceDefaults("SurfaceGrease", 90.0);
+DB_GreaseSurfaceDefaults("SurfaceGreaseFrozen", 108.0);
+DB_GreaseSurfaceDefaults("SurfaceSewer", 90.0);
+DB_GreaseSurfaceDefaults("SurfaceWaterFrozen", 120.0);
+
+DB_GreaseAcrobaticsStatuses("CircumstanceBonus1Acrobatics", 1.0);
+DB_GreaseAcrobaticsStatuses("CircumstanceBonus2Acrobatics", 2.0);
+DB_GreaseAcrobaticsStatuses("CircumstancePenalty1Acrobatics", -1.0);
+DB_GreaseAcrobaticsStatuses("CircumstancePenalty2Acrobatics", -2.0);
+DB_GreaseAcrobaticsStatuses("ItemBonus1Acrobatics", 1.0);
+DB_GreaseAcrobaticsStatuses("ItemBonus2Acrobatics", 2.0);
+DB_GreaseAcrobaticsStatuses("ItemPenalty1Acrobatics", -1.0);
+DB_GreaseAcrobaticsStatuses("ItemPenalty2Acrobatics", -2.0);
+DB_GreaseAcrobaticsStatuses("StatusBonus1Acrobatics", 1.0);
+DB_GreaseAcrobaticsStatuses("StatusBonus2Acrobatics", 2.0);
+DB_GreaseAcrobaticsStatuses("StatusPenalty1Acrobatics", -1.0);
+DB_GreaseAcrobaticsStatuses("StatusPenalty2Acrobatics", -2.0);
+
+DB_GreaseAcrobaticsPassives("AcrobaticsIncrease", 2.0);
+DB_GreaseAcrobaticsPassives("AcrobaticsIncrease2", 2.0);
+DB_GreaseAcrobaticsPassives("AcrobaticsExpert", 2.0);
+
+DB_GreaseReflexStatuses("CircumstanceBonus1ReflexSaves", 1.0);
+DB_GreaseReflexStatuses("CircumstanceBonus2ReflexSaves", 2.0);
+DB_GreaseReflexStatuses("CircumstancePenalty1ReflexSaves", -1.0);
+DB_GreaseReflexStatuses("CircumstancePenalty2ReflexSaves", -2.0);
+DB_GreaseReflexStatuses("ItemBonus1ReflexSaves", 1.0);
+DB_GreaseReflexStatuses("ItemBonus2ReflexSaves", 2.0);
+DB_GreaseReflexStatuses("ItemPenalty1ReflexSaves", -1.0);
+DB_GreaseReflexStatuses("ItemPenalty2ReflexSaves", -2.0);
+DB_GreaseReflexStatuses("StatusBonus1ReflexSaves", 1.0);
+DB_GreaseReflexStatuses("StatusBonus2ReflexSaves", 2.0);
+DB_GreaseReflexStatuses("StatusPenalty1ReflexSaves", -1.0);
+DB_GreaseReflexStatuses("StatusPenalty2ReflexSaves", -2.0);
+DB_GreaseReflexStatuses("StatusPenalty3ReflexSaves", -3.0);
+
+DB_GreaseReflexPassives("ReflexExpert", 2.0);
+DB_GreaseReflexPassives("ReflexMaster", 4.0);
+DB_GreaseReflexPassives("ReflexLegend", 6.0);
+// Bias to reflex if we have crit converting passive.
+DB_GreaseReflexPassives("CritConvert_Evasion", 1.0);
+KBSECTION
+// If the character does not already have a grease DC, apply one
+// by grabbing the spell DC of the cause.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PROC", _, _)
+AND
+HasActiveStatus(_Character, "GREASE_BLOCK", 0)
+AND
+HasActiveStatus(_Character, "DISENGAGE", 0)
+AND
+HasActiveStatus(_Character, "PRONE_PF2", 0)
+AND
+GetSurfaceGroundOwnerAt(_Character, (CHARACTER)_Owner, _)
+AND
+HasActiveStatus((GUIDSTRING)_Owner, "SPELL_DC_TRACKER", 1)
+AND
+GetStatusCurrentLifetime(_Owner, "SPELL_DC_TRACKER", (REAL)_DCSeconds)
+THEN
+ApplyStatus(_Character, "GREASE_DC", _DCSeconds, 0, _Owner);
+
+// If we can't find the source DC, just use 15.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PROC", _, _)
+AND
+HasActiveStatus(_Character, "GREASE_BLOCK", 0)
+AND
+HasActiveStatus(_Character, "DISENGAGE", 0)
+AND
+HasActiveStatus(_Character, "PRONE_PF2", 0)
+AND
+GetSurfaceGroundOwnerAt(_Character, (CHARACTER)_Owner, _)
+AND
+_Owner != NULL_00000000-0000-0000-0000-000000000000
+AND
+HasActiveStatus(_Owner, "SPELL_DC_TRACKER", 0)
+THEN
+ApplyStatus(_Character, "GREASE_DC", 90.0, 0, _Owner);
+
+// If a surface has no owner, use our lookup table for
+// slippery surfaces.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PROC", _, _)
+AND
+HasActiveStatus(_Character, "GREASE_BLOCK", 0)
+AND
+HasActiveStatus(_Character, "DISENGAGE", 0)
+AND
+HasActiveStatus(_Character, "PRONE_PF2", 0)
+AND
+GetSurfaceGroundOwnerAt(_Character, (CHARACTER)_Owner, _)
+AND
+_Owner == NULL_00000000-0000-0000-0000-000000000000
+AND
+GetSurfaceGroundAt(_Character, (STRING)_Surface)
+AND
+DB_GreaseSurfaceDefaults(_Surface, (REAL)_DCSeconds)
+THEN
+ApplyStatus(_Character, "GREASE_DC", _DCSeconds, 0, _Character);
+
+// We then schedule a status to perform the check after a delay. We
+// need to determine whether to use a reflex save or an acrobatics
+// check by comparing the character's bonuses and penalties to each.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PROC", _, _)
+AND
+HasActiveStatus(_Character, "GREASE_BLOCK", 0)
+AND
+HasActiveStatus(_Character, "DISENGAGE", 0)
+AND
+HasActiveStatus(_Character, "PRONE_PF2", 0)
+THEN
+RealtimeObjectTimerLaunch(_Character, "GreaseCheckEvent", 30);
+
+IF
+ObjectTimerFinished((GUIDSTRING)_Character, "GreaseCheckEvent")
+THEN
+PROC_ScheduleGreaseCheck(_Character);
+
+// First, clear the DB of previous results
+PROC
+PROC_ScheduleGreaseCheck((GUIDSTRING)_Character)
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+NOT DB_BestGreaseBonus(_Character, _Score, _Status);
+
+// Check bonuses for each potential roll, and each QRY will set the
+// status to be applied if they beat the current value.
+PROC
+PROC_ScheduleGreaseCheck((GUIDSTRING)_Character)
+AND
+QRY_CalculateGreaseAcrobaticsBonus(_Character, "GREASE_ACROBATICS_CHECK")
+AND
+QRY_CalculateGreaseReflexBonus(_Character, "GREASE_REFLEX_CHECK")
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+ApplyStatus(_Character, _Status, 0.0, 0, _Character);
+
+//REGION Acrobatics
+// Clear out the DB first.
+QRY
+QRY_CalculateGreaseAcrobaticsBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseAcrobaticsBonusTracker(_Character, (REAL)_Current)
+THEN
+NOT DB_GreaseAcrobaticsBonusTracker(_Character, _Current);
+
+// And preset it to 0.
+QRY
+QRY_CalculateGreaseAcrobaticsBonus((GUIDSTRING)_Character, (STRING)_Status)
+THEN
+DB_GreaseAcrobaticsBonusTracker(_Character, 0.0);
+
+// Acrobatics is always checked first, so no need to compare to any
+// value here, just grab the bonuses. First we do statuses.
+QRY
+QRY_CalculateGreaseAcrobaticsBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseAcrobaticsStatuses((STRING)_Status, (REAL)_Bonus)
+AND
+HasActiveStatus(_Character, _Status, 1)
+AND
+DB_GreaseAcrobaticsBonusTracker(_Character, (REAL)_Current)
+AND
+RealSum(_Current, _Bonus, (REAL)_New)
+THEN
+NOT DB_GreaseAcrobaticsBonusTracker(_Character, _Current);
+DB_GreaseAcrobaticsBonusTracker(_Character, _New);
+
+// And then passives.
+QRY
+QRY_CalculateGreaseAcrobaticsBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseAcrobaticsPassives((STRING)_Passive, (REAL)_Bonus)
+AND
+HasPassive(_Character, _Passive, 1)
+AND
+DB_GreaseAcrobaticsBonusTracker(_Character, (REAL)_Current)
+AND
+RealSum(_Current, _Bonus, (REAL)_New)
+THEN
+NOT DB_GreaseAcrobaticsBonusTracker(_Character, _Current);
+DB_GreaseAcrobaticsBonusTracker(_Character, _New);
+
+// Once that is complete, update the overall tracker.
+QRY
+QRY_CalculateGreaseAcrobaticsBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseAcrobaticsBonusTracker(_Character, (REAL)_Current)
+THEN
+DB_BestGreaseBonus(_Character, _Current, _Status);
+//END_REGION Acrobatics
+
+//REGION Reflex
+// Clear out the DB first.
+QRY
+QRY_CalculateGreaseReflexBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseReflexBonusTracker(_Character, (REAL)_Current)
+THEN
+NOT DB_GreaseReflexBonusTracker(_Character, _Current);
+
+// And preset it to 0.
+QRY
+QRY_CalculateGreaseReflexBonus((GUIDSTRING)_Character, (STRING)_Status)
+THEN
+DB_GreaseReflexBonusTracker(_Character, 0.0);
+
+// First we do statuses.
+QRY
+QRY_CalculateGreaseReflexBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseReflexStatuses((STRING)_Status, (REAL)_Bonus)
+AND
+HasActiveStatus(_Character, _Status, 1)
+AND
+DB_GreaseReflexBonusTracker(_Character, (REAL)_Current)
+AND
+RealSum(_Current, _Bonus, (REAL)_New)
+THEN
+NOT DB_GreaseReflexBonusTracker(_Character, _Current);
+DB_GreaseReflexBonusTracker(_Character, _New);
+
+// And then passives.
+QRY
+QRY_CalculateGreaseReflexBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseReflexPassives((STRING)_Passive, (REAL)_Bonus)
+AND
+HasPassive(_Character, _Passive, 1)
+AND
+DB_GreaseReflexBonusTracker(_Character, (REAL)_Current)
+AND
+RealSum(_Current, _Bonus, (REAL)_New)
+THEN
+NOT DB_GreaseReflexBonusTracker(_Character, _Current);
+DB_GreaseReflexBonusTracker(_Character, _New);
+
+// Once that is complete, update the overall tracker if the score
+// exceeds that which is stored already.
+QRY
+QRY_CalculateGreaseReflexBonus((GUIDSTRING)_Character, (STRING)_Status)
+AND
+DB_GreaseReflexBonusTracker(_Character, (REAL)_Current)
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Old, (STRING)_OldStatus)
+AND
+_Current > _Old
+THEN
+NOT DB_BestGreaseBonus(_Character, _Old, _OldStatus);
+DB_BestGreaseBonus(_Character, _Current, _Status);
+//END_REGION Reflex
+
+// Regardless of results or availability of DC, prevent further procs
+// until a spell is cast or the turn ends (implemented in the status).
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PROC", _, _)
+AND
+HasActiveStatus(_Character, "GREASE_BLOCK", 0)
+AND
+HasActiveStatus(_Character, "DISENGAGE", 0)
+AND
+HasActiveStatus(_Character, "PRONE_PF2", 0)
+THEN
+ApplyStatus(_Character, "GREASE_BLOCK", 1.0);
+
+// Applying prone doesn't stop movement fast enough by itself to
+// prevent it being removed immediately. We'll teleport the character
+// their current location to break their move and then apply prone.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_APPLY", _, _)
+AND
+GetPosition(_Character, _X, _Y, _Z)
+AND
+RealSum(_X, 0.01, _NewX)
+THEN
+TeleportToPosition(_Character, _NewX, _Y, _Z, "Prone_MovementEnd", 0, 0, 0, 0, 1);
+ApplyStatus(_Character, "PRONE_PF2", -1.0);
+
+//REGION Weapon Grease
+// If a character's weapon is made greasy, they also need to make a reflex
+// save or acrobatics check.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_WEAPON_PROC", (GUIDSTRING)_Caster, _)
+AND
+GetStatusCurrentLifetime(_Caster, "SPELL_DC_TRACKER", (REAL)_DCSeconds)
+THEN
+ApplyStatus(_Character, "GREASE_DC", _DCSeconds, 0, _Caster);
+RealtimeObjectTimerLaunch(_Character, "GreaseWeaponCheckEvent", 30);
+
+IF
+ObjectTimerFinished((GUIDSTRING)_Character, "GreaseWeaponCheckEvent")
+THEN
+PROC_ScheduleWeaponGreaseCheck(_Character);
+
+// First, clear the DB of previous results
+PROC
+PROC_ScheduleWeaponGreaseCheck((GUIDSTRING)_Character)
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+NOT DB_BestGreaseBonus(_Character, _Score, _Status);
+
+// Check bonuses for each potential roll, and each QRY will set the
+// status to be applied if they beat the current value.
+PROC
+PROC_ScheduleWeaponGreaseCheck((GUIDSTRING)_Character)
+AND
+QRY_CalculateGreaseAcrobaticsBonus(_Character, "GREASE_ACROBATICS_WEAPON")
+AND
+QRY_CalculateGreaseReflexBonus(_Character, "GREASE_REFLEX_WEAPON")
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+ApplyStatus(_Character, _Status, 0.0, 0, _Character);
+//END_REGION Weapon Grease
+
+//REGION Unattended Items
+// We need to track the DC of any item with the grease status.
+IF
+StatusApplied((GUIDSTRING)_Object, "GREASE_COATED", (GUIDSTRING)_Caster, _)
+AND
+IsItem(_Object, 1)
+AND
+HasActiveStatus(_Caster, "SPELL_DC_TRACKER", 1)
+AND
+GetStatusCurrentLifetime(_Caster, "SPELL_DC_TRACKER", (REAL)_DCSeconds)
+THEN
+ApplyStatus(_Object, "GREASE_DC", _DCSeconds, 0, _Caster);
+
+// Fallback to 15.
+IF
+StatusApplied((GUIDSTRING)_Object, "GREASE_COATED", (GUIDSTRING)_Caster, _)
+AND
+IsItem(_Object, 1)
+AND
+HasActiveStatus(_Caster, "SPELL_DC_TRACKER", 0)
+THEN
+ApplyStatus(_Object, "GREASE_DC", 90.0, 0, _Caster);
+
+// Remove DC if status lost.
+IF
+StatusRemoved((GUIDSTRING)_Object, "GREASE_COATED", _, _)
+THEN
+RemoveStatus(_Object, "GREASE_DC");
+
+// Pre-cleanup
+IF
+RequestCanPickup((CHARACTER)_Character, _, _)
+AND
+DB_GreasePickupRequest(_Character, (GUIDSTRING)_Item)
+THEN
+NOT DB_GreasePickupRequest(_Character, _Item);
+
+IF
+RequestCanPickup((CHARACTER)_Character, (GUIDSTRING)_Item, (INTEGER)_RequestID)
+AND
+HasActiveStatus(_Item, "GREASE_COATED", 1)
+THEN
+RequestProcessed(_Character, _RequestID, 1);
+DB_GreasePickupRequest(_Character, _Item);
+
+IF
+RequestCanPickup((CHARACTER)_Character, (GUIDSTRING)_Item, (INTEGER)_RequestID)
+AND
+HasActiveStatus(_Item, "GREASE_COATED", 1)
+AND
+GetStatusCurrentLifetime(_Item, "GREASE_DC", (REAL)_DCSeconds)
+THEN
+ApplyStatus((GUIDSTRING)_Character, "GREASE_DC", _DCSeconds, 0, _Character);
+RealtimeObjectTimerLaunch(_Character, "GreasePickupCheckEvent", 30);
+
+IF
+ObjectTimerFinished((GUIDSTRING)_Character, "GreasePickupCheckEvent")
+THEN
+PROC_SchedulePickupGreaseCheck(_Character);
+
+// First, clear the DB of previous results
+PROC
+PROC_SchedulePickupGreaseCheck((GUIDSTRING)_Character)
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+NOT DB_BestGreaseBonus(_Character, _Score, _Status);
+
+// Check bonuses for each potential roll, and each QRY will set the
+// status to be applied if they beat the current value.
+PROC
+PROC_SchedulePickupGreaseCheck((GUIDSTRING)_Character)
+AND
+QRY_CalculateGreaseAcrobaticsBonus(_Character, "GREASE_ACROBATICS_PICKUP")
+AND
+QRY_CalculateGreaseReflexBonus(_Character, "GREASE_REFLEX_PICKUP")
+AND
+DB_BestGreaseBonus(_Character, (REAL)_Score, (STRING)_Status)
+THEN
+ApplyStatus(_Character, _Status, 0.0, 0, _Character);
+
+// The status will pass back in case of success.
+IF
+StatusApplied((GUIDSTRING)_Character, "GREASE_PICKUP_FAILURE", _, _)
+AND
+DB_GreasePickupRequest((CHARACTER)_Character, (GUIDSTRING)_Item)
+THEN
+RealtimeObjectTimerLaunch(_Item, "GreaseDropEvent", 1000);
+DebugText(_Character, "Drop Attempted");
+
+IF
+ObjectTimerFinished((GUIDSTRING)_Item, "GreaseDropEvent")
+THEN
+Drop((ITEM)_Item);
+
+//END_REGION Unattended Items
+EXITSECTION
+
+ENDEXITSECTION

@@ -21135,7 +21135,7 @@
         <field name="Constitution" type="IntegerTableFieldDefinition" value="14" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="6" />
         <field name="ActionResources" type="StringTableFieldDefinition" value="ActionPoint:2;BonusActionPoint:0;Movement:12;ReactionActionPoint:1" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;PerceptionIncrease" />
         <field name="DefaultBoosts" type="StringTableFieldDefinition" value="DialogueBlock();BlockRegainHP(Undead;Construct);ProficiencyBonus(Skill, Athletics);ProficiencyBonus(Skill, Acrobatics);ProficiencyBonus(Skill, Stealth);" />
         <field name="Weight" type="FloatTableFieldDefinition" value="10" />
         <field name="GameSize" type="EnumerationTableFieldDefinition" value="Medium" enumeration_type_name="ObjectSize" version="1" />
@@ -21166,7 +21166,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="a2e76519-6078-4b23-aca9-3ff5f3c8ec80" />
         <field name="Level" type="IntegerTableFieldDefinition" value="3" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="30" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert;PerceptionIncrease;PerceptionIncrease2" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -21176,7 +21176,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="2347dca1-45b6-4c0f-9b09-24ee39e25f5a" />
         <field name="Level" type="IntegerTableFieldDefinition" value="5" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="47" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;ReflexMaster;FortitudeMaster;WeaponMaster;StealthIncrease" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;ReflexMaster;FortitudeMaster;WeaponMaster;StealthIncrease;PerceptionIncrease;PerceptionIncrease2" />
         <field name="Strength" type="IntegerTableFieldDefinition" value="14" />
         <field name="Dexterity" type="IntegerTableFieldDefinition" value="18" />
         <field name="Constitution" type="IntegerTableFieldDefinition" value="16" />
@@ -21202,7 +21202,7 @@
         <field name="Charisma" type="IntegerTableFieldDefinition" value="6" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="20" />
         <field name="UnarmedAttackAbility" type="EnumerationTableFieldDefinition" value="Strength" enumeration_type_name="Ability" version="1" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponExpert" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponExpert;PerceptionIncrease" />
         <field name="ActionResources" type="StringTableFieldDefinition" value="ActionPoint:2;BonusActionPoint:0;Movement:16;ReactionActionPoint:1" />
       </fields>
     </stat_object>
@@ -21222,6 +21222,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="983c1dc5-f27a-4de1-8bed-b757564e13e5" />
         <field name="Level" type="IntegerTableFieldDefinition" value="3" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="32" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponExpert;PerceptionIncrease;PerceptionIncrease2" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -21231,7 +21232,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="983c1dc5-f27a-4de1-8bed-b757564e13e5" />
         <field name="Level" type="IntegerTableFieldDefinition" value="5" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="49" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;ReflexMaster;FortitudeMaster;WillMaster;WeaponMaster" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;ReflexMaster;FortitudeMaster;WillMaster;WeaponMaster;PerceptionIncrease;PerceptionIncrease2" />
         <field name="Strength" type="IntegerTableFieldDefinition" value="18" />
         <field name="Dexterity" type="IntegerTableFieldDefinition" value="18" />
         <field name="Constitution" type="IntegerTableFieldDefinition" value="16" />
@@ -21259,7 +21260,7 @@
         <field name="Vitality" type="IntegerTableFieldDefinition" value="25" />
         <field name="UnarmedAttackAbility" type="EnumerationTableFieldDefinition" value="Dexterity" enumeration_type_name="Ability" version="1" />
         <field name="ActionResources" type="StringTableFieldDefinition" value="ActionPoint:2;BonusActionPoint:0;Movement:10;ReactionActionPoint:1" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert;GiantCrabVulnerableToProne;GiantCrabScuttle;NPCBoostAC1;Darkvision;SlaResist_3;PrcResist_3" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert;GiantCrabVulnerableToProne;GiantCrabScuttle;NPCBoostAC1;Darkvision;SlaResist_3;PrcResist_3;PerceptionIncrease;PerceptionIncrease2" />
         <field name="StepsType" type="EnumerationTableFieldDefinition" value="Spider" enumeration_type_name="StepsType" version="1" />
       </fields>
     </stat_object>
@@ -21279,7 +21280,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="f55c1dde-8758-4835-87c5-5a6c879bf5ff" />
         <field name="Level" type="IntegerTableFieldDefinition" value="5" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="75" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;GiantCrabVulnerableToProne;GiantCrabScuttle;NPCBoostAC1;Darkvision;SlaResist_5;PrcResist_5;ReflexMaster;FortitudeMaster;WeaponMaster;" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;GiantCrabVulnerableToProne;GiantCrabScuttle;NPCBoostAC1;Darkvision;SlaResist_5;PrcResist_5;ReflexMaster;FortitudeMaster;WeaponMaster;PerceptionIncrease;PerceptionIncrease2" />
         <field name="Strength" type="IntegerTableFieldDefinition" value="20" />
         <field name="Dexterity" type="IntegerTableFieldDefinition" value="18" />
         <field name="Constitution" type="IntegerTableFieldDefinition" value="14" />
@@ -21306,7 +21307,7 @@
         <field name="Wisdom" type="IntegerTableFieldDefinition" value="16" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="50" />
         <field name="DefaultBoosts" type="StringTableFieldDefinition" value="DialogueBlock();BlockRegainHP(Undead;Construct);ProficiencyBonus(Skill, Athletics);ProficiencyBonus(Skill, Acrobatics);ProficiencyBonus(Skill, Stealth);ProficiencyBonus(Skill, Survival);" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponMaster" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponMaster;PerceptionIncrease;PerceptionIncrease2" />
         <field name="StepsType" type="EnumerationTableFieldDefinition" value="Clawed" enumeration_type_name="StepsType" version="1" />
         <field name="ActionResources" type="StringTableFieldDefinition" value="ActionPoint:2;BonusActionPoint:0;Movement:14;ReactionActionPoint:1" />
       </fields>
@@ -21318,7 +21319,7 @@
         <field name="Using" type="BaseClassTableFieldDefinition" value="8d0a5b06-dddd-4961-8c68-dbc52cf42215" />
         <field name="Level" type="IntegerTableFieldDefinition" value="5" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="85" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponMaster;FortitudeMaster" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WillExpert;WeaponMaster;FortitudeMaster;PerceptionIncrease;PerceptionIncrease2" />
         <field name="Strength" type="IntegerTableFieldDefinition" value="22" />
         <field name="Dexterity" type="IntegerTableFieldDefinition" value="18" />
         <field name="Constitution" type="IntegerTableFieldDefinition" value="20" />
@@ -21346,7 +21347,7 @@
         <field name="Charisma" type="IntegerTableFieldDefinition" value="12" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="94" />
         <field name="UnarmedAttackAbility" type="EnumerationTableFieldDefinition" value="Strength" enumeration_type_name="Ability" version="1" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert;ReflexMaster;FortitudeMaster;StealthIncrease;PoiResist_8" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponExpert;WillExpert;ReflexMaster;FortitudeMaster;StealthIncrease;PoiResist_8;PerceptionIncrease;PerceptionIncrease2" />
         <field name="GameSize" type="EnumerationTableFieldDefinition" value="Large" enumeration_type_name="ObjectSize" version="1" />
         <field name="StepsType" type="EnumerationTableFieldDefinition" value="Bare" enumeration_type_name="StepsType" version="1" />
         <field name="ActionResources" type="StringTableFieldDefinition" value="ActionPoint:2;BonusActionPoint:0;Movement:10;ReactionActionPoint:1" />
@@ -21358,7 +21359,7 @@
         <field name="Name" type="NameTableFieldDefinition" value="SummonAnimal_SporebackFrog_6" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="c4cd5506-97e3-4416-8390-99eade2cbc61" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="134" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponMaster;WillExpert;ReflexMaster;FortitudeMaster;StealthIncrease;PoiResist_8" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;WeaponMaster;WillExpert;ReflexMaster;FortitudeMaster;StealthIncrease;PoiResist_8;PerceptionIncrease;PerceptionIncrease2" />
         <field name="Level" type="IntegerTableFieldDefinition" value="7" />
       </fields>
     </stat_object>
@@ -21376,7 +21377,7 @@
         <field name="Charisma" type="IntegerTableFieldDefinition" value="2" />
         <field name="Vitality" type="IntegerTableFieldDefinition" value="155" />
         <field name="UnarmedAttackAbility" type="EnumerationTableFieldDefinition" value="Strength" enumeration_type_name="Ability" version="1" />
-        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;ReflexExpert;WeaponMaster;Darkvision;AthleticsIncrease;StealthIncrease;ACExpert" />
+        <field name="Passives" type="StringTableFieldDefinition" value="PathfinderDCBoost;OffGuardRules;FallingCheckHelper;InitiativeRules;MultipleAttackPenalty;DarknessRules;AdvantageDisabler;NPCSkills;ReflexExpert;FortitudeExpert;ReflexExpert;WeaponMaster;Darkvision;AthleticsIncrease;StealthIncrease;ACExpert;PerceptionIncrease;PerceptionIncrease2" />
         <field name="GameSize" type="EnumerationTableFieldDefinition" value="Large" enumeration_type_name="ObjectSize" version="1" />
         <field name="StepsType" type="EnumerationTableFieldDefinition" value="Spider" enumeration_type_name="StepsType" version="1" />
       </fields>

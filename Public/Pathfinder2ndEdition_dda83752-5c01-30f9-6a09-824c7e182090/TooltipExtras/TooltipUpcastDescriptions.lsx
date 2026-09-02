@@ -34,6 +34,41 @@
                     <attribute id="Text" type="TranslatedString" handle="h2aa45d2cgc24eg9b69g51a0gc83c664c7bba" version="1"/>
                     <attribute id="UUID" type="guid" value="f2e89acd-ecac-48a4-9d4b-bd2eaf1a6184"/>
                 </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="FearUpcast"/>
+                    <attribute id="Text" type="TranslatedString" handle="h704271d8g0dc5gb149ge25cgef1db489216e" version="1"/>
+                    <attribute id="UUID" type="guid" value="9c052f5f-c976-48e7-8d6f-55e0da75ac40"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="ForceBarrage"/>
+                    <attribute id="Text" type="TranslatedString" handle="h75f7a03bgac5cgbe70g1f9cg8d7b06d06b3d" version="2"/>
+                    <attribute id="UUID" type="guid" value="5b0b668e-17e1-44e2-873b-976597d0424d"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="MysticArmor"/>
+                    <attribute id="Text" type="TranslatedString" handle="h110b4b24g2d4cg10a5gd267g14d0ad5a77e4" version="1"/>
+                    <attribute id="UUID" type="guid" value="ad439e06-7978-466a-8c22-93930d1ae046"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="AdditionalDamageActionChoice"/>
+                    <attribute id="Text" type="TranslatedString" handle="h776b96c4g2fb7g78f4g9e42g74eff14703f2" version="2"/>
+                    <attribute id="UUID" type="guid" value="129c61c7-067e-45ec-b7b3-9038b2874dbe"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="Dehydrate"/>
+                    <attribute id="Text" type="TranslatedString" handle="h46a4d390g8a2dg1101g6074g430ae2779d53" version="1"/>
+                    <attribute id="UUID" type="guid" value="8fb0af1d-954d-4c13-9932-7c414d167c0e"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="Heal"/>
+                    <attribute id="Text" type="TranslatedString" handle="h7eee46cbgb214g3be3gd0cag2f9d75d2001a" version="1"/>
+                    <attribute id="UUID" type="guid" value="3a99d7bc-b960-458a-a441-ec9a48b9b212"/>
+                </node>
+                <node id="TooltipUpcastDescriptions">
+                    <attribute id="Name" type="FixedString" value="Harm"/>
+                    <attribute id="Text" type="TranslatedString" handle="h66781f0fg6855g3d23g47fagd7d324196f0b" version="1"/>
+                    <attribute id="UUID" type="guid" value="4f055a62-c043-4735-a64f-0e4a9c2ffaf8"/>
+                </node>
             </children>
         </node>
     </region>

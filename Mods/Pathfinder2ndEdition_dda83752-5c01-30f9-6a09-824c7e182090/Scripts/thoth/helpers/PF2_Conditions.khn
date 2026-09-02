@@ -771,6 +771,21 @@ function ShoveCheck()
 	return result
 end
 
+function GrappleDC()
+	BaseDC = FortitudeDC()
+
+	if HasStatus('GREASE_COATED', context.Target).Result then
+		if HasStatus('CircumstanceBonus2FortSaves', context.Target).Result then
+			return BaseDC
+		elseif HasStatus('CircumstanceBonus1FortSaves', context.Target).Result then
+			return BaseDC - 1
+		else
+			return BaseDC - 2
+		end
+	end
+end
+
+
 function GetBestSkillCheck(dc)
 	local source = context.Source
 	
@@ -1499,7 +1514,7 @@ function SaveCritMiss(save_type)
 		local target = context.Target
 		if save_type == 'Fort' and (HasPassive('CritConvert_Juggernaut',target) | HasPassive('PathToPerfectionFort',target)).Result then
 				return ConditionResult(true)
-			elseif save_type == 'Reflex' and (HasPassive('CritConvert_Evasion',target) | HasPassive('PathToPerfectionFort',target) | HasPassive('PathToPerfectionWill',target)).Result then
+			elseif save_type == 'Reflex' and (HasPassive('CritConvert_Evasion',target) | HasPassive('PathToPerfectionRef',target)).Result then
 				return ConditionResult(true)
 			elseif save_type == 'Fear' and (HasPassive('CritConvert_Bravery',target) | HasPassive('Halfling_Brave',target) | HasPassive('CritConvert_Resolve',target) | HasPassive('PathToPerfectionWill',target)).Result then
 				return ConditionResult(true)
@@ -1511,6 +1526,19 @@ function SaveCritMiss(save_type)
 		return ConditionResult(difficulty < total)
 	end
 	return ConditionResult(false)
+end
+
+-- Dehydrate treats DC as 10 higher for water and plant creatures.
+function DehydrateDC(target,source)
+	target = target or context.Target
+	source = source or context.Source
+	dc = SourceSpellDC(10,source)
+	
+	if HasAnyTags({'CHASM_IMMUNE_SWIM','PLANT'},target) then
+		dc = dc + 10
+	end
+
+	return dc
 end
 
 function SkillCrit()

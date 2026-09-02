@@ -14,7 +14,6 @@ DB_MovementStatus("DISENGAGE_USESTEP");
 DB_MovementStatus("TUMBLE_THROUGH_SOURCE");
 DB_MovementStatus("FuriousSprintStatus");
 DB_MovementStatus("FuriousSprintBonusStatus");
-DB_MovementStatus("FuriousSprintBonusStatus");
 
 //These spells provide Movement resources.
 DB_MovementSpell("Shout_Dash");
@@ -101,6 +100,16 @@ AND
 DB_MovementStatus(_Status)
 THEN
 RemoveStatus(_Char, "DEBUG_RESET_MOVE");
+
+// Remove movement statuses on reset
+IF
+StatusApplied((CHARACTER)_Char, "DEBUG_RESET_MOVE", _, _)
+AND
+DB_MovementStatus((STRING)_Status)
+AND
+HasActiveStatus(_Char, _Status, 1)
+THEN
+RemoveStatus(_Char, _Status);
 
 //END_REGION
 
