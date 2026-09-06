@@ -576,7 +576,7 @@
         <field name="TargetConditions" type="StringTableFieldDefinition" value="Character() and not Enemy() and not HasAnyStatus({'HEALER_HEALED', 'HEALER_HEALED_SHORT'},{},{},context.Target,context.Source);" />
         <field name="Icon" type="StringTableFieldDefinition" value="Skill_Fighter_SecondWind" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hfa19d710gf7a7g1f15g2742gd799c71c6f45" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf099fd79g6168g1711gf523g0f7054f87678" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf099fd79g6168g1711gf523g0f7054f87678" version="2" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="RegainHitPoints(2d8)" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="RegainHitPoints(2d8)" />
         <field name="PrepareSound" type="StringTableFieldDefinition" value="Vocal_Component_Stop" />
@@ -596,7 +596,7 @@
         <field name="Owner" type="CommentTableFieldDefinition" value="DC 14" />
         <field name="SpellContainerID" type="StringTableFieldDefinition" value="Target_BattleMedicine" />
         <field name="ContainerSpells" type="StringTableFieldDefinition" value=";" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd8b46883gaf2cg3365gee4agfc77f8c6b7f9" version="1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hd8b46883gaf2cg3365gee4agfc77f8c6b7f9" version="2" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsMelee" enumeration_type_name="SpellFlagList" version="1" />
       </fields>
     </stat_object>
@@ -608,10 +608,11 @@
         <field name="Owner" type="CommentTableFieldDefinition" value="DC 17" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Medicine,17);" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SkillCrit()):RegainHitPoints(2d8+10);IF(SkillCrit()):RegainHitPoints(4d8+10);IF(HasPassive('RobustHealth')):RegainHitPoints(context.Target.Level);" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h6cd76f63g40dage631gc38bg9c4fe75eabe9" version="1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h6cd76f63g40dage631gc38bg9c4fe75eabe9" version="2" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="RegainHitPoints(12~26)" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="RegainHitPoints(2d8+10)" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="IsSkillExpert('Medicine', 'Wisdom');" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hb77e1e25gba8eg9e07g2557gbfc2a6c1b91c" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -623,9 +624,10 @@
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="IsSkillMaster('Medicine', 'Wisdom');" />
         <field name="SpellRoll" type="StringTableFieldDefinition" value="SkillCheck(Skill.Medicine,23);" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SkillCrit()):RegainHitPoints(2d8+30);IF(SkillCrit()):RegainHitPoints(4d8+30);IF(HasPassive('RobustHealth')):RegainHitPoints(context.Target.Level);" />
-        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8620d188g829bgb0f0g465cg348b15f8e774" version="1" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h8620d188g829bgb0f0g465cg348b15f8e774" version="2" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="RegainHitPoints(32~46)" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="RegainHitPoints(2d8+30)" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h46d0ea78g502fgccc6g58f8g77ea2481562c" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -10416,11 +10418,11 @@
         <field name="TargetSound" type="StringTableFieldDefinition" value="Spell_Impact_Debuff_HuntersMark_L1to3" />
         <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_HuntersMark" />
         <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
-        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="9313094a-bae2-454f-9701-f920d0e8e98d,,;,,;3e441d3f-11f9-432d-877c-c0ba4d92c74a,,;8b7ae969-2a04-4720-9685-3bde54c18ffe,,;808fdfab-2e6c-472e-b3c4-19ce4a719d9d,,;,,;ea745d30-eb87-447f-b190-c81298e27d9c,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Debuff" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="VerbalIntent" version="1" />
         <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities;Stealth" enumeration_type_name="SpellFlagList" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="0" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="de6dddd8-8a32-4db1-a521-70706648a83b" />
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="2e44371c-a637-4cab-a120-3088b3d83369" />
@@ -10445,9 +10447,9 @@
         <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="9313094a-bae2-454f-9701-f920d0e8e98d,,;,,;3e441d3f-11f9-432d-877c-c0ba4d92c74a,,;8b7ae969-2a04-4720-9685-3bde54c18ffe,,;808fdfab-2e6c-472e-b3c4-19ce4a719d9d,,;,,;ea745d30-eb87-447f-b190-c81298e27d9c,,;,,;,," />
-        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Debuff" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="None" enumeration_type_name="VerbalIntent" version="1" />
         <field name="SpellStyleGroup" type="EnumerationTableFieldDefinition" value="Class" enumeration_type_name="SpellStyleGroup" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasHighGroundRangeExtension;IgnorePreviouslyPickedEntities;Stealth" enumeration_type_name="SpellFlagList" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="0" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="de6dddd8-8a32-4db1-a521-70706648a83b" />
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="2e44371c-a637-4cab-a120-3088b3d83369" />

@@ -7846,7 +7846,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="2aabd747-fbb0-48ed-8d68-3dee58ad995b" />
         <field name="Name" type="NameTableFieldDefinition" value="SnapShot" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h7053ff25g7117g91d5gbbb3g72652aec8f6e" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h158809b2g0b12g2384g1797gaa11d1911d90" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h158809b2g0b12g2384g1797gaa11d1911d90" version="2" />
         <field name="TooltipUseCosts" type="StringTableFieldDefinition" value="ReactionActionPoint:1" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_GiantKiller" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1" />
@@ -8036,7 +8036,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="9d935476-a66c-467c-bccd-ddb1e8db1e6e" />
         <field name="Name" type="NameTableFieldDefinition" value="StoneOrder" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1adc0e54g8b18g7139g6a6bg45cf10da3dce" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="2" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(SLIPPING_ADV)" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Land_Mountain" />

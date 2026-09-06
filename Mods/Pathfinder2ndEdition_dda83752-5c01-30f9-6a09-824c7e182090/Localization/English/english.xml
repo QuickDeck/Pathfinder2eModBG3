@@ -3125,7 +3125,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="he274782ag6e8ag044egd900gdb92102ea565" version="2">* Advanced Warden: Enlarge Companion *</content>
   <content contentuid="h9eab959cgcee1gecbcg6a7fg576ac236870d" version="1">2a &lt;br&gt;Focus Spell&lt;br&gt;Your animal companion grows much larger, towering over its foes in battle. Your animal companion becomes Large, gaining the effects of a 2nd-rank enlarge spell.</content>
   <content contentuid="h7053ff25g7117g91d5gbbb3g72652aec8f6e" version="1">Snap Shot</content>
-  <content contentuid="h158809b2g0b12g2384g1797gaa11d1911d90" version="1">Reaction&lt;br&gt;You can react with ranged weapons when a creature is in close quarters. You can use a reaction that normally allows you to make a melee weapon Strike to instead make a ranged weapon Strike (this feat grants one in BG3). You must be Striking an adjacent target. If necessary for the reaction’s trigger, you treat your ranged weapon as if it had a reach of 5 feet. If the reaction has other requirements, such as wielding a specific kind of weapon, Snap Shot doesn’t allow you to ignore them; it allows you only to replace a melee weapon Strike with a ranged weapon Strike.</content>
+  <content contentuid="h158809b2g0b12g2384g1797gaa11d1911d90" version="2">Reaction&lt;br&gt;You can react with ranged weapons when a creature is in close quarters. You gain a variant of Reactive Strike except that it uses your ranged weapon instead of a melee weapon.</content>
   <content contentuid="h1154bfebgde3agac24g9fe4g607c2c8fb7b9" version="2">Unarmed Automatic Bonus Progression +1 Potency</content>
   <content contentuid="hae58de07gd878g486fg332fg47a63b8cb5f8" version="1">At level 2 and 10, you gain a +1 bonus to unarmed attack rolls (due to the lack of many handwrap of mighty blows type items). Unarmed damage gains a damage die at level 4 and 12 to represent Striking runes.</content>
   <content contentuid="hf8847878g6913ga510g459cgce7d59a61d0d" version="1">Blind Fight</content>
@@ -3185,7 +3185,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hb717bbf4gf688g99a0g0913g06ec7cb377fb" version="2">Leshy Familiar</content>
   <content contentuid="hda3a28aeg19ebgc3c2gf7a9g78d04e442951" version="2">You call a minor spirit of nature into a plant body, creating a leshy companion to aid you in your spellcasting.</content>
   <content contentuid="h1adc0e54g8b18g7139g6a6bg45cf10da3dce" version="2">Steadying Stone</content>
-  <content contentuid="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="1">You're as enduring as stone, and you take comfort in its steadfast presence, both natural and worked.&lt;br&gt;Poisoning or polluting the land and heedlessly carving the earth to plunder its natural resources are anathema to your order (this doesn't prevent you from responsibly digging or mining).</content>
+  <content contentuid="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="2">You're as enduring as stone, and you take comfort in its steadfast presence, both natural and worked.&lt;br&gt;Poisoning or polluting the land and heedlessly carving the earth to plunder its natural resources are anathema to your order (this doesn't prevent you from responsibly digging or mining). You roll twice and take the better result when rolling to avoid "slipping" (BG3 term).</content>
   <content contentuid="hfd97c96fg0e38g21ddg6046gbd40850ec5ab" version="2">Storm Born</content>
   <content contentuid="h8dd2fac2g22d7ge60eg475cgfad806712541" version="2">You are at home out in the elements, reveling in the power of nature unleashed. Ignore concealment from fog.</content>
   <content contentuid="h50b19e67g2a0bg3077gc131g3287ecf0e43e" version="1">Untamed Order</content>
@@ -3477,7 +3477,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="heb6f8b52ga303g45fdgf69eg34dd3537bd04" version="2">* Battle Medicine *</content>
   <content contentuid="he6e2caebg8130gf9c1g1360g4f47567eda1e" version="1">You can patch up wounds, even in combat. Attempt a &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; check and restore [1].</content>
   <content contentuid="hfa19d710gf7a7g1f15g2742gd799c71c6f45" version="1">Battle Medicine</content>
-  <content contentuid="hf099fd79g6168g1711gf523g0f7054f87678" version="1">You can patch up wounds, even in combat. Attempt a &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; check and restore [1].</content>
+  <content contentuid="hf099fd79g6168g1711gf523g0f7054f87678" version="2">You can patch up wounds, even in combat. Attempt a DC 14 &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; check and restore [1].</content>
   <content contentuid="hf61c80f4ga6c9gaa6bge259gdbf16d579703" version="1">Pet</content>
   <content contentuid="h14ae54eag8bc9gb644g9764g2d26a05d8cdf" version="1">You have a loyal pet—a Tiny animal of a type you choose.</content>
   <content contentuid="h676500d9g1705g31c8ga6acg95bcaf4ee038" version="1">Animal Companion</content>
@@ -3696,9 +3696,9 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="ha6a833e5g3f53g4474g3021g66e5e4dc5ad2" version="1">&lt;LSTag Type="Status" Tooltip="SURPRISED"&gt;Suprised&lt;/LSTag&gt; creatures that haven't acted are &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;off-guard&lt;/LSTag&gt; to you.</content>
   <content contentuid="h61d97d66g340dgb540g47f3g525a33fa84c4" version="1">Deal extra precision damage to an &lt;LSTag Type="Status" Tooltip="OFF_BALANCED"&gt;off-guard&lt;/LSTag&gt; foe.</content>
   <content contentuid="h554d16bdg0277g4804g4ff3gf572e675d0e1" version="1">Also works if you have an ally within [1] of the target.</content>
-  <content contentuid="hd8b46883gaf2cg3365gee4agfc77f8c6b7f9" version="1">Battle Medicine (DC 15)</content>
-  <content contentuid="h6cd76f63g40dage631gc38bg9c4fe75eabe9" version="1">Battle Medicine (DC 20)</content>
-  <content contentuid="h8620d188g829bgb0f0g465cg348b15f8e774" version="1">Battle Medicine (DC 25)</content>
+  <content contentuid="hd8b46883gaf2cg3365gee4agfc77f8c6b7f9" version="2">Battle Medicine (DC 14)</content>
+  <content contentuid="h6cd76f63g40dage631gc38bg9c4fe75eabe9" version="2">Battle Medicine (DC 17)</content>
+  <content contentuid="h8620d188g829bgb0f0g465cg348b15f8e774" version="2">Battle Medicine (DC 23)</content>
   <content contentuid="hb08b1870g6102g31a6gd6d4g7ef97f3bc38e" version="1">Path to Perfection</content>
   <content contentuid="ha1022ed1g5c6ag044cg7585gb34680d0f77b" version="1">You have progressed along your own path to enlightenment. Choose your Fortitude, Reflex, or Will saving throw. Your proficiency rank for the chosen saving throw increases to master.</content>
   <content contentuid="hecd2db2eg5d11g2c0ag6ce1g85f102ade8c6" version="1">Spinner of Threads</content>
@@ -32710,4 +32710,7 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h6fb4a47dg7e56ga5f6g54cfg8b54b7c58292" version="1">This area is densely packed with stalagmites, impeding movement.</content>
   <content contentuid="h42b7dc8bg8723g35beg0522g110dfcf626b3" version="1">&lt;LSTag Type="Passive" Tooltip="PF2e_CritSuccess"&gt;Critical Success&lt;/LSTag&gt;: The target is unaffected.&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PF2e_Success"&gt;Success&lt;/LSTag&gt;: The target takes half damage, and the debilitation lasts until the end of your next turn.&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PF2e_Fail"&gt;Failure&lt;/LSTag&gt;: The target takes full damage, and the debilitation lasts for 1 minute.&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PF2e_CritFail"&gt; Critically Failure&lt;/LSTag&gt;: The target takes double damage, and you can pick a second debilitation to apply. Both debilitations last for 1 minute.</content>
   <content contentuid="ha24b839bgab23g8ff7g7c67g7bad6f54a237" version="1">Creatures that are reduced to 0 hitpoints by this effect die instantly.</content>
+  <content contentuid="hb77e1e25gba8eg9e07g2557gbfc2a6c1b91c" version="1">You can patch up wounds, even in combat. Attempt a DC 17 &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; check and restore [1].</content>
+  <content contentuid="h46d0ea78g502fgccc6g58f8g77ea2481562c" version="1">You can patch up wounds, even in combat. Attempt a DC 23 &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; check and restore [1].</content>
+  <content contentuid="h1e55be64g01f2gd2e9g1d15g8aae9718b674" version="1">Explosion</content>
 </contentList>
