@@ -172,6 +172,9 @@
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha1797a27g167bgb285g16b7g1e1179b90997" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf1176859gc200g27c0gfc22g4debc68b561b" version="1" />
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;SpellSlotsGroup:1:1:6;" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="76ce048e-1781-4383-9aaa-bf882ac3a33a" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="0549564f-c714-49a2-b803-29dfd56f2b79" />
+        <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="f217184e-6690-4235-9539-1c560c98af37" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

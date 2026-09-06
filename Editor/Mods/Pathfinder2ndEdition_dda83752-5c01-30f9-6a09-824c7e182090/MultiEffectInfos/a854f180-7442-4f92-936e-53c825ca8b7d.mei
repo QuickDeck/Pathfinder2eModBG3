@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="a854f180-7442-4f92-936e-53c825ca8b7d" OwnerUUID="cdb2cfd9-7b96-467f-9030-fe1c6c1465f6" Name="PF2e_CAVE_FANGS_AuraEffect">
+  <EffectInfo UUID="0602c0f4-89a0-4551-a54a-fd2b768ced48" EffectResourceGuid="674d2960-c5e9-5c43-a936-4c07acad272e" DetachSource="false" DetachTarget="true" KeepRotation="false" UseOrientDirection="false" UseDistance="false" UseScaleOverride="false" KeepScale="false" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Target" Enabled="true" DamageType="None" VerbalIntent="None" TargetBone="Dummy_Root" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

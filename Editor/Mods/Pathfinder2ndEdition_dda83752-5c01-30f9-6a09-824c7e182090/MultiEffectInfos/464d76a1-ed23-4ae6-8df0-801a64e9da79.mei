@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="464d76a1-ed23-4ae6-8df0-801a64e9da79" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2e_Necrotize_CastFX">
+  <EffectInfo UUID="7b005990-184a-47b8-a7d2-8009b8c4e6fa" EffectResourceGuid="08fc53a8-5393-5423-e5eb-6f07678bd159" DetachSource="false" DetachTarget="false" KeepRotation="false" UseOrientDirection="false" UseDistance="false" UseScaleOverride="false" KeepScale="false" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Target" Enabled="true" StartTextKey="Cast" DamageType="None" VerbalIntent="None" TargetBone="Dummy_Root" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

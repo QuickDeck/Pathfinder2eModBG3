@@ -535,7 +535,7 @@
         <field name="AoEConditions" type="StringTableFieldDefinition" value="not Self() and Character();" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_ChromaticOrb_Thunder" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc4295fdcge8cag4c76gbe22g272447d0a57d" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h6770b0b7g5c57g857fg5542gf4c77b7eed3b" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h6770b0b7g5c57g857fg5542gf4c77b7eed3b" version="5" />
         <field name="DescriptionParams" type="StringTableFieldDefinition" value="Distance(2);DealDamage(LevelMapValue(H1D6),Bludgeoning);Distance(4)" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(LevelMapValue(H1D6),Bludgeoning)" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Constitution" />

@@ -953,6 +953,33 @@ data "Description" "hb7369d41g6ca7g06e9g8f6eg546ffef4adf6;1"
 data "Icon" "PassiveFeature_Generic_Threat"
 data "Properties" "IsHidden"
 
+new entry "TAG CALLOUTS"
+type "PassiveData"
+
+new entry "PF2e_CritSuccess"
+type "PassiveData"
+data "DisplayName" "hc0eb54f4gd566gbd92g0ba1g81830a8bdfdd;1"
+data "Description" "hf084cd94g6dccgd496gfa78g0fe33ad54113;1"
+data "Icon" "PassiveFeature_Indomitable"
+
+new entry "PF2e_Success"
+type "PassiveData"
+using "PF2e_CritSuccess"
+data "DisplayName" "hf33f4428g4c66g2471ge2f1gbae5fdcebc38;1"
+data "Description" "hdcb50f2ag76fag1ee2g3328g095969645134;1"
+
+new entry "PF2e_Fail"
+type "PassiveData"
+using "PF2e_CritSuccess"
+data "DisplayName" "hac20f9b6gc80eg2e85g0ca9g533f2ef06665;1"
+data "Description" "h053ff472gc351g8ce6g40f1g8018539adf5f;1"
+
+new entry "PF2e_CritFail"
+type "PassiveData"
+using "PF2e_CritSuccess"
+data "DisplayName" "h3737a8bbga3cdg0417gaccdg8c20cadf45cd;1"
+data "Description" "h42977c22gcd7cgd2begdb4agba2a785e99cc;1"
+
 new entry "FEATS"
 type "PassiveData"
 

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="63256cc7-0526-4eeb-a818-c3d37e3d9636" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2e_Spout_PositionEffect">
+  <EffectInfo UUID="12105b84-b2fd-4a8e-a232-d15f3fb9c052" EffectResourceGuid="aa6887a1-987e-9114-f290-379325eaeaf8" DetachSource="false" DetachTarget="false" KeepRotation="false" UseOrientDirection="false" UseDistance="false" UseScaleOverride="false" KeepScale="false" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Target" Enabled="true" StartTextKey="Cast" DamageType="None" VerbalIntent="None" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

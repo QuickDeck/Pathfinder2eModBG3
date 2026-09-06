@@ -1391,6 +1391,48 @@
     </stat_object>
     <stat_object color="#FFA52A2A" is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="adba6556-aa31-4ab2-9f85-39f8c22750b8" />
+        <field name="Name" type="NameTableFieldDefinition" value="TAG CALLOUTS" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_CritSuccess" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc0eb54f4gd566gbd92g0ba1g81830a8bdfdd" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf084cd94g6dccgd496gfa78g0fe33ad54113" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Indomitable" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="296efd37-2b5c-4121-be9a-93cd868a4421" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_Success" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf33f4428g4c66g2471ge2f1gbae5fdcebc38" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hdcb50f2ag76fag1ee2g3328g095969645134" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a66ab3fd-adb8-402f-933e-c4d01fbaa00a" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_Fail" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hac20f9b6gc80eg2e85g0ca9g533f2ef06665" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h053ff472gc351g8ce6g40f1g8018539adf5f" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="47369373-3ba9-49dd-8ff2-1b456e845cdb" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_CritFail" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h3737a8bbga3cdg0417gaccdg8c20cadf45cd" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h42977c22gcd7cgd2begdb4agba2a785e99cc" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FFA52A2A" is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="15a14cc7-ba2e-4168-a349-018a412913e2" />
         <field name="Name" type="NameTableFieldDefinition" value="FEATS" />
       </fields>

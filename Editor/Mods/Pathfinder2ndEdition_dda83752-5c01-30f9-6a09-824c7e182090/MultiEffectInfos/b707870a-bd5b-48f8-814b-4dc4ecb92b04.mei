@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="b707870a-bd5b-48f8-814b-4dc4ecb92b04" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2E_BlazingFissure_BeamEffect">
+  <EffectInfo UUID="8b87a8c2-8d71-44b0-a9cc-f91eaf3ed168" EffectResourceGuid="03d2136f-e351-6932-2b85-d8b93337d111" DetachSource="true" DetachTarget="true" KeepRotation="false" UseOrientDirection="true" UseDistance="true" UseScaleOverride="false" KeepScale="false" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Source" Enabled="true" StartTextKey="Cast" DamageType="None" VerbalIntent="None" SourceBone="Dummy_CastFX" TargetBone="Dummy_BodyFX" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

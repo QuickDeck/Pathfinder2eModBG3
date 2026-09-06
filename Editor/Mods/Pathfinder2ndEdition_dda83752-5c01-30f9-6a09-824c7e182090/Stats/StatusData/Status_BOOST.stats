@@ -13369,6 +13369,8 @@
         <field name="AuraRadius" type="IntegerTableFieldDefinition" value="4" />
         <field name="AuraStatuses" type="StringTableFieldDefinition" value="IF(not Tagged('INVISIBLE_HELPER')):ApplyStatus(GEYSER_STATUS,100,0)" />
         <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="e749054e-38db-43fb-ab99-216f3287fae2" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hdc68469dge24bg8f2fg8102gd551cc2ba274" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="haa99ec6dg27dagceddgc14ag252aed5c074b" version="1" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -13399,6 +13401,16 @@
         <field name="Name" type="NameTableFieldDefinition" value="GEYSER_CRIT" />
         <field name="Boosts" type="StringTableFieldDefinition" value="CanShootThrough(true);CanWalkThrough(true);" />
         <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableOverhead;DisableCombatlog;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="42cdc4cb-4b25-40ed-a47b-1ce837ed3d7e" />
+        <field name="Name" type="NameTableFieldDefinition" value="CAVEFANGS_AURA" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hb7d09318g580cg6f2cgec4bg0d1f899c5137" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h6fb4a47dg7e56ga5f6g54cfg8b54b7c58292" version="1" />
+        <field name="StatusPropertyFlags" type="EnumerationListTableFieldDefinition" value="DisableCombatlog;DisableOverhead;DisablePortraitIndicator" enumeration_type_name="StatusPropertyFlags" version="1" />
+        <field name="StatusEffect" type="GuidObjectTableFieldDefinition" value="a854f180-7442-4f92-936e-53c825ca8b7d" />
       </fields>
     </stat_object>
     <stat_object color="#FFA52A2A" is_substat="false">
