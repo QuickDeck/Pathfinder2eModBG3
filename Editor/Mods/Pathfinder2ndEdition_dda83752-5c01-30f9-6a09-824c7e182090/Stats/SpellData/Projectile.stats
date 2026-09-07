@@ -1034,6 +1034,8 @@
         <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalDamage_External" enumeration_type_name="HitAnimationType" version="1" />
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsHarmful;CanAreaDamageEvade;DisplayInItemTooltip" enumeration_type_name="SpellFlagList" version="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" clear_inherited_value="true" value="" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not (Item() and (HasStatus('DEBRIS_THRESHOLD_GREATER') or HasStatus('DEBRIS_THRESHOLD') or HasStatus('DEBRIS_THRESHOLD_LESSER')))):DealDamage(1d6+1,Force);IF(Item() and (HasStatus('DEBRIS_THRESHOLD_GREATER') or HasStatus('DEBRIS_THRESHOLD') or HasStatus('DEBRIS_THRESHOLD_LESSER'))):DealDamage(6d4+18, Force);" />
+        <field name="SpellFail" type="StringTableFieldDefinition" value="DealDamage(1,Force);" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -6504,6 +6506,41 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;Flourish:1" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="73afb4e5-8cfe-4479-95cf-16889597fee3,,;655f5d8e-39c7-45b4-8a36-fdd3358a448c,,;c07a9d83-9a39-464a-b281-15c67c528ffb,,;32c33123-7962-4d95-b497-532b1a897e85,,;6ec808e1-e128-44ef-9361-a713bf86de8f,,;,,;f920a0a6-f257-4ce4-8d17-2dcaa7bb7bbb,,;,,;,," />
         <field name="HitEffect" type="GuidObjectTableFieldDefinition" value="6b692ae1-2b09-4b42-9928-351f7f1e19a9" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="97309583-093a-42be-b246-429a64ec1597" />
+        <field name="Name" type="NameTableFieldDefinition" value="SlimeSpit" />
+        <field name="Level" type="IntegerTableFieldDefinition" value="1" />
+        <field name="SpellSchool" type="EnumerationTableFieldDefinition" value="Evocation" enumeration_type_name="SpellSchool" version="1" />
+        <field name="SpellProperties" type="StringTableFieldDefinition" value="GROUND:CreateSurface(1,1,Poison);" />
+        <field name="TargetFloor" type="StringTableFieldDefinition" value="-1" />
+        <field name="TargetRadius" type="StringTableFieldDefinition" value="12" />
+        <field name="SpellRoll" type="StringTableFieldDefinition" value="not SavingThrow(Ability.Dexterity, SourceSpellDC())" />
+        <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SaveCrit()):DealDamage(LevelMapValue(2d6H2d6),Poison,Magical);IF(SaveCrit()):DealDamage((LevelMapValue(2d6H2d6))*2,Poison,Magical);IF(not SaveCrit()):ApplyStatus(DAZZLED,100,2);IF(SaveCrit()):ApplyStatus(ApplyStatus(BLINDNESS,100,1);IF(SaveCrit()):ApplyStatus(ApplyStatus(DAZZLED,100,5);IF(SaveCrit()):ApplyStatus(CriticalFailureDisplay,100,0);" />
+        <field name="SpellFail" type="StringTableFieldDefinition" value="IF(SaveCritMiss()):DealDamage((LevelMapValue(2d6H2d6))/2,Poison,Magical);IF(SaveCritMiss()):ApplyStatus(DAZZLED,100,1);" />
+        <field name="TargetConditions" type="StringTableFieldDefinition" value="not Self() and not Dead() and ConcentrateSpell();" />
+        <field name="ProjectileCount" type="StringTableFieldDefinition" value="1" />
+        <field name="Trajectories" type="StringTableFieldDefinition" value="8c7bb016-4706-45b0-bcf4-5b59011ced12" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_ChromaticOrb_Poison" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h2d6d0f80g99bag7d19gccefg098adcc6cbad" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h75f70ac6g5324gaa8dg5dd1g47edb95897cd" version="1" />
+        <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(LevelMapValue(2d6H2d6),Poison,Magical);" />
+        <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="RangedSpellAttack" />
+        <field name="TooltipUpcastDescription" type="GuidObjectTableFieldDefinition" value="66388a6f-44dd-4c9f-a9e7-910c50e70755" />
+        <field name="CastSound" type="StringTableFieldDefinition" value="Spell_Cast_Damage_Poison_ChromaticOrbPoison_L1to3" />
+        <field name="CastTextEvent" type="StringTableFieldDefinition" value="Cast" />
+        <field name="CycleConditions" type="StringTableFieldDefinition" value="Enemy() and not Dead()" />
+        <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:2;KiPoint:1;" />
+        <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;38cdb41c-2eec-4e03-bb31-83cff0346c35,,;85414f5f-b448-4dda-9370-1b6c4b38b561,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;eadedcce-d01b-4fbb-a1ae-d218f13aa5d6,,;,,;,," />
+        <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Damage" enumeration_type_name="VerbalIntent" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IsSpell;HasHighGroundRangeExtension;HasVerbalComponent;HasSomaticComponent;RangeIgnoreVerticalThreshold;IsHarmful" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalDamage_Internal" enumeration_type_name="HitAnimationType" version="1" />
+        <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="92a96bf8-28c7-4565-8ceb-7cd02978b1ee" />
+        <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="ecd2a765-5888-42bc-bc88-7bb2303e82b7" />
+        <field name="DamageType" type="EnumerationTableFieldDefinition" value="Poison" enumeration_type_name="Damage Type" version="1" />
       </fields>
     </stat_object>
     <stat_object color="#FFFF0000" is_substat="false">

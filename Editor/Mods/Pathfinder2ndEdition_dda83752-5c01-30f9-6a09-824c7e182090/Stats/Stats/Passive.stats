@@ -7489,6 +7489,33 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="06e02068-b04f-49f4-8bfc-c33cb3c32cea" />
+        <field name="Name" type="NameTableFieldDefinition" value="SlimeSpit" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4bd1db68g1322ga39cgaf43g99b6d3061a61" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h81b6a78ag2652g0aa3gfd62gb1f07be6910b" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_ChromaticOrb_Poison" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Projectile_SlimeSpit);ActionResource(KiPoint,1,0);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9c7983b0-9302-41f9-9a3b-c641340f56e7" />
+        <field name="Name" type="NameTableFieldDefinition" value="DisruptPreyFeat" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha491365ag0d23gff6agbc70g461b35073ca0" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha492fbefgc364g2a18g62c5g1475b8c911f5" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_AttackOfOpportunity" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockInterrupt(Interrupt_DisruptPrey);UnlockInterrupt(Interrupt_DisruptPrey_OnCast);UnlockInterrupt(DisruptPrey_ReachAoO);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="63f5f85a-a15d-43e2-a659-6bf4ad64f654" />
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_0" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0bb3f688-cdfc-4bc6-8e3a-5426e60796b2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="ad60c43a-50c9-41fe-ae69-93ca23aade27" />
         <field name="Name" type="NameTableFieldDefinition" value="AnimalCompanionRanger" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="28b9294e-071c-494f-8dbf-12b5e5eee5dd" />
@@ -7695,7 +7722,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="efa36fbc-2c87-4772-a000-6c814cb3f366" />
         <field name="Name" type="NameTableFieldDefinition" value="GravityWeapon" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_WarCaster_Bonuses" />
-        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_GravityWeapon);ActionResource(KiPoint,1,0)" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_GravityWeapon);ActionResource(KiPoint,1,0);" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h123b11deg8846gc7dcgb14eg0cc980482205" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7279f5c0g5285g204cgd386gd9867ee7d227" version="1" />
         <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hfa4199e2g7109g31abg6e17gd78ff37049e8" version="1" />

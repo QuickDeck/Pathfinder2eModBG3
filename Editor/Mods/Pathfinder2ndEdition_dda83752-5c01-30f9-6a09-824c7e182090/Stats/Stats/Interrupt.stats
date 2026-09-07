@@ -41,6 +41,31 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a400abb7-0cc5-4319-94ff-17a9cc2d76eb" />
+        <field name="Name" type="NameTableFieldDefinition" value="DisruptPrey" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="6b435f5b-931f-4d26-aa61-656582325124" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h825b96degffe0g0eb7gb4abg312afd9033d6" version="1" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Self(context.Observer, context.Target) and Enemy() and not HasStatus('SANCTUARY',context.Source) and HasStatus('HUNT_PREY',context.Target) and not WieldingWeapon('Ammunition', false, false, context.Source) and not (not Player(context.Source) and Tagged('AI_IGNORED_TARGET')  and not HasStatus('GNOLL_SUDDENRUSH')) and not HasStatus('SHOCKWAVE') and not (HasStatus('MOBILE_NO_AOO', context.Source) and HasStatus('MOBILE_NO_AOO_SOURCE', context.Target)) and not HasStatus('FLAMING_SPHERE_AURA') and not HasStatus('SNEAKING',context.Target) and not HasStatus('SG_Ignore_AOO',context.Target)  and not AnyEntityIsItem() and not HasSpellFlag(SpellFlags.IgnoreAoO, context.Target);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="1b827c97-dd51-474c-98e0-67b6f58013e7" />
+        <field name="Name" type="NameTableFieldDefinition" value="Interrupt_DisruptPrey_OnCast" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="5a8353bd-aa42-4191-b85e-2c48b17eba30" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and not Self(context.Source, context.Observer) and Enemy(context.Source, context.Observer) and HasStatus('HUNT_PREY',context.Target) and not Uninterruptible() and not DistanceToEntityGreaterThan(2.5, context.ObserverPosition, context.Source) and not AnyEntityIsItem() and ((IsSpell() and HasSpellFlag(SpellFlags.Somatic)) or IsRangedAttack());" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="129403ef-f20a-4f5a-be8e-43e964d0f147" />
+        <field name="Name" type="NameTableFieldDefinition" value="DisruptPrey_ReachAoO" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="71ddc08c-24bc-4bd6-945b-552ee86f793e" />
+        <field name="Conditions" type="StringTableFieldDefinition" value="IsAbleToReact(context.Observer) and HasWeaponProperty(WeaponProperties.Reach, GetActiveWeapon(context.Source)) and not Self(context.Observer, context.Target) and Enemy() and HasStatus('HUNT_PREY',context.Target) and not HasStatus('SANCTUARY',context.Source) and not WieldingWeapon('Ammunition', false, false, context.Source) and not (not Player(context.Source) and Tagged('AI_IGNORED_TARGET')  and not HasStatus('GNOLL_SUDDENRUSH')) and not HasStatus('SHOCKWAVE') and not (HasStatus('MOBILE_NO_AOO', context.Source) and HasStatus('MOBILE_NO_AOO_SOURCE', context.Target)) and not HasStatus('FLAMING_SPHERE_AURA') and not HasStatus('SNEAKING',context.Target) and not HasStatus('SG_Ignore_AOO',context.Target)  and not AnyEntityIsItem() and not HasSpellFlag(SpellFlags.IgnoreAoO, context.Target);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="7a7a7b47-dac0-42a3-b2e9-a96a2dd26248" />
         <field name="Name" type="NameTableFieldDefinition" value="FlatCheckReaction" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h09fe9c5dg708cg9f1cgd621gbc0937e031bf" version="2" />
