@@ -1135,7 +1135,7 @@
   <content contentuid="h329c7237g614fgfd26g49f2g04c747e09d82" version="2">Smite</content>
   <content contentuid="h6ba236acga3dbge7a5g1fd2g763b3a845bb3" version="2">1 Action &lt;br&gt;You single out one enemy to destroy in your deity’s name. Designate one enemy you can see. Your Strikes against that enemy gain a +3 status bonus to damage, increasing to +4 if you have master proficiency with the weapon or unarmed attack you’re using for the Strike. Your current Smite ends if you use the Smite action again</content>
   <content contentuid="hae2fa8e8g5e9eg9385g74a0gf5057e0f97d1" version="2">Soothe</content>
-  <content contentuid="h01948cecgc9fcgc0b1g6e8egd27c5b187b4c" version="2">You grace the target's mind, boosting its mental defenses and healing its wounds. It gains a +2 status bonus to Will saves for the duration.</content>
+  <content contentuid="h01948cecgc9fcgc0b1g6e8egd27c5b187b4c" version="3">You grace the target's mind, boosting its mental defenses and healing its wounds. The target regains [1] when you Cast the Spell and gains a +2 status bonus to saves against mental effects for 1 minute.</content>
   <content contentuid="h9717ab02g3889g3ea4g5f33g9da9ba9120f2" version="1">Hunter's Mark</content>
   <content contentuid="h83a409c7gd7fcga28fg8f6cg0fc6f0b423c9" version="1">Mark a creature as your quarry to deal an additional [1] whenever you hit it with a weapon attack. </content>
   <content contentuid="he093ce0cg3c87g985cg18ccgcd5da32f4a9a" version="1">If the target dies before the spell ends, you can mark a new creature without expending a &lt;LSTag Tooltip="SpellSlot"&gt;spell slot&lt;/LSTag&gt;.</content>
@@ -4297,8 +4297,8 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hce8ff436g5bceg9f9fga86dg7122c2e86c27" version="1">Conjure a chaotic flurry of debris. The assault deals [1] when cast, and [2] when sustained.</content>
   <content contentuid="h6730c0c8g913bgf682gf8a2g97cc0d5a631d" version="1">Drowsy</content>
   <content contentuid="he06b6203gc6a4gc73fg07bfg4c23aeb06a2a" version="1">-1 status penalty to Perception checks.</content>
-  <content contentuid="hd4fe4dd7g2176g662ag6b47g4c2c44a56143" version="1">Soothed</content>
-  <content contentuid="h5fbe8b42g646cg42a1g05b8gb0dede1b51e6" version="1">+2 status bonus to Will saves.</content>
+  <content contentuid="hd4fe4dd7g2176g662ag6b47g4c2c44a56143" version="2">Soothe</content>
+  <content contentuid="h5fbe8b42g646cg42a1g05b8gb0dede1b51e6" version="2">+2 status bonus to Will saves against mental effects.</content>
   <content contentuid="h98719a09g4087g44a0g70fbg5a4d458e50ec" version="5">Each creature in the area becomes drowsy, possibly nodding off. On a successful save, a creature suffers a -1 status penalty to perception checks for 1 round. On a failed save, a creature falls unconcious for 1 minute (till your next short rest on a critical failure).</content>
   <content contentuid="h618b939eg9695g2b7bgd468g36a913fc040f" version="1">Deep Sleep</content>
   <content contentuid="h1c33daddg0212gcc71ge9e5ge8a994bfd385" version="2">Sudden Charge</content>
@@ -6422,7 +6422,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="he7dc9cc0g5551g443agb233g94c3d5d5bee1" version="6">Scroll of Hypnotize</content>
   <content contentuid="h4c2975b4gd9abg786dgab1bg5a0d681425b3" version="1">Fear </content>
   <content contentuid="h63d80d3eg3e14g9062gd15bgb1a9568da4f0" version="1">2 Actions&lt;br&gt;Range 30 feet&lt;br&gt;Targets 1 creature&lt;br&gt;Defense Will&lt;br&gt;You plant fear in the target; it must attempt a Will save.&lt;br&gt;Critical Success The target is unaffected.&lt;br&gt;Success The target is frightened 1.&lt;br&gt;Failure The target is frightened 2.&lt;br&gt;Critical Failure The target is frightened 3&lt;br&gt;Heightened (3rd) You can target up to five creatures.</content>
-  <content contentuid="hf3fcc4fage68bg8d02g824bga43d06ff4794" version="1">A violent wind issues forth from your palm, blowing from the point where you are when you Cast the Spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects.&lt;br&gt;Success The creature can't move against the wind.&lt;br&gt;Failure The creature is knocked prone.</content>
+  <content contentuid="hf3fcc4fage68bg8d02g824bga43d06ff4794" version="2">A violent wind issues forth from your palm, blowing from the point where you are when you Cast the Spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects. Large or smaller creatures in the area must attempt a Fortitude save. Large or smaller creatures that later move into the gust must attempt the save on entering.</content>
   <content contentuid="ha766f1fag219bge53ag0d01g12fe2458d8ac" version="1">A violent wind issues forth from your palm, blowing from the point where you are when you Cast the Spell to the line's opposite end. The wind extinguishes small non-magical fires, disperses fog and mist, blows objects of light Bulk or less around, and pushes larger objects.&lt;br&gt;Success The creature can't move against the wind.&lt;br&gt;Failure The creature is knocked prone.</content>
   <content contentuid="h1f023386g59b1g325cg320bgb1dc78863b1c" version="1">2 Actions&lt;br&gt;Range 30 feet&lt;br&gt;Targets 1 creature&lt;br&gt;Defense Will&lt;br&gt;You plant fear in the target; it must attempt a Will save.&lt;br&gt;Critical Success The target is unaffected.&lt;br&gt;Success The target is frightened 1.&lt;br&gt;Failure The target is frightened 2.&lt;br&gt;Critical Failure The target is frightened 3&lt;br&gt;Heightened (3rd) You can target up to five creatures.</content>
   <content contentuid="hbba0d627ga1ccgf128gf34bg3ab5aebe071e" version="1">Lightning Bolt</content>
@@ -32695,4 +32695,6 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="hdc3f28f7gc6b1g7f51g0fccgfe90e62aa281" version="2">You channel vital energy to heal the living or damage the undead. If the target is a living creature, you restore [1]. If the target is undead, you deal [2] to it, with a basic Fortitude save.</content>
   <content contentuid="h66781f0fg6855g3d23g47fagd7d324196f0b" version="1">Damage and healing increase by [1] and [2] respectively. The extra healing for the 2-action version increases by [3]</content>
   <content contentuid="h627a9bc8g2db8gc011g8c36g4fa4ad723e0a" version="2">You channel void energy to harm the living or heal the undead. If the target is a living creature, you deal [1] to it, with a basic Fortitude save. If the target is undead, it gains [2].</content>
+  <content contentuid="h56a0f636ge4bdg87e1g435cg70567c843512" version="1">Gust Of Wind Helper</content>
+  <content contentuid="he5014aa2ge2dbg11a0g2714g78407d2eb534" version="1">Gust of Wind</content>
 </contentList>

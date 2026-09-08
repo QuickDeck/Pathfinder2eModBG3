@@ -1,0 +1,260 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+DB_GustOfWindSpells("Zone_GustOfWind");
+
+DB_GustOfWindSummonDistances(-10.0);
+// We start at 1.5 to avoid hitting the caster.
+DB_GustOfWindSummonDistances(1.5);
+DB_GustOfWindSummonDistances(2.0);
+DB_GustOfWindSummonDistances(3.0);
+DB_GustOfWindSummonDistances(4.0);
+DB_GustOfWindSummonDistances(5.0);
+DB_GustOfWindSummonDistances(6.0);
+DB_GustOfWindSummonDistances(7.0);
+DB_GustOfWindSummonDistances(8.0);
+DB_GustOfWindSummonDistances(9.0);
+DB_GustOfWindSummonDistances(10.0);
+DB_GustOfWindSummonDistances(11.0);
+DB_GustOfWindSummonDistances(12.0);
+DB_GustOfWindSummonDistances(13.0);
+DB_GustOfWindSummonDistances(14.0);
+DB_GustOfWindSummonDistances(15.0);
+DB_GustOfWindSummonDistances(16.0);
+DB_GustOfWindSummonDistances(17.0);
+DB_GustOfWindSummonDistances(18.0);
+DB_GustOfWindSummonDistances(19.0);
+DB_GustOfWindSummonDistances(20.0);
+DB_GustOfWindSummonDistances(21.0);
+DB_GustOfWindSummonDistances(22.0);
+DB_GustOfWindSummonDistances(23.0);
+
+DB_GustOfWindCloudStatuses("RustCloudAura_Rank4");
+DB_GustOfWindCloudStatuses("RustCloudAura_Rank5");
+DB_GustOfWindCloudStatuses("RustCloudAura_Rank6");
+DB_GustOfWindCloudStatuses("PetalStorm_Aura_Rank4");
+DB_GustOfWindCloudStatuses("PetalStorm_Aura_Rank6");
+DB_GustOfWindCloudStatuses("MistAura");
+DB_GustOfWindCloudStatuses("AshCloudAura_Rank2");
+DB_GustOfWindCloudStatuses("AshCloudAura_Rank3");
+DB_GustOfWindCloudStatuses("AshCloudAura_Rank4");
+DB_GustOfWindCloudStatuses("AshCloudAura_Rank5");
+DB_GustOfWindCloudStatuses("AshCloudAura_Rank6");
+DB_GustOfWindCloudStatuses("SanguineMistAura_4");
+DB_GustOfWindCloudStatuses("SanguineMistAura_5");
+DB_GustOfWindCloudStatuses("SanguineMistAura_6");
+DB_GustOfWindCloudStatuses("FLOATING_FLAME_AURA");
+DB_GustOfWindCloudStatuses("FLOATING_FLAME_3_AURA");
+DB_GustOfWindCloudStatuses("FLOATING_FLAME_4_AURA");
+DB_GustOfWindCloudStatuses("FLOATING_FLAME_5_AURA");
+DB_GustOfWindCloudStatuses("FLOATING_FLAME_6_AURA");
+DB_GustOfWindCloudStatuses("GEYSER_AURA");
+KBSECTION
+IF
+UsingSpell(_, _, _, _, _)
+AND
+DB_GustOfWindSpellsSummonSequence((INTEGER)_StoryID, (GUIDSTRING)_Owner, (STRING)_Spell, (REAL)_XT, (REAL)_YT, (REAL)_ZT)
+THEN
+NOT DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, _XT, _YT, _ZT);
+
+IF
+UsingSpellAtPosition((GUIDSTRING)_Owner, (REAL)_XT, (REAL)_YT, (REAL)_ZT, (STRING)_Spell, _, _, (INTEGER)_StoryID)
+AND
+DB_GustOfWindSpells(_Spell)
+THEN
+DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, _XT, _YT, _ZT);
+
+IF
+UsingSpellOnTarget((GUIDSTRING)_Owner, (GUIDSTRING)_Target, (STRING)_Spell, _, _, (INTEGER)_StoryID)
+AND
+GetPosition(_Target, (REAL)_XT, (REAL)_YT, (REAL)_ZT)
+AND
+DB_GustOfWindSpells(_Spell)
+THEN
+DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, _XT, _YT, _ZT);
+
+//WARNING: This gets weird and is a pain in the ass to follow. In short,
+// we just summon a whole load of helpers in a line with auras. In order
+// to prevent lag spikes when we do this, we have to summon them
+// sequentially, which makes things really horrid.
+
+// Dummy to clear warning about unused DB
+IF
+CastSpell(_, _, _, _, _)
+AND
+DB_GustOfWindSummonDistances((REAL)_Distance)
+THEN
+DB_NOOP(1);
+
+// First, clear out any old index tracking.
+IF
+CastSpell(_, _, _, _, _)
+AND
+DB_GustOfWindCurrentIndex((INTEGER)_Index)
+THEN
+NOT DB_GustOfWindCurrentIndex(_Index);
+
+// Get the first distance value from the DB, and summon a helper
+// at that distance. Apply a source status to it and await its
+// summon event. Start a DB tracking the index.
+IF
+CastSpell((GUIDSTRING)_Owner, (STRING)_Spell, _, _, (INTEGER)_StoryID)
+AND
+DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, (REAL)_XT, (REAL)_YT, (REAL)_ZT)
+AND
+DB_GustOfWindSpells(_Spell)
+AND
+SysFactAtIndex("DB_GustOfWindSummonDistances", 1, 1, "DB_GustOfWindCurrentSummon")
+AND
+DB_GustOfWindCurrentSummon((REAL)_Distance)
+AND
+GetPosition(_Owner, (REAL)_XO, (REAL)_YO, (REAL)_ZO)
+AND
+QRY_VectorABByDistance(_XO, _YO, _ZO, _XT, _YT, _ZT, _Distance)
+AND
+DB_QRYRTN_VectorABByDistance((REAL)_XS, (REAL)_YS, (REAL)_ZS)
+AND
+CreateAt((GUIDSTRING)GustOfWindHelper_74557a4c-6c00-44ea-8d42-30eec8010fa2, _XS, _YS, _ZS, 1, 0, "GustOfWindSummonStep", (GUIDSTRING)_Source)
+THEN
+NOT DB_GustOfWindCurrentSummon(_Distance);
+DB_GustOfWindSpellsSource(_Source, _Owner);
+DB_GustOfWindCurrentIndex(1);
+ApplyStatus(_Source, "GUST_OF_WIND_SOURCE", 6.0, 0, _Owner);
+
+// Once the last helper is summoned, use the index value and
+// add 1 to find the next distance in the DB. Do this until
+// we reach the DB's limit. Each time, we also teleport the
+// previous summon to its ideal co-ordinates, as the create
+// at command puts it at the nearest empty space on the grid instead.
+IF
+EntityEvent((GUIDSTRING)_LastSummon, "GustOfWindSummonStep")
+AND
+DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, (REAL)_XT, (REAL)_YT, (REAL)_ZT)
+AND
+DB_GustOfWindSpells(_Spell)
+AND
+DB_GustOfWindCurrentIndex((INTEGER)_Index)
+AND
+IntegerSum(_Index, 1, (INTEGER)_NewIndex)
+AND
+SysCount("DB_GustOfWindSummonDistances", 1, (INTEGER)_Count)
+AND
+_Count >= _NewIndex
+AND
+SysFactAtIndex("DB_GustOfWindSummonDistances", 1, _NewIndex, "DB_GustOfWindCurrentSummon")
+AND
+SysFactAtIndex("DB_GustOfWindSummonDistances", 1, _Index, "DB_GustOfWindPreviousSummon")
+AND
+DB_GustOfWindCurrentSummon((REAL)_Distance)
+AND
+DB_GustOfWindPreviousSummon((REAL)_PreviousDistance)
+AND
+GetPosition(_Owner, (REAL)_XO, (REAL)_YO, (REAL)_ZO)
+AND
+QRY_VectorABByDistance(_XO, _YO, _ZO, _XT, _YT, _ZT, _Distance)
+AND
+DB_QRYRTN_VectorABByDistance((REAL)_XS, (REAL)_YS, (REAL)_ZS)
+AND
+QRY_VectorABByDistance(_XO, _YO, _ZO, _XT, _YT, _ZT, _PreviousDistance)
+AND
+DB_QRYRTN_VectorABByDistance((REAL)_XP, (REAL)_YP, (REAL)_ZP)
+AND
+CreateAt((GUIDSTRING)GustOfWindHelper_74557a4c-6c00-44ea-8d42-30eec8010fa2, _XS, _YS, _ZS, 1, 0, "GustOfWindSummonStep", (GUIDSTRING)_Summon)
+AND
+DB_GustOfWindSpellsSource((GUIDSTRING)_Source, _Owner)
+THEN
+NOT DB_GustOfWindCurrentIndex(_Index);
+DB_GustOfWindCurrentIndex(_NewIndex);
+NOT DB_GustOfWindCurrentSummon(_Distance);
+DB_GustOfWindSpellsSummons(_Summon, _Owner, _Source);
+NOT DB_GustOfWindPreviousSummon(_PreviousDistance);
+ApplyStatus(_Summon, "GUST_OF_WIND_AURA", 6.0, 0, _Owner);
+TeleportToPosition(_LastSummon, _XP, _YP, _ZP, "GustOfWindSummonAdjust", 0, 0, 0, 0, 0);
+
+// If we hit the end of the DB, cleanup.
+IF
+EntityEvent((GUIDSTRING)_LastSummon, "GustOfWindSummonStep")
+AND
+DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, (REAL)_XT, (REAL)_YT, (REAL)_ZT)
+AND
+DB_GustOfWindSpells(_Spell)
+AND
+DB_GustOfWindCurrentIndex((INTEGER)_Index)
+AND
+IntegerSum(_Index, 1, (INTEGER)_NewIndex)
+AND
+SysCount("DB_GustOfWindSummonDistances", 1, (INTEGER)_Count)
+AND
+_Count < _NewIndex
+THEN
+NOT DB_GustOfWindCurrentIndex(_Index);
+NOT DB_GustOfWindSpellsSummonSequence(_StoryID, _Owner, _Spell, _XT, _YT, _ZT);
+
+// When the auras expire, delete the helpers.
+IF
+StatusRemoved((GUIDSTRING)_Summon, "GUST_OF_WIND_AURA", _, _)
+THEN
+RequestDeleteTemporary((CHARACTER)_Summon);
+
+IF
+StatusRemoved((GUIDSTRING)_Summon, "GUST_OF_WIND_AURA", _, _)
+AND
+DB_GustOfWindSpellsSummons(_Summon, (GUIDSTRING)_Owner, (GUIDSTRING)_Source)
+THEN
+NOT DB_GustOfWindSpellsSummons(_Summon, _Owner, _Source);
+
+IF
+StatusRemoved((GUIDSTRING)_Source, "GUST_OF_WIND_SOURCE", _, _)
+THEN
+RequestDeleteTemporary((CHARACTER)_Source);
+
+IF
+StatusRemoved((GUIDSTRING)_Source, "GUST_OF_WIND_SOURCE", _, _)
+AND
+DB_GustOfWindSpellsSource((GUIDSTRING)_Source, (GUIDSTRING)_Owner)
+THEN
+NOT DB_GustOfWindSpellsSource(_Source, _Owner);
+
+// When a character needs to make a check, we do that via
+// a proc status so we can change the source.
+IF
+StatusApplied((GUIDSTRING)_Character, "GUST_OF_WIND_TRIGGER", (GUIDSTRING)_Summon, _)
+AND
+DB_GustOfWindSpellsSummons(_Summon, (GUIDSTRING)_Owner, (GUIDSTRING)_Source)
+AND
+HasActiveStatus(_Character, "GUST_OF_WIND_BLOCK", 0)
+THEN
+ApplyStatus(_Character, "GUST_OF_WIND_CHECK", 0.0, 0, _Owner);
+
+// When a character needs to be knocked back, we do that via
+// a proc status so we can change the source. We have to wait
+// for the teleport command from STOP_MOVEMENT to complete
+// first.
+IF
+EntityEvent((GUIDSTRING)_Character, "PF2e_StopMovement")
+AND
+HasActiveStatus(_Character, "GUST_OF_WIND_PROC", 1)
+AND
+DB_GustOfWindSpellsSource((GUIDSTRING)_Source, _Owner)
+THEN
+ApplyStatus(_Character, "GUST_OF_WIND_FORCE", 0.0, 0, _Source);
+
+IF
+GotUp((CHARACTER)_Character)
+AND
+HasActiveStatus((GUIDSTRING)_Character, "GUST_OF_WIND_PROC", 1)
+THEN
+ApplyStatus(_Character, "STOP_MOVEMENT", 0.0);
+RemoveStatus(_Character, "GUST_OF_WIND_PROC");
+
+// If an invisible helper enters the auras, remove cloud-
+// related statuses from it.
+IF
+StatusApplied((GUIDSTRING)_Helper, "GUST_OF_WIND_CLOUD_CLEANUP", _, _)
+AND
+DB_GustOfWindCloudStatuses((STRING)_Status)
+THEN
+RemoveStatus(_Helper, _Status);
+EXITSECTION
+
+ENDEXITSECTION

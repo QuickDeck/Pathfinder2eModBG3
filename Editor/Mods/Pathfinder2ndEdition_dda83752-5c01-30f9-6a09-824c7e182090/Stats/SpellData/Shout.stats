@@ -73,7 +73,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="88cae003-a946-4e0e-bd0c-2ba677f5d9ef,,;,,;37fe9557-0310-4273-9e28-03c1613e4101,,;,,;88cae003-a946-4e0e-bd0c-2ba677f5d9ef,,;,,;,,;,,;,," />
         <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Buff" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;NoCameraMove;HasSomaticComponent;IsSpell;Temporary" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;NoCameraMove;HasSomaticComponent;Temporary" enumeration_type_name="SpellFlagList" version="1" />
         <field name="AnimationIntentType" type="EnumerationTableFieldDefinition" value="Aggressive" enumeration_type_name="SpellAnimationIntentType" version="1" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="HasStatus('PRONE_PF2') and not HasStatus('Grappled');" />
         <field name="CinematicArenaFlags" type="EnumerationTableFieldDefinition" value="Ignore" enumeration_type_name="CinematicArenaFlags" version="1" />
@@ -101,7 +101,7 @@
         <field name="UseCosts" type="StringTableFieldDefinition" value="ActionPoint:1;" />
         <field name="SpellAnimation" type="CastAnimationsTableFieldDefinition" value="e4c33fe4-af36-47b7-9f61-51f2f6924210,,;,,;35b644cf-5c13-4407-9dc1-23bf4309216e,,;823e3ddf-c670-41ef-b7b4-9f4a4e38300b,,;6574bfb9-d601-4760-bd53-867747514006,,;,,;a28c0e11-6dc4-4f40-8e58-14e0d7ae4172,,;,,;,," />
         <field name="VerbalIntent" type="EnumerationTableFieldDefinition" value="Utility" enumeration_type_name="VerbalIntent" version="1" />
-        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;NoCameraMove;HasSomaticComponent;IsSpell;Temporary" enumeration_type_name="SpellFlagList" version="1" />
+        <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="IgnoreSilence;NoCameraMove;HasSomaticComponent;Temporary" enumeration_type_name="SpellFlagList" version="1" />
         <field name="AnimationIntentType" type="EnumerationTableFieldDefinition" value="Aggressive" enumeration_type_name="SpellAnimationIntentType" version="1" />
         <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="bcd1488f-2c9d-4f14-98ba-0e4bb80fc967" />
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="aec764bd-7542-462d-bd73-9d048fea33f8" />
