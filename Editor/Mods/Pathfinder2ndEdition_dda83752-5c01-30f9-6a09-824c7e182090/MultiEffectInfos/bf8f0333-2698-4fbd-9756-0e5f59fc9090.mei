@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MultiEffectInfos UUID="bf8f0333-2698-4fbd-9756-0e5f59fc9090" OwnerUUID="7c8dc8ea-ef4c-4fda-bc13-afaf859e1aaf" Name="PF2e_AltToxicCloud_AuraEffect">
+  <EffectInfo UUID="b4caa21b-bee6-453a-beb6-0c596f103dfe" EffectResourceGuid="c0a8ef7c-8349-61c1-eac7-fb121460a6b5" DetachSource="false" DetachTarget="false" KeepRotation="false" UseOrientDirection="false" UseDistance="false" UseScaleOverride="true" KeepScale="false" MainHand="false" OffHand="false" MinDistance="0" MaxDistance="0" BindSourceTo="SourceEntity" BindTargetTo="TargetEntity" Pivot="Target" Enabled="true" DamageType="None" VerbalIntent="None" SourceCheckEquipmentTagConditions="true" TargetCheckEquipmentTagConditions="true" />
+</MultiEffectInfos>

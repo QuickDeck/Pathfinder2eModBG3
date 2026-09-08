@@ -1391,6 +1391,48 @@
     </stat_object>
     <stat_object color="#FFA52A2A" is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="adba6556-aa31-4ab2-9f85-39f8c22750b8" />
+        <field name="Name" type="NameTableFieldDefinition" value="TAG CALLOUTS" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_CritSuccess" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hc0eb54f4gd566gbd92g0ba1g81830a8bdfdd" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hf084cd94g6dccgd496gfa78g0fe33ad54113" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Indomitable" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="296efd37-2b5c-4121-be9a-93cd868a4421" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_Success" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hf33f4428g4c66g2471ge2f1gbae5fdcebc38" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="hdcb50f2ag76fag1ee2g3328g095969645134" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="a66ab3fd-adb8-402f-933e-c4d01fbaa00a" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_Fail" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="hac20f9b6gc80eg2e85g0ca9g533f2ef06665" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h053ff472gc351g8ce6g40f1g8018539adf5f" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="47369373-3ba9-49dd-8ff2-1b456e845cdb" />
+        <field name="Name" type="NameTableFieldDefinition" value="PF2e_CritFail" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="3a1603f1-fb53-4c10-b254-e5ca772bdf67" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h3737a8bbga3cdg0417gaccdg8c20cadf45cd" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h42977c22gcd7cgd2begdb4agba2a785e99cc" version="1" />
+      </fields>
+    </stat_object>
+    <stat_object color="#FFA52A2A" is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="15a14cc7-ba2e-4168-a349-018a412913e2" />
         <field name="Name" type="NameTableFieldDefinition" value="FEATS" />
       </fields>
@@ -7447,6 +7489,33 @@
     </stat_object>
     <stat_object is_substat="false">
       <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="06e02068-b04f-49f4-8bfc-c33cb3c32cea" />
+        <field name="Name" type="NameTableFieldDefinition" value="SlimeSpit" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h4bd1db68g1322ga39cgaf43g99b6d3061a61" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h81b6a78ag2652g0aa3gfd62gb1f07be6910b" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="Spell_Evocation_ChromaticOrb_Poison" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Projectile_SlimeSpit);ActionResource(KiPoint,1,0);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="9c7983b0-9302-41f9-9a3b-c641340f56e7" />
+        <field name="Name" type="NameTableFieldDefinition" value="DisruptPreyFeat" />
+        <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="ha491365ag0d23gff6agbc70g461b35073ca0" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha492fbefgc364g2a18g62c5g1475b8c911f5" version="1" />
+        <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_AttackOfOpportunity" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockInterrupt(Interrupt_DisruptPrey);UnlockInterrupt(Interrupt_DisruptPrey_OnCast);UnlockInterrupt(DisruptPrey_ReachAoO);" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="UUID" type="IdTableFieldDefinition" value="63f5f85a-a15d-43e2-a659-6bf4ad64f654" />
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_0" />
+        <field name="Using" type="BaseClassTableFieldDefinition" value="0bb3f688-cdfc-4bc6-8e3a-5426e60796b2" />
+      </fields>
+    </stat_object>
+    <stat_object is_substat="false">
+      <fields>
         <field name="UUID" type="IdTableFieldDefinition" value="ad60c43a-50c9-41fe-ae69-93ca23aade27" />
         <field name="Name" type="NameTableFieldDefinition" value="AnimalCompanionRanger" />
         <field name="Using" type="BaseClassTableFieldDefinition" value="28b9294e-071c-494f-8dbf-12b5e5eee5dd" />
@@ -7653,7 +7722,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="efa36fbc-2c87-4772-a000-6c814cb3f366" />
         <field name="Name" type="NameTableFieldDefinition" value="GravityWeapon" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_WarCaster_Bonuses" />
-        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_GravityWeapon);ActionResource(KiPoint,1,0)" />
+        <field name="Boosts" type="StringTableFieldDefinition" value="UnlockSpell(Shout_GravityWeapon);ActionResource(KiPoint,1,0);" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h123b11deg8846gc7dcgb14eg0cc980482205" version="1" />
         <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h7279f5c0g5285g204cgd386gd9867ee7d227" version="1" />
         <field name="ExtraDescription" type="TranslatedStringTableFieldDefinition" handle="hfa4199e2g7109g31abg6e17gd78ff37049e8" version="1" />
@@ -7804,7 +7873,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="2aabd747-fbb0-48ed-8d68-3dee58ad995b" />
         <field name="Name" type="NameTableFieldDefinition" value="SnapShot" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h7053ff25g7117g91d5gbbb3g72652aec8f6e" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h158809b2g0b12g2384g1797gaa11d1911d90" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h158809b2g0b12g2384g1797gaa11d1911d90" version="2" />
         <field name="TooltipUseCosts" type="StringTableFieldDefinition" value="ReactionActionPoint:1" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_GiantKiller" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1" />
@@ -7994,7 +8063,7 @@
         <field name="UUID" type="IdTableFieldDefinition" value="9d935476-a66c-467c-bccd-ddb1e8db1e6e" />
         <field name="Name" type="NameTableFieldDefinition" value="StoneOrder" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h1adc0e54g8b18g7139g6a6bg45cf10da3dce" version="2" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="1" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="ha316cc8eg57f6g2d6agb737g5732f425ccb8" version="2" />
         <field name="Properties" type="EnumerationListTableFieldDefinition" value="Highlighted" enumeration_type_name="PassiveFlags" version="1" />
         <field name="Boosts" type="StringTableFieldDefinition" value="Tag(SLIPPING_ADV)" />
         <field name="Icon" type="StringTableFieldDefinition" value="PassiveFeature_Land_Mountain" />

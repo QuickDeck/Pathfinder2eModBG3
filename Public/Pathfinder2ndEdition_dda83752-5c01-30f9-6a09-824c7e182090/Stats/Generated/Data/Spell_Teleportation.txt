@@ -147,6 +147,9 @@ data "OriginTargetConditions" "not Tagged('BLOCK_RESURRECTION') and not Self() a
 data "DisplayName" "ha1797a27g167bgb285g16b7g1e1179b90997;1"
 data "Description" "hf1176859gc200g27c0gfc22g4debc68b561b;1"
 data "UseCosts" "ActionPoint:2;SpellSlotsGroup:1:1:6;"
+data "PrepareEffect" "76ce048e-1781-4383-9aaa-bf882ac3a33a"
+data "CastEffect" "0549564f-c714-49a2-b803-29dfd56f2b79"
+data "TargetEffect" "f217184e-6690-4235-9539-1c560c98af37"
 
 new entry "Teleportation_Displacement_DisplacerBeast"
 type "SpellData"
