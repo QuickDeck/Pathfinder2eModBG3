@@ -1983,7 +1983,7 @@
   <content contentuid="h7a33a7c5g6b13g4187g53c1g7cf794f934c9" version="1">Dragon Stance</content>
   <content contentuid="h4320c14cg089ag831fgd6deg0cb2837bff8d" version="2">1 Action &lt;br&gt; &lt;b&gt;Prerequisites You are unarmored &lt;b&gt; You enter the stance of a dragon and make powerful leg strikes like a lashing dragon’s tail. You can make dragon tail attacks that deal 1d10 bludgeoning damage. They are in the brawling group and have the backswing, nonlethal, and unarmed traits. While in Dragon Stance, you can ignore the first square of difficult terrain while Striding</content>
   <content contentuid="h56b32258g67e6gb6fagab7dg8448476d242c" version="1">Frightened</content>
-  <content contentuid="h0cf74499g962cg6951gae46gbb78cbd7063a" version="1">Frightened entities have -1 to all attacks and DCs.</content>
+  <content contentuid="h0cf74499g962cg6951gae46gbb78cbd7063a" version="2">Frightened creatures take a status to all attack rolls and DCs equal to their frightened value, which reduces by 1 at the end of each of their turns.</content>
   <content contentuid="h8abe6c22g0d0cg6cfeg2ae5g9c062dd5df55" version="1">Dragon Stance</content>
   <content contentuid="h2eb9fd0egd5dbg1e8egb839g25f7b8a79321" version="1">1 Action &lt;br&gt; You enter the stance of a dragon and make powerful leg strikes like a lashing dragon’s tail. You can make dragon tail attacks that deal 1d10 bludgeoning damage. They are in the brawling group and have the backswing, nonlethal, and unarmed traits. While in Dragon Stance, you can ignore the first square of difficult terrain while Striding</content>
   <content contentuid="hbe1812a5gb411gbad7g4deegc77cbd85e42f" version="1">Dragon Tail</content>
@@ -4495,7 +4495,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="hb924ce27gcf6dg7534g3c7dg62df9d6aa5c3" version="2">Protection</content>
   <content contentuid="hcc3e0a4dg53c8ga7d0g1cb0g1c88e95de0a4" version="1">2 Actions&lt;br&gt;Range Touch&lt;br&gt;Targets 1 willing creature&lt;br&gt;Duration 1 minute&lt;br&gt;You ward a creature against harm. The target gains a +1 status bonus to Armor Class and saving throws.&lt;br&gt;Heightened (3rd) You can choose to have the benefits also affect all your allies in a 10-foot emanation around the target.</content>
   <content contentuid="h62e84ed2g3e30gef01gef81g6f66323c7198" version="1">Blistering Invective</content>
-  <content contentuid="h74f8af02g429bgcec8g9ee2gc587c03b0fa5" version="2">A heap of insults and invectives spew from your mouth - words so devastating your foes burn from the intensity of your diatribe. Your words deal [1] with a basic Will save. A target that fails the save is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened 1&lt;/LSTag&gt; (Frightened 2 on a critical failure).</content>
+  <content contentuid="h74f8af02g429bgcec8g9ee2gc587c03b0fa5" version="4">A heap of insults and invectives spew from your mouth - words so devastating your foes burn from the intensity of your diatribe. Your words deal a persistent [1] with a basic Will save. A target that fails the save is &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened 1&lt;/LSTag&gt; (Frightened 2 on a critical failure).</content>
   <content contentuid="h698a03e1g4a9fgfd47gf071g91a1ebca3a70" version="1">Protection (Rank 3)</content>
   <content contentuid="h9311f837g1461gad7bg4c3cgdfcd9986c3f7" version="1">2 Actions&lt;br&gt;Range Touch&lt;br&gt;Targets 1 willing creature&lt;br&gt;Duration 1 minute&lt;br&gt;You ward a creature against harm. The target gains a +1 status bonus to Armor Class and saving throws.&lt;br&gt;Heightened (3rd) You can choose to have the benefits also affect all your allies in a 10-foot emanation around the target.</content>
   <content contentuid="h2d99a35eg4eb9g446ag4522gd7e7105e58eb" version="1">Persistent Acid Damage</content>
@@ -4503,7 +4503,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="h7beb9f1fg1ea4g46c6g8a0bg57979c9712c6" version="1">Taking 2d6 persistent acid damage at the end of its turn.</content>
   <content contentuid="hc0673df7g1015g5815g593fg7e866f2c3b3f" version="1">Taking 3d6 persistent acid damage at the end of its turn.</content>
   <content contentuid="hf4a86233gc412gbbffgec50g09e449ad3ed5" version="1">Burning</content>
-  <content contentuid="hf5e553d9g79c1ge816g12c2g1fe4bd72e38c" version="1">Taking 2d6 persistent fire damage.</content>
+  <content contentuid="hf5e553d9g79c1ge816g12c2g1fe4bd72e38c" version="3">Taking a persistent [1].</content>
   <content contentuid="hd7f09c03g4c9cg3875g51fag43ea3a2da952" version="1">Taking 4d6 persistent fire damage.</content>
   <content contentuid="ha9762f3agab38g5286gb2a0g174149a7af27" version="1">Taking 6d6 persistent fire damage.</content>
   <content contentuid="h30cc5a8dg4394g67aag2333g49216dc959d6" version="1">Taking (2d6)/2 persistent fire damage.</content>
@@ -6267,7 +6267,7 @@ Because this is Pathfinder 2nd Edition, Short Rests are unlimited and restore fo
   <content contentuid="h9ef73049g261ag8688g1ab0g3ebda2919636" version="1">Ignition</content>
   <content contentuid="h8cd61df7g494cg0c07g2a17ge9279f18b96b" version="3">You snap your fingers and point at a target, which begins to smolder. Make a ranged spell attack roll against the target's AC, dealing [1] on a hit. On a critical hit the target also takes &lt;LSTag Type="Status" Tooltip="IgnitionPersistent_Rank1"&gt;1d4 persistent fire damage&lt;/LSTag&gt;.</content>
   <content contentuid="hfd43c1d4g6085g8dc4g0901g62c3d7befc19" version="1">Burning</content>
-  <content contentuid="ha139a77cgdaa0g738cg8418g71a534cf34fe" version="2">Taking [1] persistent fire damage. The damage increases by 1d4 per rank. At the end of each turn, the conditions ends on a successful DC 15 flat check.</content>
+  <content contentuid="ha139a77cgdaa0g738cg8418g71a534cf34fe" version="3">Taking [1].</content>
   <content contentuid="h04537f10ga083g3f4dg923eg1bb75a421b2a" version="1">Bleeding</content>
   <content contentuid="h0fda300fg1bc6g6146gc051ga7d0b815862e" version="2">Taking [1] bleed damage. The damage increases by 1 per rank. At the end of each turn, the conditions ends on a successful DC 15 flat check.</content>
   <content contentuid="h50b40c5egf9b7g6ef9ga03cg95a2249c71e3" version="1">You push your foes around and leave bruises. While raging, when you successfully Disarm, Grapple, Reposition, Shove, or Trip an enemy, you deal that enemy bludgeoning damage equal to your Strength modifier; add this to the damage from a critical success to Trip.</content>
@@ -31613,7 +31613,7 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="hed63299bga36ege4c7g361bg401e373f8643" version="2">You snap your fingers and point at a target, which begins to smolder. Make a ranged spell attack roll against the target's AC, dealing [1] on a hit. On a critical hit the target also takes &lt;LSTag Type="Status" Tooltip="IgnitionPersistent_Rank1"&gt;1d4 persistent fire damage&lt;/LSTag&gt;.</content>
   <content contentuid="hdbdd3ec6g7c77g0717g90aeg5ae04611689e" version="1">You slash your hands through the air, channeling miniature ripples of air from each finger to slice your enemy. Make spell attack rolls against two targets' ACs. This deals [1]. On a critical success, a target also takes &lt;LSTag Type="Status" Tooltip="SlashingGustPersistent_Rank1"&gt;1d4 persistent bleed damage&lt;/LSTag&gt;. This counts as two attacks for your multiple attack penalty, but the penalty doesn't increase until after both attacks.</content>
   <content contentuid="h335ac0ffgf5d4gc42ag993bg5782b2513ec9" version="1">Bleeding</content>
-  <content contentuid="h7ec186ebgddaag048ag8b00gb2621832c6f6" version="3">Taking a persistent [1]. At the end of each turn, the conditions ends on a successful DC 15 flat check.</content>
+  <content contentuid="h7ec186ebgddaag048ag8b00gb2621832c6f6" version="5">Taking a persistent [1].</content>
   <content contentuid="h7aa6bc03gfe65gaedfgf08eg2848afc978c2" version="1">Bleeding</content>
   <content contentuid="h44329535g17degaa71gd656g32c50124132e" version="1">Taking [1] persistent bleed damage. The damage increases by 1d4 per rank. At the end of each turn, the conditions ends on a successful DC 15 flat check. The condition also ends if the target is healed to full health.</content>
   <content contentuid="h42b41b61g0378g16e7g09b1g62f1b926bff4" version="1">You must have both hands free.</content>
@@ -32864,4 +32864,10 @@ Really? Just like that? All right, but if she reaches for that lute, it's firewo
   <content contentuid="h5aab5920g3931gafb9g19fcg0a80f28cc3b6" version="1">Animated Assault</content>
   <content contentuid="h3aa81242gefd0g8831g5e67gd961cadb8605" version="1">Persistent</content>
   <content contentuid="h8f23aba9g7387g7b39g7aa8gcf48ca4f876c" version="1">Deals an additional [1] and targets two additional creatures every 2nd rank.</content>
+  <content contentuid="h19f1faadga212gccf5geeaeg8647e55cceac" version="1">Taking [1].</content>
+  <content contentuid="h0b315540g350bge8cbg886fg9dc9fbaacc85" version="1">Taking [1].</content>
+  <content contentuid="h8d1a56d1g5387gd7a7gff8bge6000aa96c78" version="1">Persistent Bleed</content>
+  <content contentuid="h095e97b6g2389g148dg1510gd3ba3b738f08" version="1">Taking a persistent [1].</content>
+  <content contentuid="he9e76cdbg0d79g7712gbc09g3ee656472357" version="1">Taking a persistent [1].</content>
+  <content contentuid="h2a2eceafgec7bg9059g3a2bg396e1a890c49" version="1">Taking a persistent [1].</content>
 </contentList>

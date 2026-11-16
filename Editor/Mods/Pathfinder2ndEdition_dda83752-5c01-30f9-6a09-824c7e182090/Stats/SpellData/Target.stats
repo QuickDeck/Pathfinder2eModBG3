@@ -15590,7 +15590,7 @@
         <field name="AmountOfTargets" type="StringTableFieldDefinition" value="1" />
         <field name="Icon" type="StringTableFieldDefinition" value="Spell_Enchantment_CrownOfMadness" />
         <field name="DisplayName" type="TranslatedStringTableFieldDefinition" handle="h62e84ed2g3e30gef01gef81g6f66323c7198" version="1" />
-        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h74f8af02g429bgcec8g9ee2gc587c03b0fa5" version="2" />
+        <field name="Description" type="TranslatedStringTableFieldDefinition" handle="h74f8af02g429bgcec8g9ee2gc587c03b0fa5" version="4" />
         <field name="TooltipDamageList" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire,,,,eb09dd06-914f-492f-a234-7f5b3778b097)" />
         <field name="TooltipAttackSave" type="StringTableFieldDefinition" value="Wisdom" />
         <field name="TooltipStatusApply" type="StringTableFieldDefinition" value="ApplyStatus(FRIGHTENED,100,-1)" />
@@ -15606,7 +15606,7 @@
         <field name="SpellFlags" type="EnumerationListTableFieldDefinition" value="HasVerbalComponent;HasSomaticComponent;IsSpell" enumeration_type_name="SpellFlagList" version="1" />
         <field name="HitAnimationType" type="EnumerationTableFieldDefinition" value="MagicalDamage_External" enumeration_type_name="HitAnimationType" version="1" />
         <field name="SpellPrepareCost" type="IntegerTableFieldDefinition" value="1" />
-        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="fdbf8e88-c3a5-4151-a81d-429985de422c" />
+        <field name="PrepareEffect" type="GuidObjectTableFieldDefinition" value="303cac68-f3de-4322-a5cb-66186a6098fe" />
         <field name="CastEffect" type="GuidObjectTableFieldDefinition" value="f857a71f-fdcd-415f-89e2-de63192cd86f" />
         <field name="TargetEffect" type="GuidObjectTableFieldDefinition" value="ec3af71e-4c6e-4ca3-8af8-bcf713aab8bf" />
         <field name="DamageType" type="EnumerationTableFieldDefinition" value="Fire" enumeration_type_name="Damage Type" version="1" />
@@ -15614,7 +15614,7 @@
         <field name="BeamEffect" type="GuidObjectTableFieldDefinition" value="7a20894a-09a9-45f2-9b9e-c2a824adaad4" />
         <field name="VocalComponentSound" type="StringTableFieldDefinition" value="Vocal_Component_Stop" />
         <field name="RequirementConditions" type="StringTableFieldDefinition" value="ConcentrateSpell();" />
-        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire,,,,eb09dd06-914f-492f-a234-7f5b3778b097)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire)" />
         <field name="TooltipUpcastDescriptionParams" type="StringTableFieldDefinition" value="DealDamage(2d6,Fire,,,,eb09dd06-914f-492f-a234-7f5b3778b097)" />
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="2" />
       </fields>
@@ -15640,7 +15640,7 @@
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="4" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SaveCrit() and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank4,100,-1);IF(not SaveCrit()):ApplyStatus(FRIGHTENED,100,1);IF(SaveCrit() and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank4_Double,100,-1);IF(SaveCrit()):ApplyStatus(FRIGHTENED,100,2);IF(SaveCrit()):ApplyStatus(CriticalFailureDisplay,100,0);" />
         <field name="SpellFail" type="StringTableFieldDefinition" value="IF(not SaveCritMiss('Fear') and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank4_Half,100,-1);" />
-        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(4d6,Fire,,,,eb09dd06-914f-492f-a234-7f5b3778b097)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(4d6,Fire)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">
@@ -15663,7 +15663,7 @@
         <field name="PowerLevel" type="IntegerTableFieldDefinition" value="6" />
         <field name="SpellSuccess" type="StringTableFieldDefinition" value="IF(not SaveCrit() and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank6,100,-1);IF(not SaveCrit()):ApplyStatus(FRIGHTENED,100,1);IF(SaveCrit() and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank6_Double,100,-1);IF(SaveCrit()):ApplyStatus(FRIGHTENED,100,2);IF(SaveCrit()):ApplyStatus(CriticalFailureDisplay,100,0);" />
         <field name="SpellFail" type="StringTableFieldDefinition" value="IF(not SaveCritMiss('Fear') and not IsImmuneToStatus('BURNING')):ApplyStatus(BlisteringInvectiveBurning_Rank6_Half,100,-1);" />
-        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(6d6,Fire,,,,eb09dd06-914f-492f-a234-7f5b3778b097)" />
+        <field name="DescriptionParams" type="StringTableFieldDefinition" value="DealDamage(6d6,Fire)" />
       </fields>
     </stat_object>
     <stat_object is_substat="false">

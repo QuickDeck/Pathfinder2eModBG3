@@ -420,5 +420,12 @@
         <field name="Text" type="TranslatedStringTableFieldDefinition" handle="h3aa81242gefd0g8831g5e67gd961cadb8605" version="1" />
       </fields>
     </stat_object>
+    <stat_object is_substat="false">
+      <fields>
+        <field name="Name" type="NameTableFieldDefinition" value="New_Stat_60" />
+        <field name="UUID" type="IdTableFieldDefinition" value="8087251a-d800-4363-b068-b360d4841a3a" />
+        <field name="Text" type="TranslatedStringTableFieldDefinition" handle="h8d1a56d1g5387gd7a7gff8bge6000aa96c78" version="1" />
+      </fields>
+    </stat_object>
   </stat_objects>
 </stats>
